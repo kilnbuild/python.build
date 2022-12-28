@@ -1,8 +1,6 @@
-You can find a list of wheels here: https://mirror.pythonbuild.com
+You can find a list of built wheels on this page.
 
 If you would like to see an audit of builds, you can see these at https://audit.pythonbuild.com
-
-These are as close to reproducible builds as we can get (without getting too crazy).
 
 The following packages are being built:
 
@@ -15,8 +13,9 @@ The following packages are being built:
 
 
 ## [grpcio](https://pypi.org/project/grpcio)
+<details><summary>Click to view all versions</summary>
 
-| OS | Architecture | Package Version | Python Versions | 
+| OS | Architecture | Package Version | Python Versions (Click to Download) | 
 | --- | --- | --- | --- | 
 | macOS | ARM64 | 1.51.1 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/grpcio-1.51.1-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/grpcio-1.51.1-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/grpcio-1.51.1-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/grpcio-1.51.1-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 1.51.0 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/grpcio-1.51.0-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/grpcio-1.51.0-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/grpcio-1.51.0-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/grpcio-1.51.0-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
@@ -40,11 +39,6 @@ The following packages are being built:
 | macOS | ARM64 | 1.41.0 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/grpcio-1.41.0-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/grpcio-1.41.0-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/grpcio-1.41.0-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/grpcio-1.41.0-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 1.40.0 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/grpcio-1.40.0-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/grpcio-1.40.0-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/grpcio-1.40.0-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/grpcio-1.40.0-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 1.39.0 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/grpcio-1.39.0-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/grpcio-1.39.0-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/grpcio-1.39.0-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/grpcio-1.39.0-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
-<details>
-<summary>grpcio version 1.38.1 and below failed to build</summary>
-
-| OS | Architecture | Package Version | Python Versions | 
-| --- | --- | --- | --- |
 | macOS | ARM64 | 1.38.1 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) ![3.8 - 3.8](https://img.shields.io/badge/3.8-Failed-red) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 1.38.0 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) ![3.8 - 3.8](https://img.shields.io/badge/3.8-Failed-red) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 1.37.1 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) ![3.8 - 3.8](https://img.shields.io/badge/3.8-Failed-red) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
@@ -141,8 +135,9 @@ The following packages are being built:
 </details>
 
 ## [grpcio-tools](https://pypi.org/project/grpcio-tools)
+<details><summary>Click to view all versions</summary>
 
-| OS | Architecture | Package Version | Python Versions | 
+| OS | Architecture | Package Version | Python Versions (Click to Download) | 
 | --- | --- | --- | --- | 
 | macOS | ARM64 | 1.51.1 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.51.1-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.51.1-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.51.1-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.51.1-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 1.51.0 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.51.0-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.51.0-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.51.0-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.51.0-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
@@ -239,9 +234,12 @@ The following packages are being built:
 | macOS | ARM64 | 1.0.0 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.0.0-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.0.0-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.0.0-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/grpcio_tools-1.0.0-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 0.15.1 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/grpcio_tools-0.15.1-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/grpcio_tools-0.15.1-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/grpcio_tools-0.15.1-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/grpcio_tools-0.15.1-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 0.14.0 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) ![3.8 - 3.8](https://img.shields.io/badge/3.8-Failed-red) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
-## [lxml](https://pypi.org/project/lxml)
+</details>
 
-| OS | Architecture | Package Version | Python Versions | 
+## [lxml](https://pypi.org/project/lxml)
+<details><summary>Click to view all versions</summary>
+
+| OS | Architecture | Package Version | Python Versions (Click to Download) | 
 | --- | --- | --- | --- | 
 | macOS | ARM64 | 4.9.2 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/lxml-4.9.2-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/lxml-4.9.2-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/lxml-4.9.2-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/lxml-4.9.2-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 4.9.1 |[![3.11 - 3.11](https://img.shields.io/badge/3.11-Success-2ea44f)](https://wheels.python.build/lxml-4.9.1-cp311-cp311-macosx_11_0_arm64.whl) [![3.10 - 3.10](https://img.shields.io/badge/3.10-Success-2ea44f)](https://wheels.python.build/lxml-4.9.1-cp310-cp310-macosx_11_0_arm64.whl) [![3.9 - 3.9](https://img.shields.io/badge/3.9-Success-2ea44f)](https://wheels.python.build/lxml-4.9.1-cp39-cp39-macosx_11_0_arm64.whl) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/lxml-4.9.1-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
@@ -276,13 +274,6 @@ The following packages are being built:
 | macOS | ARM64 | 4.2.1 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/lxml-4.2.1-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 4.2.0 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/lxml-4.2.0-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 4.1.1 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) [![3.8 - 3.8](https://img.shields.io/badge/3.8-Success-2ea44f)](https://wheels.python.build/lxml-4.1.1-cp38-cp38-macosx_11_0_arm64.whl) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
-
-
-<details>
-<summary>lxml version 4.1.0 and below failed to build</summary>
-
-| OS | Architecture | Package Version | Python Versions | 
-| --- | --- | --- | --- |
 | macOS | ARM64 | 4.1.0 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) ![3.8 - 3.8](https://img.shields.io/badge/3.8-Failed-red) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 4.0.0 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) ![3.8 - 3.8](https://img.shields.io/badge/3.8-Failed-red) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 3.7.2 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) ![3.8 - 3.8](https://img.shields.io/badge/3.8-Failed-red) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
@@ -391,5 +382,4 @@ The following packages are being built:
 | macOS | ARM64 | 1.0.beta |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) ![3.8 - 3.8](https://img.shields.io/badge/3.8-Failed-red) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 0.9.2 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) ![3.8 - 3.8](https://img.shields.io/badge/3.8-Failed-red) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
 | macOS | ARM64 | 0.9.1 |![3.11 - 3.11](https://img.shields.io/badge/3.11-Failed-red) ![3.10 - 3.10](https://img.shields.io/badge/3.10-Failed-red) ![3.9 - 3.9](https://img.shields.io/badge/3.9-Failed-red) ![3.8 - 3.8](https://img.shields.io/badge/3.8-Failed-red) ![3.7 - 3.7](https://img.shields.io/badge/3.7-Failed-red) |
-
 </details>
