@@ -1,0 +1,576 @@
+2022-12-27T08:57:32.5468220Z Requested labels: self-hosted, macOS, X64
+2022-12-27T08:57:32.5468293Z Job defined at: kilnbuild/python.build/.github/workflows/mac_arm_build.yml@refs/heads/main
+2022-12-27T08:57:32.5468318Z Waiting for a runner to pick up this job...
+2022-12-27T11:40:20.1992675Z Job is about to start running on the runner: s1 (organization)
+2022-12-27T11:40:23.7864950Z Current runner version: '2.300.2'
+2022-12-27T11:40:23.7869990Z Runner name: 's1'
+2022-12-27T11:40:23.7870240Z Runner group name: 'Default'
+2022-12-27T11:40:23.7870690Z Machine name: 's1'
+2022-12-27T11:40:23.7872240Z ##[group]GITHUB_TOKEN Permissions
+2022-12-27T11:40:23.7872670Z Actions: write
+2022-12-27T11:40:23.7872810Z Checks: write
+2022-12-27T11:40:23.7872940Z Contents: write
+2022-12-27T11:40:23.7873080Z Deployments: write
+2022-12-27T11:40:23.7873220Z Discussions: write
+2022-12-27T11:40:23.7873360Z Issues: write
+2022-12-27T11:40:23.7873500Z Metadata: read
+2022-12-27T11:40:23.7873630Z Packages: write
+2022-12-27T11:40:23.7873820Z Pages: write
+2022-12-27T11:40:23.7873970Z PullRequests: write
+2022-12-27T11:40:23.7874130Z RepositoryProjects: write
+2022-12-27T11:40:23.7874300Z SecurityEvents: write
+2022-12-27T11:40:23.7874450Z Statuses: write
+2022-12-27T11:40:23.7874590Z ##[endgroup]
+2022-12-27T11:40:23.7877320Z Secret source: Actions
+2022-12-27T11:40:23.7877810Z Prepare workflow directory
+2022-12-27T11:40:23.8554960Z Prepare all required actions
+2022-12-27T11:40:23.8677990Z Getting action download info
+2022-12-27T11:40:24.2843220Z Download action repository 'actions/setup-python@v4' (SHA:5ccb29d8773c3f3f653e1705f474dfaa8a06a912)
+2022-12-27T11:40:26.0352970Z Download action repository 'actions/upload-artifact@v3' (SHA:83fd05a356d7e2593de66fc9913b3002723633cb)
+2022-12-27T11:40:27.3704040Z ##[group]Run echo '{
+2022-12-27T11:40:27.3704380Z [36;1mecho '{[0m
+2022-12-27T11:40:27.3704510Z [36;1m  "package_name": "lxml",[0m
+2022-12-27T11:40:27.3704760Z [36;1m  "package_url": "https://files.pythonhosted.org/packages/e8/5d/98f56e274bdf17f2e0d9016d1788ca80d26d8987dcd5e1d9416d86ee0625/lxml-4.2.1.tar.gz",[0m
+2022-12-27T11:40:27.3704980Z [36;1m  "package_version": "4.2.1",[0m
+2022-12-27T11:40:27.3705110Z [36;1m  "python_version": "3.8",[0m
+2022-12-27T11:40:27.3705230Z [36;1m  "use_ccache": "true"[0m
+2022-12-27T11:40:27.3705380Z [36;1m}'[0m
+2022-12-27T11:40:27.3721570Z shell: /bin/bash -e {0}
+2022-12-27T11:40:27.3721780Z ##[endgroup]
+2022-12-27T11:40:27.3944650Z {
+2022-12-27T11:40:27.3945980Z   "package_name": "lxml",
+2022-12-27T11:40:27.3946750Z   "package_url": "https://files.pythonhosted.org/packages/e8/5d/98f56e274bdf17f2e0d9016d1788ca80d26d8987dcd5e1d9416d86ee0625/lxml-4.2.1.tar.gz",
+2022-12-27T11:40:27.3947050Z   "package_version": "4.2.1",
+2022-12-27T11:40:27.3947280Z   "python_version": "3.8",
+2022-12-27T11:40:27.3947480Z   "use_ccache": "true"
+2022-12-27T11:40:27.3947640Z }
+2022-12-27T11:40:27.4168070Z ##[group]Run actions/setup-python@v4
+2022-12-27T11:40:27.4168390Z with:
+2022-12-27T11:40:27.4168590Z   python-version: 3.8
+2022-12-27T11:40:27.4168740Z   check-latest: false
+2022-12-27T11:40:27.4169030Z   token: ***
+2022-12-27T11:40:27.4169220Z   update-environment: true
+2022-12-27T11:40:27.4169420Z ##[endgroup]
+2022-12-27T11:40:27.5429130Z ##[group]Installed versions
+2022-12-27T11:40:27.5466940Z Successfully set up CPython (3.8.15)
+2022-12-27T11:40:27.5467920Z ##[endgroup]
+2022-12-27T11:40:27.5621990Z ##[group]Run if [ "true" == "true" ]
+2022-12-27T11:40:27.5622370Z [36;1mif [ "true" == "true" ][0m
+2022-12-27T11:40:27.5622530Z [36;1mthen[0m
+2022-12-27T11:40:27.5622750Z [36;1m  echo "CCACHE_PATH_PREPEND=/usr/local/opt/ccache/libexec" >> $GITHUB_OUTPUT[0m
+2022-12-27T11:40:27.5622950Z [36;1melse[0m
+2022-12-27T11:40:27.5623190Z [36;1m  echo "CCACHE_PATH_PREPEND=" >> $GITHUB_OUTPUT[0m
+2022-12-27T11:40:27.5623520Z [36;1mfi[0m
+2022-12-27T11:40:27.5640540Z shell: /bin/bash -e {0}
+2022-12-27T11:40:27.5640740Z env:
+2022-12-27T11:40:27.5640980Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5641350Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T11:40:27.5641620Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5641830Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5642130Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5642810Z ##[endgroup]
+2022-12-27T11:40:27.5749120Z ##[group]Run echo "BUILD_NAME=$(echo lxml_4.2.1_3.8 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+2022-12-27T11:40:27.5749920Z [36;1mecho "BUILD_NAME=$(echo lxml_4.2.1_3.8 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT[0m
+2022-12-27T11:40:27.5764000Z shell: /bin/bash -e {0}
+2022-12-27T11:40:27.5764250Z env:
+2022-12-27T11:40:27.5764630Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5764900Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T11:40:27.5765160Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5765370Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5765670Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5765880Z ##[endgroup]
+2022-12-27T11:40:27.5907390Z ##[group]Run echo "PYTHON_NO_DOTS=$(echo 3.8 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+2022-12-27T11:40:27.5907780Z [36;1mecho "PYTHON_NO_DOTS=$(echo 3.8 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT[0m
+2022-12-27T11:40:27.5922010Z shell: /bin/bash -e {0}
+2022-12-27T11:40:27.5922160Z env:
+2022-12-27T11:40:27.5922440Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5922710Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T11:40:27.5922930Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5923170Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5923400Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.5923590Z ##[endgroup]
+2022-12-27T11:40:27.6044490Z ##[group]Run rm -rf build_lxml42138
+2022-12-27T11:40:27.6044880Z [36;1mrm -rf build_lxml42138[0m
+2022-12-27T11:40:27.6045080Z [36;1mmkdir build_lxml42138[0m
+2022-12-27T11:40:27.6045270Z [36;1mcd build_lxml42138[0m
+2022-12-27T11:40:27.6045600Z [36;1m/usr/local/bin/wget --quiet https://files.pythonhosted.org/packages/e8/5d/98f56e274bdf17f2e0d9016d1788ca80d26d8987dcd5e1d9416d86ee0625/lxml-4.2.1.tar.gz[0m
+2022-12-27T11:40:27.6045980Z [36;1mtar xf *.tar.gz[0m
+2022-12-27T11:40:27.6046150Z [36;1mcd *[0m
+2022-12-27T11:40:27.6046390Z [36;1mpython -m pip install cibuildwheel==2.11.3[0m
+2022-12-27T11:40:27.6046670Z [36;1mpython -m cibuildwheel --output-dir ../wheelsout[0m
+2022-12-27T11:40:27.6062550Z shell: /bin/bash -e {0}
+2022-12-27T11:40:27.6062710Z env:
+2022-12-27T11:40:27.6062930Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.6063190Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T11:40:27.6063520Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.6063740Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.6063980Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:40:27.6064180Z   CIBW_ARCHS_MACOS: arm64
+2022-12-27T11:40:27.6064360Z   CIBW_TEST_SKIP: *_arm64
+2022-12-27T11:40:27.6064550Z   CIBW_BUILD: cp38-macosx_arm64
+2022-12-27T11:40:27.6064740Z   CIBW_BUILD_FRONTEND: pip
+2022-12-27T11:40:27.6064930Z   CIBW_BUILD_VERBOSITY: 3
+2022-12-27T11:40:27.6065210Z   CIBW_ENVIRONMENT_MACOS:  CFLAGS="-I/usr/local/opt/openssl@3/include" LDFLAGS="-L/usr/local/opt/openssl@3/lib" CPPFLAGS="-I/usr/local/opt/openssl@3/include" MAKEFLAGS="-j$(sysctl -n hw.logicalcpu)" PATH=/usr/local/opt/ccache/libexec:$PATH
+2022-12-27T11:40:27.6065590Z   CIBW_BEFORE_BUILD: pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi
+2022-12-27T11:40:27.6065870Z   MAKEFLAGS: -j$(sysctl -n hw.logicalcpu)
+2022-12-27T11:40:27.6066060Z ##[endgroup]
+2022-12-27T11:40:28.1314750Z Requirement already satisfied: cibuildwheel==2.11.3 in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (2.11.3)
+2022-12-27T11:40:28.1659640Z Requirement already satisfied: tomli in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (2.0.1)
+2022-12-27T11:40:28.1663370Z Requirement already satisfied: filelock in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (3.8.2)
+2022-12-27T11:40:28.1667010Z Requirement already satisfied: certifi in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (2022.12.7)
+2022-12-27T11:40:28.1672530Z Requirement already satisfied: packaging>=20.9 in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (22.0)
+2022-12-27T11:40:28.1676380Z Requirement already satisfied: platformdirs in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (2.6.0)
+2022-12-27T11:40:28.1681770Z Requirement already satisfied: bashlex!=0.13 in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (0.16)
+2022-12-27T11:40:28.1691540Z Requirement already satisfied: typing-extensions>=4.1.0 in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (4.4.0)
+2022-12-27T11:40:28.1695330Z Requirement already satisfied: bracex in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (2.3.post1)
+2022-12-27T11:40:28.3532730Z 
+2022-12-27T11:40:28.3532970Z      _ _       _ _   _       _           _
+2022-12-27T11:40:28.3533550Z  ___|_| |_ _ _|_| |_| |_ _ _| |_ ___ ___| |
+2022-12-27T11:40:28.3534570Z |  _| | . | | | | | . | | | |   | -_| -_| |
+2022-12-27T11:40:28.3535260Z |___|_|___|___|_|_|___|_____|_|_|___|___|_|
+2022-12-27T11:40:28.3536060Z 
+2022-12-27T11:40:28.3536170Z cibuildwheel version 2.11.3
+2022-12-27T11:40:28.3536330Z 
+2022-12-27T11:40:28.3536470Z Build options:
+2022-12-27T11:40:28.3536690Z   platform: macos
+2022-12-27T11:40:28.3680300Z   architectures: arm64[0m
+2022-12-27T11:40:28.3680580Z   build_selector: 
+2022-12-27T11:40:28.3681100Z     build_config: cp38-macosx_arm64
+2022-12-27T11:40:28.3681830Z     skip_config: 
+2022-12-27T11:40:28.3682170Z     requires_python: None
+2022-12-27T11:40:28.3682700Z     prerelease_pythons: False[0m
+2022-12-27T11:40:28.3683210Z   [38;5;244mcontainer_engine: docker[0m
+2022-12-27T11:40:28.3684000Z   output_dir: /Users/runner/actions-runner/_work/python.build/python.build/build_lxml42138/wheelsout[0m
+2022-12-27T11:40:28.3684780Z   package_dir: /Users/runner/actions-runner/_work/python.build/python.build/build_lxml42138/lxml-4.2.1[0m
+2022-12-27T11:40:28.3685250Z   test_selector: 
+2022-12-27T11:40:28.3685920Z     skip_config: *_arm64[0m
+2022-12-27T11:40:28.3686430Z   [38;5;244mbefore_all: [0m
+2022-12-27T11:40:28.3687080Z   before_build: pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi[0m
+2022-12-27T11:40:28.3687870Z   [38;5;244mbefore_test: [0m
+2022-12-27T11:40:28.3688300Z   [38;5;244mbuild_frontend: pip[0m
+2022-12-27T11:40:28.3688740Z   build_verbosity: 3[0m
+2022-12-27T11:40:28.3689190Z   [38;5;244mconfig_settings: [0m
+2022-12-27T11:40:28.3689860Z   [38;5;244mdependency_constraints: pinned[0m
+2022-12-27T11:40:28.3690150Z   environment: 
+2022-12-27T11:40:28.3690560Z     CFLAGS="-I/usr/local/opt/openssl@3/include"
+2022-12-27T11:40:28.3690970Z     LDFLAGS="-L/usr/local/opt/openssl@3/lib"
+2022-12-27T11:40:28.3691340Z     CPPFLAGS="-I/usr/local/opt/openssl@3/include"
+2022-12-27T11:40:28.3691900Z     MAKEFLAGS="-j$(sysctl -n hw.logicalcpu)"
+2022-12-27T11:40:28.3692330Z     PATH=/usr/local/opt/ccache/libexec:$PATH[0m
+2022-12-27T11:40:28.3692680Z   [38;5;244mmanylinux_images: None[0m
+2022-12-27T11:40:28.3693060Z   [38;5;244mmusllinux_images: None[0m
+2022-12-27T11:40:28.3693580Z   [38;5;244mrepair_command: delocate-wheel --require-archs {delocate_archs} -w {dest_dir} -v {wheel}[0m
+2022-12-27T11:40:28.3694530Z   [38;5;244mtest_command: [0m
+2022-12-27T11:40:28.3694910Z   [38;5;244mtest_extras: [0m
+2022-12-27T11:40:28.3695270Z   [38;5;244mtest_requires: [0m
+2022-12-27T11:40:28.3695440Z 
+2022-12-27T11:40:28.3695610Z Cache folder: /Users/runner/Library/Caches/cibuildwheel
+2022-12-27T11:40:28.3698150Z 
+2022-12-27T11:40:28.3698310Z Here we go!
+2022-12-27T11:40:28.3698670Z 
+2022-12-27T11:40:28.3761060Z 
+2022-12-27T11:40:28.3761360Z [1m[34mBuilding cp38-macosx_arm64 wheel[0m
+2022-12-27T11:40:28.3761670Z CPython 3.8 macOS arm64 - Apple Silicon
+2022-12-27T11:40:28.3761800Z 
+2022-12-27T11:40:28.3765690Z ##[group]Installing Python cp38...
+2022-12-27T11:40:28.3765910Z 
+2022-12-27T11:40:28.3767340Z + pkgutil --pkgs
+2022-12-27T11:40:28.3864630Z ##[endgroup]
+2022-12-27T11:40:28.3865950Z                                                               [32m✓ [0m0.01s
+2022-12-27T11:40:28.3866420Z ##[group]Setting up build environment...
+2022-12-27T11:40:28.3866600Z 
+2022-12-27T11:40:28.3886070Z + /Users/runner/hostedtoolcache/Python/3.8.15/x64/bin/python -sS /Users/runner/Library/Caches/cibuildwheel/virtualenv-20.17.0.pyz --activators= --no-periodic-update --pip=22.3.1 --setuptools=65.6.3 --wheel=0.38.4 --symlink-app-data --python /Library/Frameworks/Python.framework/Versions/3.8/bin/python3 /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv
+2022-12-27T11:40:28.5827500Z created virtual environment CPython3.8.10.final.0-64 in 49ms
+2022-12-27T11:40:28.5828250Z   creator CPython3Posix(dest=/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv, clear=False, no_vcs_ignore=False, global=False)
+2022-12-27T11:40:28.5829000Z   seeder FromAppData(download=False, pip=22.3.1, setuptools=65.6.3, wheel=0.38.4, via=symlink, app_data_dir=/Users/runner/Library/Application Support/virtualenv)
+2022-12-27T11:40:28.5829470Z     added seed packages: pip==22.3.1, setuptools==65.6.3, wheel==0.38.4
+2022-12-27T11:40:28.5940570Z + python -m pip install --upgrade pip -c /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/cibuildwheel/resources/constraints-python38.txt
+2022-12-27T11:40:28.9040760Z Requirement already satisfied: pip in ./lib/python3.8/site-packages (22.3.1)
+2022-12-27T11:40:29.0523290Z + which pip
+2022-12-27T11:40:29.0539850Z /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/bin/pip
+2022-12-27T11:40:29.0542210Z + pip --version
+2022-12-27T11:40:29.2833500Z pip 22.3.1 from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/pip (python 3.8)
+2022-12-27T11:40:29.3042760Z + which pip
+2022-12-27T11:40:29.3069320Z + which python
+2022-12-27T11:40:29.3087030Z /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/bin/python
+2022-12-27T11:40:29.3089020Z + python --version
+2022-12-27T11:40:29.3134740Z Python 3.8.10
+2022-12-27T11:40:29.3138200Z + which python
+2022-12-27T11:40:29.3191680Z ##[endgroup]
+2022-12-27T11:40:29.3192270Z                                                               [32m✓ [0m0.93s
+2022-12-27T11:40:29.3192820Z ##[group]Installing build tools...
+2022-12-27T11:40:29.3192930Z 
+2022-12-27T11:40:29.3193340Z + pip install --upgrade setuptools wheel delocate -c /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/cibuildwheel/resources/constraints-python38.txt
+2022-12-27T11:40:29.6320610Z Requirement already satisfied: setuptools in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages (65.6.3)
+2022-12-27T11:40:29.8583820Z Requirement already satisfied: wheel in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages (0.38.4)
+2022-12-27T11:40:29.9056740Z Collecting delocate
+2022-12-27T11:40:29.9081810Z   Using cached delocate-0.10.3-py3-none-any.whl (142 kB)
+2022-12-27T11:40:29.9311100Z Collecting typing-extensions
+2022-12-27T11:40:29.9332120Z   Using cached typing_extensions-4.4.0-py3-none-any.whl (26 kB)
+2022-12-27T11:40:29.9600920Z Collecting packaging>=20.9
+2022-12-27T11:40:29.9623020Z   Using cached packaging-21.3-py3-none-any.whl (40 kB)
+2022-12-27T11:40:30.0029710Z Collecting pyparsing!=3.0.5,>=2.0.2
+2022-12-27T11:40:30.0050890Z   Using cached pyparsing-3.0.9-py3-none-any.whl (98 kB)
+2022-12-27T11:40:30.0435920Z Installing collected packages: typing-extensions, pyparsing, packaging, delocate
+2022-12-27T11:40:30.1834440Z Successfully installed delocate-0.10.3 packaging-21.3 pyparsing-3.0.9 typing-extensions-4.4.0
+2022-12-27T11:40:30.2240470Z ##[endgroup]
+2022-12-27T11:40:30.2241070Z                                                               [32m✓ [0m0.90s
+2022-12-27T11:40:30.2241640Z ##[group]Running before_build...
+2022-12-27T11:40:30.2241790Z 
+2022-12-27T11:40:30.2247840Z + pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi
+2022-12-27T11:40:30.9103250Z Collecting Cython
+2022-12-27T11:40:30.9150120Z   Using cached Cython-0.29.32-py2.py3-none-any.whl (986 kB)
+2022-12-27T11:40:30.9590690Z Installing collected packages: Cython
+2022-12-27T11:40:31.3998250Z Successfully installed Cython-0.29.32
+2022-12-27T11:40:31.7334380Z Requirement already satisfied: Cython>=0.26.1 in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages (from -r requirements.txt (line 1)) (0.29.32)
+2022-12-27T11:40:31.8037540Z ##[endgroup]
+2022-12-27T11:40:31.8038270Z                                                               [32m✓ [0m1.58s
+2022-12-27T11:40:31.8039040Z ##[group]Building wheel...
+2022-12-27T11:40:31.8039230Z 
+2022-12-27T11:40:31.8043820Z + python -m pip wheel /Users/runner/actions-runner/_work/python.build/python.build/build_lxml42138/lxml-4.2.1 --wheel-dir=/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/built_wheel --no-deps -vvv
+2022-12-27T11:40:32.0897090Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-ephem-wheel-cache-z2zz6oh3
+2022-12-27T11:40:32.0902690Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-yiwvvrp3
+2022-12-27T11:40:32.0904970Z Initialized build tracking at /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-yiwvvrp3
+2022-12-27T11:40:32.0906960Z Created build tracker: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-yiwvvrp3
+2022-12-27T11:40:32.0908940Z Entered build tracker: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-yiwvvrp3
+2022-12-27T11:40:32.0912860Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-gu4j_ora
+2022-12-27T11:40:32.0919720Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-ephem-wheel-cache-b46onslr
+2022-12-27T11:40:32.1003750Z Processing /Users/runner/actions-runner/_work/python.build/python.build/build_lxml42138/lxml-4.2.1
+2022-12-27T11:40:32.1009160Z   Added file:///Users/runner/actions-runner/_work/python.build/python.build/build_lxml42138/lxml-4.2.1 to build tracker '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-yiwvvrp3'
+2022-12-27T11:40:32.1013130Z   Running setup.py (path:/Users/runner/actions-runner/_work/python.build/python.build/build_lxml42138/lxml-4.2.1/setup.py) egg_info for package from file:///Users/runner/actions-runner/_work/python.build/python.build/build_lxml42138/lxml-4.2.1
+2022-12-27T11:40:32.1016910Z   Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-780cu6hg
+2022-12-27T11:40:32.1019080Z   Preparing metadata (setup.py): started
+2022-12-27T11:40:32.1021510Z   Running command python setup.py egg_info
+2022-12-27T11:40:32.4209380Z   Building lxml version 4.2.1.
+2022-12-27T11:40:32.4211310Z   Building without Cython.
+2022-12-27T11:40:32.4213930Z   Using build configuration of libxslt 1.1.29
+2022-12-27T11:40:32.4216720Z   Building against libxml2/libxslt in the following directory: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib
+2022-12-27T11:40:32.4218860Z   running egg_info
+2022-12-27T11:40:32.4221950Z   creating /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-780cu6hg/lxml.egg-info
+2022-12-27T11:40:32.4224950Z   writing /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-780cu6hg/lxml.egg-info/PKG-INFO
+2022-12-27T11:40:32.4227760Z   writing dependency_links to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-780cu6hg/lxml.egg-info/dependency_links.txt
+2022-12-27T11:40:32.4231800Z   writing requirements to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-780cu6hg/lxml.egg-info/requires.txt
+2022-12-27T11:40:32.4233700Z   writing top-level names to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-780cu6hg/lxml.egg-info/top_level.txt
+2022-12-27T11:40:32.4236580Z   writing manifest file '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-780cu6hg/lxml.egg-info/SOURCES.txt'
+2022-12-27T11:40:32.4344160Z   reading manifest file '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-780cu6hg/lxml.egg-info/SOURCES.txt'
+2022-12-27T11:40:32.4347560Z   reading manifest template 'MANIFEST.in'
+2022-12-27T11:40:32.5507870Z   adding license file 'LICENSES.txt'
+2022-12-27T11:40:32.5583590Z   writing manifest file '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-780cu6hg/lxml.egg-info/SOURCES.txt'
+2022-12-27T11:40:32.5808720Z   Preparing metadata (setup.py): finished with status 'done'
+2022-12-27T11:40:32.5835870Z   Source in /Users/runner/actions-runner/_work/python.build/python.build/build_lxml42138/lxml-4.2.1 has version 4.2.1, which satisfies requirement lxml==4.2.1 from file:///Users/runner/actions-runner/_work/python.build/python.build/build_lxml42138/lxml-4.2.1
+2022-12-27T11:40:32.5838960Z   Removed lxml==4.2.1 from file:///Users/runner/actions-runner/_work/python.build/python.build/build_lxml42138/lxml-4.2.1 from build tracker '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-yiwvvrp3'
+2022-12-27T11:40:32.5950000Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-unpack-jn2bshls
+2022-12-27T11:40:32.5952130Z Building wheels for collected packages: lxml
+2022-12-27T11:40:32.5959700Z   Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-82x0mqsy
+2022-12-27T11:40:32.5961700Z   Building wheel for lxml (setup.py): started
+2022-12-27T11:40:32.5963920Z   Destination directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-82x0mqsy
+2022-12-27T11:40:32.5965620Z   Running command python setup.py bdist_wheel
+2022-12-27T11:40:32.7669190Z   Building lxml version 4.2.1.
+2022-12-27T11:40:32.7671500Z   Building without Cython.
+2022-12-27T11:40:32.7802280Z   Using build configuration of libxslt 1.1.29
+2022-12-27T11:40:32.8831970Z   Building against libxml2/libxslt in the following directory: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib
+2022-12-27T11:40:32.9110810Z   running bdist_wheel
+2022-12-27T11:40:32.9155710Z   running build
+2022-12-27T11:40:32.9158340Z   running build_py
+2022-12-27T11:40:32.9179800Z   creating build
+2022-12-27T11:40:32.9182570Z   creating build/lib.macosx-11.0-arm64-cpython-38
+2022-12-27T11:40:32.9184990Z   creating build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9187430Z   copying src/lxml/_elementpath.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9189580Z   copying src/lxml/sax.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9191840Z   copying src/lxml/pyclasslookup.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9194090Z   copying src/lxml/__init__.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9196870Z   copying src/lxml/builder.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9199680Z   copying src/lxml/doctestcompare.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9202760Z   copying src/lxml/usedoctest.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9205530Z   copying src/lxml/cssselect.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9208580Z   copying src/lxml/ElementInclude.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9213080Z   creating build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9215210Z   copying src/lxml/includes/__init__.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9222210Z   creating build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9224590Z   copying src/lxml/html/soupparser.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9226790Z   copying src/lxml/html/defs.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9229210Z   copying src/lxml/html/_setmixin.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9231660Z   copying src/lxml/html/clean.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9235890Z   copying src/lxml/html/_diffcommand.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9238070Z   copying src/lxml/html/html5parser.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9241120Z   copying src/lxml/html/__init__.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9243510Z   copying src/lxml/html/formfill.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9247100Z   copying src/lxml/html/builder.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9249340Z   copying src/lxml/html/ElementSoup.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9251610Z   copying src/lxml/html/_html5builder.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9254580Z   copying src/lxml/html/usedoctest.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9257150Z   copying src/lxml/html/diff.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/html
+2022-12-27T11:40:32.9261590Z   creating build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron
+2022-12-27T11:40:32.9263880Z   copying src/lxml/isoschematron/__init__.py -> build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron
+2022-12-27T11:40:32.9290920Z   copying src/lxml/etree.h -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9293680Z   copying src/lxml/etree_api.h -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9297080Z   copying src/lxml/lxml.etree.h -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9299870Z   copying src/lxml/lxml.etree_api.h -> build/lib.macosx-11.0-arm64-cpython-38/lxml
+2022-12-27T11:40:32.9304650Z   copying src/lxml/includes/xmlerror.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9310340Z   copying src/lxml/includes/c14n.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9314920Z   copying src/lxml/includes/xmlschema.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9318990Z   copying src/lxml/includes/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9321890Z   copying src/lxml/includes/schematron.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9324960Z   copying src/lxml/includes/tree.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9328740Z   copying src/lxml/includes/uri.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9332810Z   copying src/lxml/includes/etreepublic.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9335240Z   copying src/lxml/includes/xpath.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9338810Z   copying src/lxml/includes/htmlparser.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9342280Z   copying src/lxml/includes/xslt.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9345610Z   copying src/lxml/includes/config.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9348970Z   copying src/lxml/includes/xmlparser.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9352780Z   copying src/lxml/includes/xinclude.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9355850Z   copying src/lxml/includes/dtdvalid.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9358920Z   copying src/lxml/includes/relaxng.pxd -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9362090Z   copying src/lxml/includes/lxml-version.h -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9365770Z   copying src/lxml/includes/etree_defs.h -> build/lib.macosx-11.0-arm64-cpython-38/lxml/includes
+2022-12-27T11:40:32.9369810Z   creating build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources
+2022-12-27T11:40:32.9371570Z   creating build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/rng
+2022-12-27T11:40:32.9373380Z   copying src/lxml/isoschematron/resources/rng/iso-schematron.rng -> build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/rng
+2022-12-27T11:40:32.9377220Z   creating build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl
+2022-12-27T11:40:32.9379100Z   copying src/lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl -> build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl
+2022-12-27T11:40:32.9383210Z   copying src/lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl -> build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl
+2022-12-27T11:40:32.9386770Z   creating build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:40:32.9388690Z   copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl -> build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:40:32.9393090Z   copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl -> build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:40:32.9397040Z   copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl -> build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:40:32.9400720Z   copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl -> build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:40:32.9404430Z   copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl -> build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:40:32.9407530Z   copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt -> build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:40:32.9421250Z   running build_ext
+2022-12-27T11:40:32.9719540Z   building 'lxml.etree' extension
+2022-12-27T11:40:32.9721950Z   creating build/temp.macosx-11.0-arm64-cpython-38
+2022-12-27T11:40:32.9724140Z   creating build/temp.macosx-11.0-arm64-cpython-38/src
+2022-12-27T11:40:32.9726770Z   creating build/temp.macosx-11.0-arm64-cpython-38/src/lxml
+2022-12-27T11:40:32.9730950Z   gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -DCYTHON_CLINE_IN_TRACEBACK=0 -I/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include -Isrc -Isrc/lxml/includes -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.8/include/python3.8 -c src/lxml/etree.c -o build/temp.macosx-11.0-arm64-cpython-38/src/lxml/etree.o -w -flat_namespace
+2022-12-27T11:40:56.9899200Z   gcc -bundle -undefined dynamic_lookup -g -L/usr/local/opt/openssl@3/lib -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 build/temp.macosx-11.0-arm64-cpython-38/src/lxml/etree.o -L/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib -lxslt -lexslt -lxml2 -lz -lm -o build/lib.macosx-11.0-arm64-cpython-38/lxml/etree.cpython-38-darwin.so -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+2022-12-27T11:40:57.0871500Z   building 'lxml.objectify' extension
+2022-12-27T11:40:57.0932820Z   gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -DCYTHON_CLINE_IN_TRACEBACK=0 -I/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include -Isrc -Isrc/lxml/includes -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.8/include/python3.8 -c src/lxml/objectify.c -o build/temp.macosx-11.0-arm64-cpython-38/src/lxml/objectify.o -w -flat_namespace
+2022-12-27T11:41:01.7060060Z   gcc -bundle -undefined dynamic_lookup -g -L/usr/local/opt/openssl@3/lib -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 build/temp.macosx-11.0-arm64-cpython-38/src/lxml/objectify.o -L/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib -lxslt -lexslt -lxml2 -lz -lm -o build/lib.macosx-11.0-arm64-cpython-38/lxml/objectify.cpython-38-darwin.so -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+2022-12-27T11:41:01.7628550Z   building 'lxml.builder' extension
+2022-12-27T11:41:01.7631070Z   gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -DCYTHON_CLINE_IN_TRACEBACK=0 -I/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include -Isrc -Isrc/lxml/includes -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.8/include/python3.8 -c src/lxml/builder.c -o build/temp.macosx-11.0-arm64-cpython-38/src/lxml/builder.o -w -flat_namespace
+2022-12-27T11:41:02.7131540Z   gcc -bundle -undefined dynamic_lookup -g -L/usr/local/opt/openssl@3/lib -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 build/temp.macosx-11.0-arm64-cpython-38/src/lxml/builder.o -L/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib -lxslt -lexslt -lxml2 -lz -lm -o build/lib.macosx-11.0-arm64-cpython-38/lxml/builder.cpython-38-darwin.so -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+2022-12-27T11:41:02.7622090Z   building 'lxml._elementpath' extension
+2022-12-27T11:41:02.7624700Z   gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -DCYTHON_CLINE_IN_TRACEBACK=0 -I/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include -Isrc -Isrc/lxml/includes -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.8/include/python3.8 -c src/lxml/_elementpath.c -o build/temp.macosx-11.0-arm64-cpython-38/src/lxml/_elementpath.o -w -flat_namespace
+2022-12-27T11:41:04.8278130Z   gcc -bundle -undefined dynamic_lookup -g -L/usr/local/opt/openssl@3/lib -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 build/temp.macosx-11.0-arm64-cpython-38/src/lxml/_elementpath.o -L/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib -lxslt -lexslt -lxml2 -lz -lm -o build/lib.macosx-11.0-arm64-cpython-38/lxml/_elementpath.cpython-38-darwin.so -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+2022-12-27T11:41:04.8795580Z   building 'lxml.html.diff' extension
+2022-12-27T11:41:04.8797660Z   creating build/temp.macosx-11.0-arm64-cpython-38/src/lxml/html
+2022-12-27T11:41:04.8800320Z   gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -DCYTHON_CLINE_IN_TRACEBACK=0 -I/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include -Isrc -Isrc/lxml/includes -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.8/include/python3.8 -c src/lxml/html/diff.c -o build/temp.macosx-11.0-arm64-cpython-38/src/lxml/html/diff.o -w -flat_namespace
+2022-12-27T11:41:09.3254920Z   gcc -bundle -undefined dynamic_lookup -g -L/usr/local/opt/openssl@3/lib -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 build/temp.macosx-11.0-arm64-cpython-38/src/lxml/html/diff.o -L/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib -lxslt -lexslt -lxml2 -lz -lm -o build/lib.macosx-11.0-arm64-cpython-38/lxml/html/diff.cpython-38-darwin.so -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+2022-12-27T11:41:09.3816540Z   building 'lxml.html.clean' extension
+2022-12-27T11:41:09.3819790Z   gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -DCYTHON_CLINE_IN_TRACEBACK=0 -I/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include -Isrc -Isrc/lxml/includes -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.8/include/python3.8 -c src/lxml/html/clean.c -o build/temp.macosx-11.0-arm64-cpython-38/src/lxml/html/clean.o -w -flat_namespace
+2022-12-27T11:41:12.9327890Z   gcc -bundle -undefined dynamic_lookup -g -L/usr/local/opt/openssl@3/lib -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 build/temp.macosx-11.0-arm64-cpython-38/src/lxml/html/clean.o -L/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib -lxslt -lexslt -lxml2 -lz -lm -o build/lib.macosx-11.0-arm64-cpython-38/lxml/html/clean.cpython-38-darwin.so -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
+2022-12-27T11:41:12.9905900Z   /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+2022-12-27T11:41:12.9908270Z     warnings.warn(
+2022-12-27T11:41:12.9921190Z   installing to build/bdist.macosx-11.0-arm64/wheel
+2022-12-27T11:41:12.9922660Z   running install
+2022-12-27T11:41:12.9977750Z   running install_lib
+2022-12-27T11:41:12.9997470Z   creating build/bdist.macosx-11.0-arm64
+2022-12-27T11:41:12.9999530Z   creating build/bdist.macosx-11.0-arm64/wheel
+2022-12-27T11:41:13.0001310Z   creating build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0003140Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/_elementpath.py -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0005620Z   creating build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron
+2022-12-27T11:41:13.0007920Z   creating build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources
+2022-12-27T11:41:13.0010010Z   creating build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/xsl
+2022-12-27T11:41:13.0011740Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl -> build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/xsl
+2022-12-27T11:41:13.0015470Z   creating build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:41:13.0017580Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl -> build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:41:13.0019920Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl -> build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:41:13.0023360Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl -> build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:41:13.0027140Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl -> build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:41:13.0030920Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl -> build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:41:13.0033400Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt -> build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2022-12-27T11:41:13.0036240Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl -> build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/xsl
+2022-12-27T11:41:13.0039700Z   creating build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/rng
+2022-12-27T11:41:13.0041560Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/resources/rng/iso-schematron.rng -> build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron/resources/rng
+2022-12-27T11:41:13.0044540Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/isoschematron/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/isoschematron
+2022-12-27T11:41:13.0047560Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/etree.cpython-38-darwin.so -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0076570Z   creating build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0078540Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/xmlerror.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0081250Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/c14n.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0083910Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/xmlschema.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0087090Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/__init__.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0088720Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/lxml-version.h -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0092110Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/schematron.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0094160Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0096750Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/tree.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0099420Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/uri.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0102540Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/etree_defs.h -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0105400Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/etreepublic.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0108390Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/xpath.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0111220Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/htmlparser.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0114010Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/xslt.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0117350Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/config.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0120080Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/xmlparser.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0123690Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/xinclude.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0126470Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/dtdvalid.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0129710Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/includes/relaxng.pxd -> build/bdist.macosx-11.0-arm64/wheel/lxml/includes
+2022-12-27T11:41:13.0132380Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/sax.py -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0135200Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/pyclasslookup.py -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0138410Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0141780Z   creating build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0143580Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/soupparser.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0146140Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/defs.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0149060Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/_setmixin.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0151840Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/clean.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0155070Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/_diffcommand.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0157600Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/html5parser.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0160930Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0163920Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/formfill.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0166640Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/builder.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0169280Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/ElementSoup.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0172360Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/_html5builder.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0175160Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/usedoctest.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0177720Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/diff.py -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0180920Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/diff.cpython-38-darwin.so -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0187260Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/html/clean.cpython-38-darwin.so -> build/bdist.macosx-11.0-arm64/wheel/lxml/html
+2022-12-27T11:41:13.0195450Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/etree_api.h -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0198930Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/objectify.cpython-38-darwin.so -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0206880Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/builder.py -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0209730Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/doctestcompare.py -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0212820Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/usedoctest.py -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0215710Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/cssselect.py -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0219520Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/builder.cpython-38-darwin.so -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0226820Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/lxml.etree.h -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0230120Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/etree.h -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0232640Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/ElementInclude.py -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0236220Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/lxml.etree_api.h -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0240250Z   copying build/lib.macosx-11.0-arm64-cpython-38/lxml/_elementpath.cpython-38-darwin.so -> build/bdist.macosx-11.0-arm64/wheel/lxml
+2022-12-27T11:41:13.0246990Z   running install_egg_info
+2022-12-27T11:41:13.0324170Z   running egg_info
+2022-12-27T11:41:13.0337050Z   writing src/lxml.egg-info/PKG-INFO
+2022-12-27T11:41:13.0341130Z   writing dependency_links to src/lxml.egg-info/dependency_links.txt
+2022-12-27T11:41:13.0345300Z   writing requirements to src/lxml.egg-info/requires.txt
+2022-12-27T11:41:13.0347710Z   writing top-level names to src/lxml.egg-info/top_level.txt
+2022-12-27T11:41:13.0404260Z   reading manifest file 'src/lxml.egg-info/SOURCES.txt'
+2022-12-27T11:41:13.0458150Z   reading manifest template 'MANIFEST.in'
+2022-12-27T11:41:13.1587910Z   adding license file 'LICENSES.txt'
+2022-12-27T11:41:13.1683500Z   writing manifest file 'src/lxml.egg-info/SOURCES.txt'
+2022-12-27T11:41:13.1686290Z   Copying src/lxml.egg-info to build/bdist.macosx-11.0-arm64/wheel/lxml-4.2.1-py3.8.egg-info
+2022-12-27T11:41:13.1707660Z   running install_scripts
+2022-12-27T11:41:13.1976160Z   creating build/bdist.macosx-11.0-arm64/wheel/lxml-4.2.1.dist-info/WHEEL
+2022-12-27T11:41:13.1981310Z   creating '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-82x0mqsy/lxml-4.2.1-cp38-cp38-macosx_11_0_arm64.whl' and adding 'build/bdist.macosx-11.0-arm64/wheel' to it
+2022-12-27T11:41:13.1989310Z   adding 'lxml/ElementInclude.py'
+2022-12-27T11:41:13.1992520Z   adding 'lxml/__init__.py'
+2022-12-27T11:41:13.2051750Z   adding 'lxml/_elementpath.cpython-38-darwin.so'
+2022-12-27T11:41:13.2062390Z   adding 'lxml/_elementpath.py'
+2022-12-27T11:41:13.2094170Z   adding 'lxml/builder.cpython-38-darwin.so'
+2022-12-27T11:41:13.2101830Z   adding 'lxml/builder.py'
+2022-12-27T11:41:13.2105180Z   adding 'lxml/cssselect.py'
+2022-12-27T11:41:13.2110530Z   adding 'lxml/doctestcompare.py'
+2022-12-27T11:41:13.2776070Z   adding 'lxml/etree.cpython-38-darwin.so'
+2022-12-27T11:41:13.2852400Z   adding 'lxml/etree.h'
+2022-12-27T11:41:13.2856770Z   adding 'lxml/etree_api.h'
+2022-12-27T11:41:13.2860580Z   adding 'lxml/lxml.etree.h'
+2022-12-27T11:41:13.2864960Z   adding 'lxml/lxml.etree_api.h'
+2022-12-27T11:41:13.2991960Z   adding 'lxml/objectify.cpython-38-darwin.so'
+2022-12-27T11:41:13.3007380Z   adding 'lxml/pyclasslookup.py'
+2022-12-27T11:41:13.3011580Z   adding 'lxml/sax.py'
+2022-12-27T11:41:13.3014670Z   adding 'lxml/usedoctest.py'
+2022-12-27T11:41:13.3017550Z   adding 'lxml/html/ElementSoup.py'
+2022-12-27T11:41:13.3033690Z   adding 'lxml/html/__init__.py'
+2022-12-27T11:41:13.3038880Z   adding 'lxml/html/_diffcommand.py'
+2022-12-27T11:41:13.3042780Z   adding 'lxml/html/_html5builder.py'
+2022-12-27T11:41:13.3045170Z   adding 'lxml/html/_setmixin.py'
+2022-12-27T11:41:13.3048310Z   adding 'lxml/html/builder.py'
+2022-12-27T11:41:13.3140420Z   adding 'lxml/html/clean.cpython-38-darwin.so'
+2022-12-27T11:41:13.3156860Z   adding 'lxml/html/clean.py'
+2022-12-27T11:41:13.3161740Z   adding 'lxml/html/defs.py'
+2022-12-27T11:41:13.3279170Z   adding 'lxml/html/diff.cpython-38-darwin.so'
+2022-12-27T11:41:13.3301900Z   adding 'lxml/html/diff.py'
+2022-12-27T11:41:13.3307010Z   adding 'lxml/html/formfill.py'
+2022-12-27T11:41:13.3310710Z   adding 'lxml/html/html5parser.py'
+2022-12-27T11:41:13.3315370Z   adding 'lxml/html/soupparser.py'
+2022-12-27T11:41:13.3318380Z   adding 'lxml/html/usedoctest.py'
+2022-12-27T11:41:13.3321490Z   adding 'lxml/includes/__init__.pxd'
+2022-12-27T11:41:13.3324060Z   adding 'lxml/includes/__init__.py'
+2022-12-27T11:41:13.3326760Z   adding 'lxml/includes/c14n.pxd'
+2022-12-27T11:41:13.3329210Z   adding 'lxml/includes/config.pxd'
+2022-12-27T11:41:13.3331720Z   adding 'lxml/includes/dtdvalid.pxd'
+2022-12-27T11:41:13.3336810Z   adding 'lxml/includes/etree_defs.h'
+2022-12-27T11:41:13.3341290Z   adding 'lxml/includes/etreepublic.pxd'
+2022-12-27T11:41:13.3344480Z   adding 'lxml/includes/htmlparser.pxd'
+2022-12-27T11:41:13.3347330Z   adding 'lxml/includes/lxml-version.h'
+2022-12-27T11:41:13.3350780Z   adding 'lxml/includes/relaxng.pxd'
+2022-12-27T11:41:13.3353100Z   adding 'lxml/includes/schematron.pxd'
+2022-12-27T11:41:13.3358330Z   adding 'lxml/includes/tree.pxd'
+2022-12-27T11:41:13.3361660Z   adding 'lxml/includes/uri.pxd'
+2022-12-27T11:41:13.3364350Z   adding 'lxml/includes/xinclude.pxd'
+2022-12-27T11:41:13.3374440Z   adding 'lxml/includes/xmlerror.pxd'
+2022-12-27T11:41:13.3380360Z   adding 'lxml/includes/xmlparser.pxd'
+2022-12-27T11:41:13.3383470Z   adding 'lxml/includes/xmlschema.pxd'
+2022-12-27T11:41:13.3387080Z   adding 'lxml/includes/xpath.pxd'
+2022-12-27T11:41:13.3390750Z   adding 'lxml/includes/xslt.pxd'
+2022-12-27T11:41:13.3396320Z   adding 'lxml/isoschematron/__init__.py'
+2022-12-27T11:41:13.3401700Z   adding 'lxml/isoschematron/resources/rng/iso-schematron.rng'
+2022-12-27T11:41:13.3405780Z   adding 'lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl'
+2022-12-27T11:41:13.3408920Z   adding 'lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl'
+2022-12-27T11:41:13.3414050Z   adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl'
+2022-12-27T11:41:13.3420950Z   adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl'
+2022-12-27T11:41:13.3425180Z   adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl'
+2022-12-27T11:41:13.3442440Z   adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl'
+2022-12-27T11:41:13.3450140Z   adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl'
+2022-12-27T11:41:13.3454040Z   adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt'
+2022-12-27T11:41:13.3459620Z   adding 'lxml-4.2.1.dist-info/LICENSES.txt'
+2022-12-27T11:41:13.3462390Z   adding 'lxml-4.2.1.dist-info/METADATA'
+2022-12-27T11:41:13.3464370Z   adding 'lxml-4.2.1.dist-info/WHEEL'
+2022-12-27T11:41:13.3466300Z   adding 'lxml-4.2.1.dist-info/top_level.txt'
+2022-12-27T11:41:13.3468360Z   adding 'lxml-4.2.1.dist-info/RECORD'
+2022-12-27T11:41:13.3471750Z   removing build/bdist.macosx-11.0-arm64/wheel
+2022-12-27T11:41:13.3774750Z   Building wheel for lxml (setup.py): finished with status 'done'
+2022-12-27T11:41:13.3829800Z   Created wheel for lxml: filename=lxml-4.2.1-cp38-cp38-macosx_11_0_arm64.whl size=1430795 sha256=7e9a7013d9de7968ba375c076054307dff80606c01f2dcb698bf158a75f30c77
+2022-12-27T11:41:13.3832290Z   Stored in directory: /Users/runner/Library/Caches/pip/wheels/bd/5c/6e/346cb94012b7bbaa25b797d04b0e4a622889b7383a4cab5c22
+2022-12-27T11:41:13.3869150Z Successfully built lxml
+2022-12-27T11:41:13.3879580Z Removed build tracker: '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-yiwvvrp3'
+2022-12-27T11:41:13.4255920Z ##[endgroup]
+2022-12-27T11:41:13.4256500Z                                                              [32m✓ [0m41.62s
+2022-12-27T11:41:13.4256800Z ##[group]Repairing wheel...
+2022-12-27T11:41:13.4256910Z 
+2022-12-27T11:41:13.4260560Z + delocate-wheel --require-archs arm64 -w /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/repaired_wheel -v /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/built_wheel/lxml-4.2.1-cp38-cp38-macosx_11_0_arm64.whl
+2022-12-27T11:41:17.4234630Z Fixing: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-3jg1m5vq/cp38-macosx_arm64/built_wheel/lxml-4.2.1-cp38-cp38-macosx_11_0_arm64.whl
+2022-12-27T11:41:17.4304920Z ##[endgroup]
+2022-12-27T11:41:17.4305330Z                                                               [32m✓ [0m4.00s
+2022-12-27T11:41:17.4656020Z 
+2022-12-27T11:41:17.4656460Z [32m✓ [0mcp38-macosx_arm64 finished in 49.09s
+2022-12-27T11:41:17.4658650Z 
+2022-12-27T11:41:17.4658870Z 1 wheels produced in 1 minutes:
+2022-12-27T11:41:17.4659230Z   lxml-4.2.1-cp38-cp38-macosx_11_0_arm64.whl   1,398 kB
+2022-12-27T11:41:17.4828220Z ##[group]Run actions/upload-artifact@v3
+2022-12-27T11:41:17.4828390Z with:
+2022-12-27T11:41:17.4828530Z   name: lxml-4.2.1-cp38-cp38-macosx_11_0_arm64.whl.zip
+2022-12-27T11:41:17.4828670Z   path: build_lxml42138/wheelsout/*.whl
+2022-12-27T11:41:17.4828810Z   if-no-files-found: warn
+2022-12-27T11:41:17.4828930Z env:
+2022-12-27T11:41:17.4829080Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:41:17.4829290Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T11:41:17.4829560Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:41:17.4829740Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:41:17.4829910Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:41:17.4830050Z ##[endgroup]
+2022-12-27T11:41:17.5362060Z With the provided path, there will be 1 file uploaded
+2022-12-27T11:41:17.5364480Z Starting artifact upload
+2022-12-27T11:41:17.5365140Z For more detailed logs during the artifact upload process, enable step-debugging: https://docs.github.com/actions/monitoring-and-troubleshooting-workflows/enabling-debug-logging#enabling-step-debug-logging
+2022-12-27T11:41:17.5365480Z Artifact name is valid!
+2022-12-27T11:41:17.8718140Z Container for artifact "lxml-4.2.1-cp38-cp38-macosx_11_0_arm64.whl.zip" successfully created. Starting upload of file(s)
+2022-12-27T11:41:19.1899520Z Total size of all the files uploaded is 1416694 bytes
+2022-12-27T11:41:19.1899810Z File upload process has finished. Finalizing the artifact upload
+2022-12-27T11:41:19.5350580Z Artifact has been finalized. All files have been successfully uploaded!
+2022-12-27T11:41:19.5351000Z 
+2022-12-27T11:41:19.5351330Z The raw size of all the files that were specified for upload is 1430818 bytes
+2022-12-27T11:41:19.5351870Z The size of all the files that were uploaded is 1416694 bytes. This takes into account any gzip compression used to reduce the upload size, time and storage
+2022-12-27T11:41:19.5352250Z 
+2022-12-27T11:41:19.5353560Z Note: The size of downloaded zips can differ significantly from the reported size. For more information see: https://github.com/actions/upload-artifact#zipped-artifact-downloads 
+2022-12-27T11:41:19.5354010Z 
+2022-12-27T11:41:19.5354370Z Artifact lxml-4.2.1-cp38-cp38-macosx_11_0_arm64.whl.zip has been successfully uploaded!
+2022-12-27T11:41:19.5415850Z ##[group]Run rm -rf build_lxml42138 wheelsout
+2022-12-27T11:41:19.5416090Z [36;1mrm -rf build_lxml42138 wheelsout[0m
+2022-12-27T11:41:19.5431260Z shell: /bin/bash -e {0}
+2022-12-27T11:41:19.5431450Z env:
+2022-12-27T11:41:19.5431750Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:41:19.5432000Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T11:41:19.5432250Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:41:19.5432490Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:41:19.5432690Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T11:41:19.5432940Z ##[endgroup]
+2022-12-27T11:41:19.5974520Z Post job cleanup.
+2022-12-27T11:41:19.7195110Z Cleaning up orphan processes

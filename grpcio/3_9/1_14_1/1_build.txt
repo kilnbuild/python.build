@@ -1,0 +1,1433 @@
+2022-12-27T01:58:08.3109498Z Requested labels: self-hosted, macOS, X64
+2022-12-27T01:58:08.3109591Z Job defined at: kilnbuild/python.build/.github/workflows/mac_arm_build.yml@refs/heads/main
+2022-12-27T01:58:08.3109626Z Waiting for a runner to pick up this job...
+2022-12-27T02:58:12.8839866Z Job is about to start running on the runner: s1 (organization)
+2022-12-27T02:58:15.6535740Z Current runner version: '2.300.2'
+2022-12-27T02:58:15.6540840Z Runner name: 's1'
+2022-12-27T02:58:15.6541090Z Runner group name: 'Default'
+2022-12-27T02:58:15.6541530Z Machine name: 's1'
+2022-12-27T02:58:15.6543080Z ##[group]GITHUB_TOKEN Permissions
+2022-12-27T02:58:15.6543500Z Actions: write
+2022-12-27T02:58:15.6543640Z Checks: write
+2022-12-27T02:58:15.6543780Z Contents: write
+2022-12-27T02:58:15.6543920Z Deployments: write
+2022-12-27T02:58:15.6544070Z Discussions: write
+2022-12-27T02:58:15.6544200Z Issues: write
+2022-12-27T02:58:15.6544330Z Metadata: read
+2022-12-27T02:58:15.6544460Z Packages: write
+2022-12-27T02:58:15.6544600Z Pages: write
+2022-12-27T02:58:15.6544740Z PullRequests: write
+2022-12-27T02:58:15.6544900Z RepositoryProjects: write
+2022-12-27T02:58:15.6545060Z SecurityEvents: write
+2022-12-27T02:58:15.6545210Z Statuses: write
+2022-12-27T02:58:15.6545340Z ##[endgroup]
+2022-12-27T02:58:15.6547850Z Secret source: Actions
+2022-12-27T02:58:15.6548170Z Prepare workflow directory
+2022-12-27T02:58:15.7215960Z Prepare all required actions
+2022-12-27T02:58:15.7339630Z Getting action download info
+2022-12-27T02:58:16.9761420Z Download action repository 'actions/setup-python@v4' (SHA:5ccb29d8773c3f3f653e1705f474dfaa8a06a912)
+2022-12-27T02:58:18.7757910Z Download action repository 'actions/upload-artifact@v3' (SHA:83fd05a356d7e2593de66fc9913b3002723633cb)
+2022-12-27T02:58:20.3351180Z ##[group]Run echo '{
+2022-12-27T02:58:20.3351480Z [36;1mecho '{[0m
+2022-12-27T02:58:20.3351760Z [36;1m  "environment_variables": "GRPC_PYTHON_BUILD_WITH_CYTHON=1 GRPC_BUILD_WITH_BORING_SSL_ASM='' GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=TRUE",[0m
+2022-12-27T02:58:20.3351990Z [36;1m  "package_name": "grpcio",[0m
+2022-12-27T02:58:20.3352280Z [36;1m  "package_url": "https://files.pythonhosted.org/packages/bc/f0/9ac37e255a5f1023cba15c425be5c03fe687eed0f8d98f0fa305de3159c0/grpcio-1.14.1.tar.gz",[0m
+2022-12-27T02:58:20.3352510Z [36;1m  "package_version": "1.14.1",[0m
+2022-12-27T02:58:20.3352630Z [36;1m  "python_version": "3.9",[0m
+2022-12-27T02:58:20.3352770Z [36;1m  "use_ccache": "true"[0m
+2022-12-27T02:58:20.3352950Z [36;1m}'[0m
+2022-12-27T02:58:20.3368970Z shell: /bin/bash -e {0}
+2022-12-27T02:58:20.3369110Z ##[endgroup]
+2022-12-27T02:58:20.3589420Z {
+2022-12-27T02:58:20.3590900Z   "environment_variables": "GRPC_PYTHON_BUILD_WITH_CYTHON=1 GRPC_BUILD_WITH_BORING_SSL_ASM= GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=TRUE",
+2022-12-27T02:58:20.3591270Z   "package_name": "grpcio",
+2022-12-27T02:58:20.3591890Z   "package_url": "https://files.pythonhosted.org/packages/bc/f0/9ac37e255a5f1023cba15c425be5c03fe687eed0f8d98f0fa305de3159c0/grpcio-1.14.1.tar.gz",
+2022-12-27T02:58:20.3592180Z   "package_version": "1.14.1",
+2022-12-27T02:58:20.3592350Z   "python_version": "3.9",
+2022-12-27T02:58:20.3592500Z   "use_ccache": "true"
+2022-12-27T02:58:20.3592700Z }
+2022-12-27T02:58:20.3811800Z ##[group]Run actions/setup-python@v4
+2022-12-27T02:58:20.3812030Z with:
+2022-12-27T02:58:20.3812210Z   python-version: 3.9
+2022-12-27T02:58:20.3812400Z   check-latest: false
+2022-12-27T02:58:20.3812830Z   token: ***
+2022-12-27T02:58:20.3813020Z   update-environment: true
+2022-12-27T02:58:20.3813210Z ##[endgroup]
+2022-12-27T02:58:20.5097910Z ##[group]Installed versions
+2022-12-27T02:58:20.5136480Z Successfully set up CPython (3.9.16)
+2022-12-27T02:58:20.5137890Z ##[endgroup]
+2022-12-27T02:58:20.5299190Z ##[group]Run if [ "true" == "true" ]
+2022-12-27T02:58:20.5299500Z [36;1mif [ "true" == "true" ][0m
+2022-12-27T02:58:20.5299670Z [36;1mthen[0m
+2022-12-27T02:58:20.5299890Z [36;1m  echo "CCACHE_PATH_PREPEND=/usr/local/opt/ccache/libexec" >> $GITHUB_OUTPUT[0m
+2022-12-27T02:58:20.5300100Z [36;1melse[0m
+2022-12-27T02:58:20.5300340Z [36;1m  echo "CCACHE_PATH_PREPEND=" >> $GITHUB_OUTPUT[0m
+2022-12-27T02:58:20.5300500Z [36;1mfi[0m
+2022-12-27T02:58:20.5317480Z shell: /bin/bash -e {0}
+2022-12-27T02:58:20.5317750Z env:
+2022-12-27T02:58:20.5317950Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5318220Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/pkgconfig
+2022-12-27T02:58:20.5318970Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5319220Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5319530Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5319730Z ##[endgroup]
+2022-12-27T02:58:20.5428380Z ##[group]Run echo "BUILD_NAME=$(echo grpcio_1.14.1_3.9 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+2022-12-27T02:58:20.5428790Z [36;1mecho "BUILD_NAME=$(echo grpcio_1.14.1_3.9 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT[0m
+2022-12-27T02:58:20.5443150Z shell: /bin/bash -e {0}
+2022-12-27T02:58:20.5443350Z env:
+2022-12-27T02:58:20.5443660Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5443900Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/pkgconfig
+2022-12-27T02:58:20.5444170Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5444460Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5444770Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5444940Z ##[endgroup]
+2022-12-27T02:58:20.5583520Z ##[group]Run echo "PYTHON_NO_DOTS=$(echo 3.9 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+2022-12-27T02:58:20.5583900Z [36;1mecho "PYTHON_NO_DOTS=$(echo 3.9 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT[0m
+2022-12-27T02:58:20.5598020Z shell: /bin/bash -e {0}
+2022-12-27T02:58:20.5598190Z env:
+2022-12-27T02:58:20.5598390Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5598730Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/pkgconfig
+2022-12-27T02:58:20.5598960Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5599200Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5599910Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5600130Z ##[endgroup]
+2022-12-27T02:58:20.5714330Z ##[group]Run rm -rf build_grpcio114139
+2022-12-27T02:58:20.5714710Z [36;1mrm -rf build_grpcio114139[0m
+2022-12-27T02:58:20.5714900Z [36;1mmkdir build_grpcio114139[0m
+2022-12-27T02:58:20.5715080Z [36;1mcd build_grpcio114139[0m
+2022-12-27T02:58:20.5715420Z [36;1m/usr/local/bin/wget --quiet https://files.pythonhosted.org/packages/bc/f0/9ac37e255a5f1023cba15c425be5c03fe687eed0f8d98f0fa305de3159c0/grpcio-1.14.1.tar.gz[0m
+2022-12-27T02:58:20.5715690Z [36;1mtar xf *.tar.gz[0m
+2022-12-27T02:58:20.5715840Z [36;1mcd grpcio-*/[0m
+2022-12-27T02:58:20.5716040Z [36;1mpython -m pip install cibuildwheel==2.11.3[0m
+2022-12-27T02:58:20.5716290Z [36;1mpython -m cibuildwheel --output-dir ../wheelsout[0m
+2022-12-27T02:58:20.5730390Z shell: /bin/bash -e {0}
+2022-12-27T02:58:20.5730590Z env:
+2022-12-27T02:58:20.5730840Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5731180Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/pkgconfig
+2022-12-27T02:58:20.5731430Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5731670Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5731900Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:20.5732110Z   CIBW_ARCHS_MACOS: arm64
+2022-12-27T02:58:20.5732290Z   CIBW_TEST_SKIP: *_arm64
+2022-12-27T02:58:20.5732470Z   CIBW_BUILD: cp39-macosx_arm64
+2022-12-27T02:58:20.5732630Z   CIBW_BUILD_FRONTEND: pip
+2022-12-27T02:58:20.5732800Z   CIBW_BUILD_VERBOSITY: 3
+2022-12-27T02:58:20.5733200Z   CIBW_ENVIRONMENT_MACOS: GRPC_PYTHON_BUILD_WITH_CYTHON=1 GRPC_BUILD_WITH_BORING_SSL_ASM='' GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=TRUE CFLAGS="-I/usr/local/opt/openssl@3/include" LDFLAGS="-L/usr/local/opt/openssl@3/lib" CPPFLAGS="-I/usr/local/opt/openssl@3/include" MAKEFLAGS="-j$(sysctl -n hw.logicalcpu)" PATH=/usr/local/opt/ccache/libexec:$PATH
+2022-12-27T02:58:20.5733810Z   CIBW_BEFORE_BUILD: pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi
+2022-12-27T02:58:20.5734020Z   MAKEFLAGS: -j$(sysctl -n hw.logicalcpu)
+2022-12-27T02:58:20.5734200Z ##[endgroup]
+2022-12-27T02:58:21.4895010Z Requirement already satisfied: cibuildwheel==2.11.3 in /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages (2.11.3)
+2022-12-27T02:58:21.5155360Z Requirement already satisfied: certifi in /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages (from cibuildwheel==2.11.3) (2022.12.7)
+2022-12-27T02:58:21.5158760Z Requirement already satisfied: platformdirs in /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages (from cibuildwheel==2.11.3) (2.6.0)
+2022-12-27T02:58:21.5162230Z Requirement already satisfied: bracex in /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages (from cibuildwheel==2.11.3) (2.3.post1)
+2022-12-27T02:58:21.5171000Z Requirement already satisfied: typing-extensions>=4.1.0 in /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages (from cibuildwheel==2.11.3) (4.4.0)
+2022-12-27T02:58:21.5178000Z Requirement already satisfied: tomli in /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages (from cibuildwheel==2.11.3) (2.0.1)
+2022-12-27T02:58:21.5183260Z Requirement already satisfied: bashlex!=0.13 in /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages (from cibuildwheel==2.11.3) (0.16)
+2022-12-27T02:58:21.5189430Z Requirement already satisfied: packaging>=20.9 in /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages (from cibuildwheel==2.11.3) (22.0)
+2022-12-27T02:58:21.5192670Z Requirement already satisfied: filelock in /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages (from cibuildwheel==2.11.3) (3.8.2)
+2022-12-27T02:58:21.7007610Z 
+2022-12-27T02:58:21.7008060Z      _ _       _ _   _       _           _
+2022-12-27T02:58:21.7008930Z  ___|_| |_ _ _|_| |_| |_ _ _| |_ ___ ___| |
+2022-12-27T02:58:21.7010680Z |  _| | . | | | | | . | | | |   | -_| -_| |
+2022-12-27T02:58:21.7011170Z |___|_|___|___|_|_|___|_____|_|_|___|___|_|
+2022-12-27T02:58:21.7011410Z 
+2022-12-27T02:58:21.7011590Z cibuildwheel version 2.11.3
+2022-12-27T02:58:21.7012040Z 
+2022-12-27T02:58:21.7012240Z Build options:
+2022-12-27T02:58:21.7012530Z   platform: macos
+2022-12-27T02:58:21.7186270Z   architectures: arm64[0m
+2022-12-27T02:58:21.7186700Z   build_selector: 
+2022-12-27T02:58:21.7187170Z     build_config: cp39-macosx_arm64
+2022-12-27T02:58:21.7187560Z     skip_config: 
+2022-12-27T02:58:21.7187920Z     requires_python: None
+2022-12-27T02:58:21.7188490Z     prerelease_pythons: False[0m
+2022-12-27T02:58:21.7189040Z   [38;5;244mcontainer_engine: docker[0m
+2022-12-27T02:58:21.7189730Z   output_dir: /Users/runner/actions-runner/_work/python.build/python.build/build_grpcio114139/wheelsout[0m
+2022-12-27T02:58:21.7190810Z   package_dir: /Users/runner/actions-runner/_work/python.build/python.build/build_grpcio114139/grpcio-1.14.1[0m
+2022-12-27T02:58:21.7191260Z   test_selector: 
+2022-12-27T02:58:21.7191720Z     skip_config: *_arm64[0m
+2022-12-27T02:58:21.7192160Z   [38;5;244mbefore_all: [0m
+2022-12-27T02:58:21.7192930Z   before_build: pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi[0m
+2022-12-27T02:58:21.7193450Z   [38;5;244mbefore_test: [0m
+2022-12-27T02:58:21.7193820Z   [38;5;244mbuild_frontend: pip[0m
+2022-12-27T02:58:21.7194190Z   build_verbosity: 3[0m
+2022-12-27T02:58:21.7194500Z   [38;5;244mconfig_settings: [0m
+2022-12-27T02:58:21.7195080Z   [38;5;244mdependency_constraints: pinned[0m
+2022-12-27T02:58:21.7195380Z   environment: 
+2022-12-27T02:58:21.7195640Z     GRPC_PYTHON_BUILD_WITH_CYTHON=1
+2022-12-27T02:58:21.7195990Z     GRPC_BUILD_WITH_BORING_SSL_ASM=''
+2022-12-27T02:58:21.7196470Z     GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=TRUE
+2022-12-27T02:58:21.7197230Z     CFLAGS="-I/usr/local/opt/openssl@3/include"
+2022-12-27T02:58:21.7197660Z     LDFLAGS="-L/usr/local/opt/openssl@3/lib"
+2022-12-27T02:58:21.7198090Z     CPPFLAGS="-I/usr/local/opt/openssl@3/include"
+2022-12-27T02:58:21.7198460Z     MAKEFLAGS="-j$(sysctl -n hw.logicalcpu)"
+2022-12-27T02:58:21.7199120Z     PATH=/usr/local/opt/ccache/libexec:$PATH[0m
+2022-12-27T02:58:21.7199540Z   [38;5;244mmanylinux_images: None[0m
+2022-12-27T02:58:21.7199870Z   [38;5;244mmusllinux_images: None[0m
+2022-12-27T02:58:21.7200390Z   [38;5;244mrepair_command: delocate-wheel --require-archs {delocate_archs} -w {dest_dir} -v {wheel}[0m
+2022-12-27T02:58:21.7200850Z   [38;5;244mtest_command: [0m
+2022-12-27T02:58:21.7201390Z   [38;5;244mtest_extras: [0m
+2022-12-27T02:58:21.7201700Z   [38;5;244mtest_requires: [0m
+2022-12-27T02:58:21.7201870Z 
+2022-12-27T02:58:21.7202040Z Cache folder: /Users/runner/Library/Caches/cibuildwheel
+2022-12-27T02:58:21.7215250Z 
+2022-12-27T02:58:21.7215400Z Here we go!
+2022-12-27T02:58:21.7215570Z 
+2022-12-27T02:58:21.7282020Z 
+2022-12-27T02:58:21.7282330Z [1m[34mBuilding cp39-macosx_arm64 wheel[0m
+2022-12-27T02:58:21.7282750Z CPython 3.9 macOS arm64 - Apple Silicon
+2022-12-27T02:58:21.7282880Z 
+2022-12-27T02:58:21.7285410Z ##[group]Installing Python cp39...
+2022-12-27T02:58:21.7285650Z 
+2022-12-27T02:58:21.7285840Z + pkgutil --pkgs
+2022-12-27T02:58:21.7387450Z ##[endgroup]
+2022-12-27T02:58:21.7388430Z                                                               [32m✓ [0m0.01s
+2022-12-27T02:58:21.7388860Z ##[group]Setting up build environment...
+2022-12-27T02:58:21.7389000Z 
+2022-12-27T02:58:21.7408120Z + /Users/runner/hostedtoolcache/Python/3.9.16/x64/bin/python -sS /Users/runner/Library/Caches/cibuildwheel/virtualenv-20.17.0.pyz --activators= --no-periodic-update --pip=22.3.1 --setuptools=65.6.3 --wheel=0.38.4 --symlink-app-data --python /Library/Frameworks/Python.framework/Versions/3.9/bin/python3 /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv
+2022-12-27T02:58:21.9306070Z created virtual environment CPython3.9.13.final.0-64 in 48ms
+2022-12-27T02:58:21.9306940Z   creator CPython3Posix(dest=/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv, clear=False, no_vcs_ignore=False, global=False)
+2022-12-27T02:58:21.9307440Z   seeder FromAppData(download=False, pip=22.3.1, setuptools=65.6.3, wheel=0.38.4, via=symlink, app_data_dir=/Users/runner/Library/Application Support/virtualenv)
+2022-12-27T02:58:21.9307770Z     added seed packages: pip==22.3.1, setuptools==65.6.3, wheel==0.38.4
+2022-12-27T02:58:21.9402420Z + python -m pip install --upgrade pip -c /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/cibuildwheel/resources/constraints-python39.txt
+2022-12-27T02:58:22.2458550Z Requirement already satisfied: pip in ./lib/python3.9/site-packages (22.3.1)
+2022-12-27T02:58:22.3944440Z + which pip
+2022-12-27T02:58:22.3963110Z /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/bin/pip
+2022-12-27T02:58:22.3964930Z + pip --version
+2022-12-27T02:58:22.6237470Z pip 22.3.1 from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages/pip (python 3.9)
+2022-12-27T02:58:22.6446610Z + which pip
+2022-12-27T02:58:22.6473540Z + which python
+2022-12-27T02:58:22.6491190Z /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/bin/python
+2022-12-27T02:58:22.6493250Z + python --version
+2022-12-27T02:58:22.6539850Z Python 3.9.13
+2022-12-27T02:58:22.6542280Z + which python
+2022-12-27T02:58:22.6594850Z ##[endgroup]
+2022-12-27T02:58:22.6595450Z                                                               [32m✓ [0m0.92s
+2022-12-27T02:58:22.6596300Z ##[group]Installing build tools...
+2022-12-27T02:58:22.6596470Z 
+2022-12-27T02:58:22.6596840Z + pip install --upgrade setuptools wheel delocate -c /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/cibuildwheel/resources/constraints-python39.txt
+2022-12-27T02:58:22.9627970Z Requirement already satisfied: setuptools in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages (65.6.3)
+2022-12-27T02:58:23.2050980Z Requirement already satisfied: wheel in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages (0.38.4)
+2022-12-27T02:58:23.2537380Z Collecting delocate
+2022-12-27T02:58:23.2561870Z   Using cached delocate-0.10.3-py3-none-any.whl (142 kB)
+2022-12-27T02:58:23.2881460Z Collecting packaging>=20.9
+2022-12-27T02:58:23.2904970Z   Using cached packaging-21.3-py3-none-any.whl (40 kB)
+2022-12-27T02:58:23.3079750Z Collecting typing-extensions
+2022-12-27T02:58:23.3099970Z   Using cached typing_extensions-4.4.0-py3-none-any.whl (26 kB)
+2022-12-27T02:58:23.3504440Z Collecting pyparsing!=3.0.5,>=2.0.2
+2022-12-27T02:58:23.3525130Z   Using cached pyparsing-3.0.9-py3-none-any.whl (98 kB)
+2022-12-27T02:58:23.3905160Z Installing collected packages: typing-extensions, pyparsing, packaging, delocate
+2022-12-27T02:58:23.5393180Z Successfully installed delocate-0.10.3 packaging-21.3 pyparsing-3.0.9 typing-extensions-4.4.0
+2022-12-27T02:58:23.5829480Z ##[endgroup]
+2022-12-27T02:58:23.5830030Z                                                               [32m✓ [0m0.92s
+2022-12-27T02:58:23.5830370Z ##[group]Running before_build...
+2022-12-27T02:58:23.5830480Z 
+2022-12-27T02:58:23.5836130Z + pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi
+2022-12-27T02:58:24.2905750Z Collecting Cython
+2022-12-27T02:58:24.3003570Z   Using cached Cython-0.29.32-py2.py3-none-any.whl (986 kB)
+2022-12-27T02:58:24.3435940Z Installing collected packages: Cython
+2022-12-27T02:58:24.8211460Z Successfully installed Cython-0.29.32
+2022-12-27T02:58:25.6309880Z Collecting coverage>=4.0
+2022-12-27T02:58:25.6339220Z   Using cached coverage-7.0.1-cp39-cp39-macosx_10_9_x86_64.whl (188 kB)
+2022-12-27T02:58:26.0327200Z Collecting cython==0.28.3
+2022-12-27T02:58:26.0391860Z   Using cached Cython-0.28.3.tar.gz (1.9 MB)
+2022-12-27T02:58:26.5470750Z   Preparing metadata (setup.py): started
+2022-12-27T02:58:34.4632000Z   Preparing metadata (setup.py): finished with status 'done'
+2022-12-27T02:58:34.4844450Z Collecting enum34>=1.0.4
+2022-12-27T02:58:34.4868740Z   Using cached enum34-1.1.10-py3-none-any.whl (11 kB)
+2022-12-27T02:58:34.8101960Z Collecting protobuf>=3.5.0.post1
+2022-12-27T02:58:34.8135910Z   Using cached protobuf-4.21.12-cp37-abi3-macosx_10_9_universal2.whl (486 kB)
+2022-12-27T02:58:34.8346800Z Collecting six>=1.10
+2022-12-27T02:58:34.8367730Z   Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+2022-12-27T02:58:34.8386250Z Requirement already satisfied: wheel>=0.29 in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages (from -r requirements.txt (line 7)) (0.38.4)
+2022-12-27T02:58:34.8475420Z Building wheels for collected packages: cython
+2022-12-27T02:58:34.8480400Z   Building wheel for cython (setup.py): started
+2022-12-27T02:58:35.5371830Z   Building wheel for cython (setup.py): finished with status 'error'
+2022-12-27T02:58:35.5666940Z   error: subprocess-exited-with-error
+2022-12-27T02:58:35.5667450Z   
+2022-12-27T02:58:35.5669400Z   × python setup.py bdist_wheel did not run successfully.
+2022-12-27T02:58:35.5669970Z   │ exit code: 1
+2022-12-27T02:58:35.5671230Z   ╰─> [560 lines of output]
+2022-12-27T02:58:35.5671690Z       Unable to find pgen, not compiling formal grammar.
+2022-12-27T02:58:35.5672050Z       running bdist_wheel
+2022-12-27T02:58:35.5672740Z       running build
+2022-12-27T02:58:35.5673790Z       running build_py
+2022-12-27T02:58:35.5674070Z       creating build
+2022-12-27T02:58:35.5674490Z       creating build/lib.macosx-11.0-arm64-cpython-39
+2022-12-27T02:58:35.5675140Z       copying cython.py -> build/lib.macosx-11.0-arm64-cpython-39
+2022-12-27T02:58:35.5676470Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:35.5678070Z       copying Cython/TestUtils.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:35.5678890Z       copying Cython/StringIOTree.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:35.5679450Z       copying Cython/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:35.5680070Z       copying Cython/Coverage.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:35.5680570Z       copying Cython/Debugging.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:35.5681250Z       copying Cython/Utils.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:35.5681790Z       copying Cython/Shadow.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:35.5682280Z       copying Cython/CodeWriter.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:35.5682800Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:35.5683340Z       copying Cython/Build/Cythonize.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:35.5684060Z       copying Cython/Build/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:35.5684590Z       copying Cython/Build/IpythonMagic.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:35.5685170Z       copying Cython/Build/BuildExecutable.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:35.5685740Z       copying Cython/Build/Distutils.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:35.5686250Z       copying Cython/Build/Dependencies.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:35.5687000Z       copying Cython/Build/Inline.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:35.5687530Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5688450Z       copying Cython/Compiler/Optimize.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5689060Z       copying Cython/Compiler/Options.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5689820Z       copying Cython/Compiler/CodeGeneration.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5690450Z       copying Cython/Compiler/ModuleNode.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5691040Z       copying Cython/Compiler/DebugFlags.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5691570Z       copying Cython/Compiler/TypeSlots.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5692160Z       copying Cython/Compiler/Version.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5693010Z       copying Cython/Compiler/Parsing.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5693590Z       copying Cython/Compiler/Symtab.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5694120Z       copying Cython/Compiler/UtilNodes.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5694720Z       copying Cython/Compiler/Pythran.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5695430Z       copying Cython/Compiler/Naming.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5696150Z       copying Cython/Compiler/UtilityCode.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5696690Z       copying Cython/Compiler/TreePath.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5697090Z       copying Cython/Compiler/CmdLine.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5697460Z       copying Cython/Compiler/MemoryView.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5698170Z       copying Cython/Compiler/Code.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5698550Z       copying Cython/Compiler/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5698920Z       copying Cython/Compiler/TreeFragment.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5699300Z       copying Cython/Compiler/ParseTreeTransforms.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5699640Z       copying Cython/Compiler/Annotate.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5700120Z       copying Cython/Compiler/Lexicon.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5700490Z       copying Cython/Compiler/Interpreter.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5700830Z       copying Cython/Compiler/AutoDocTransforms.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5701200Z       copying Cython/Compiler/Visitor.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5701590Z       copying Cython/Compiler/Pipeline.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5701940Z       copying Cython/Compiler/Buffer.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5702260Z       copying Cython/Compiler/ExprNodes.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5702610Z       copying Cython/Compiler/CythonScope.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5702970Z       copying Cython/Compiler/Scanning.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5703360Z       copying Cython/Compiler/FusedNode.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5703690Z       copying Cython/Compiler/TypeInference.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5704210Z       copying Cython/Compiler/Builtin.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5704620Z       copying Cython/Compiler/Future.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5705120Z       copying Cython/Compiler/Errors.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5705480Z       copying Cython/Compiler/Nodes.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5705790Z       copying Cython/Compiler/Main.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5706160Z       copying Cython/Compiler/StringEncoding.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5706540Z       copying Cython/Compiler/AnalysedTreeTransforms.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5706940Z       copying Cython/Compiler/FlowControl.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5707270Z       copying Cython/Compiler/PyrexTypes.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5707660Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Runtime
+2022-12-27T02:58:35.5707960Z       copying Cython/Runtime/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Runtime
+2022-12-27T02:58:35.5708290Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Distutils
+2022-12-27T02:58:35.5708900Z       copying Cython/Distutils/old_build_ext.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Distutils
+2022-12-27T02:58:35.5709270Z       copying Cython/Distutils/build_ext.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Distutils
+2022-12-27T02:58:35.5709630Z       copying Cython/Distutils/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Distutils
+2022-12-27T02:58:35.5710140Z       copying Cython/Distutils/extension.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Distutils
+2022-12-27T02:58:35.5710480Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:35.5710910Z       copying Cython/Debugger/libcython.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:35.5711260Z       copying Cython/Debugger/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:35.5711580Z       copying Cython/Debugger/Cygdb.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:35.5711960Z       copying Cython/Debugger/DebugWriter.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:35.5712380Z       copying Cython/Debugger/libpython.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:35.5712740Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:35.5713080Z       copying Cython/Debugger/Tests/test_libcython_in_gdb.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:35.5713480Z       copying Cython/Debugger/Tests/TestLibCython.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:35.5713860Z       copying Cython/Debugger/Tests/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:35.5714310Z       copying Cython/Debugger/Tests/test_libpython_in_gdb.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:35.5714620Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5714950Z       copying Cython/Plex/Machines.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5715300Z       copying Cython/Plex/Actions.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5715600Z       copying Cython/Plex/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5716000Z       copying Cython/Plex/Timing.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5716490Z       copying Cython/Plex/Transitions.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5716880Z       copying Cython/Plex/Regexps.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5717180Z       copying Cython/Plex/DFA.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5717600Z       copying Cython/Plex/Errors.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5717950Z       copying Cython/Plex/Traditional.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5718300Z       copying Cython/Plex/Lexicons.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5718610Z       copying Cython/Plex/Scanners.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5718920Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:35.5719330Z       copying Cython/Tests/TestStringIOTree.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:35.5719660Z       copying Cython/Tests/TestCodeWriter.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:35.5720090Z       copying Cython/Tests/TestJediTyper.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:35.5720450Z       copying Cython/Tests/xmlrunner.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:35.5720860Z       copying Cython/Tests/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:35.5721160Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Build/Tests
+2022-12-27T02:58:35.5721510Z       copying Cython/Build/Tests/TestInline.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build/Tests
+2022-12-27T02:58:35.5721880Z       copying Cython/Build/Tests/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build/Tests
+2022-12-27T02:58:35.5722430Z       copying Cython/Build/Tests/TestIpythonMagic.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build/Tests
+2022-12-27T02:58:35.5722860Z       copying Cython/Build/Tests/TestStripLiterals.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build/Tests
+2022-12-27T02:58:35.5723210Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5723570Z       copying Cython/Compiler/Tests/TestGrammar.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5724090Z       copying Cython/Compiler/Tests/TestCmdLine.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5724500Z       copying Cython/Compiler/Tests/TestSignatureMatching.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5724990Z       copying Cython/Compiler/Tests/TestTreeFragment.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5725410Z       copying Cython/Compiler/Tests/TestParseTreeTransforms.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5785570Z       copying Cython/Compiler/Tests/TestBuffer.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5786070Z       copying Cython/Compiler/Tests/TestUtilityLoad.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5786730Z       copying Cython/Compiler/Tests/TestFlowControl.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5787120Z       copying Cython/Compiler/Tests/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5787500Z       copying Cython/Compiler/Tests/TestTreePath.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5787850Z       copying Cython/Compiler/Tests/TestTypes.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5788220Z       copying Cython/Compiler/Tests/TestVisitor.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5788810Z       copying Cython/Compiler/Tests/TestMemView.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:35.5789180Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5789380Z   Running setup.py clean for cython
+2022-12-27T02:58:35.5789810Z       copying Cython/Utility/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5790130Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Tempita
+2022-12-27T02:58:35.5790430Z       copying Cython/Tempita/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tempita
+2022-12-27T02:58:35.5790730Z       copying Cython/Tempita/_looper.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tempita
+2022-12-27T02:58:35.5791070Z       copying Cython/Tempita/_tempita.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tempita
+2022-12-27T02:58:35.5791410Z       copying Cython/Tempita/compat3.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tempita
+2022-12-27T02:58:35.5791680Z       creating build/lib.macosx-11.0-arm64-cpython-39/pyximport
+2022-12-27T02:58:35.5791970Z       copying pyximport/pyximport.py -> build/lib.macosx-11.0-arm64-cpython-39/pyximport
+2022-12-27T02:58:35.5792280Z       copying pyximport/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/pyximport
+2022-12-27T02:58:35.5792610Z       copying pyximport/pyxbuild.py -> build/lib.macosx-11.0-arm64-cpython-39/pyximport
+2022-12-27T02:58:35.5792910Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes
+2022-12-27T02:58:35.5793230Z       copying Cython/Includes/openmp.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes
+2022-12-27T02:58:35.5793560Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5793880Z       copying Cython/Includes/posix/types.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5794430Z       copying Cython/Includes/posix/select.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5794790Z       copying Cython/Includes/posix/resource.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5795140Z       copying Cython/Includes/posix/wait.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5795560Z       copying Cython/Includes/posix/stat.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5796090Z       copying Cython/Includes/posix/dlfcn.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5796460Z       copying Cython/Includes/posix/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5796820Z       copying Cython/Includes/posix/strings.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5797110Z       copying Cython/Includes/posix/stdio.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5797460Z       copying Cython/Includes/posix/stdlib.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5797760Z       copying Cython/Includes/posix/mman.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5798110Z       copying Cython/Includes/posix/ioctl.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5798440Z       copying Cython/Includes/posix/signal.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5798770Z       copying Cython/Includes/posix/fcntl.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5799110Z       copying Cython/Includes/posix/unistd.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5799450Z       copying Cython/Includes/posix/time.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:35.5799750Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5800300Z       copying Cython/Includes/libc/locale.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5800690Z       copying Cython/Includes/libc/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5801050Z       copying Cython/Includes/libc/math.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5801370Z       copying Cython/Includes/libc/limits.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5801710Z       copying Cython/Includes/libc/setjmp.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5802050Z       copying Cython/Includes/libc/string.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5802360Z       copying Cython/Includes/libc/stdint.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5802720Z       copying Cython/Includes/libc/stdio.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5803070Z       copying Cython/Includes/libc/stdlib.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5803430Z       copying Cython/Includes/libc/float.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5803750Z       copying Cython/Includes/libc/signal.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5804090Z       copying Cython/Includes/libc/stddef.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5804450Z       copying Cython/Includes/libc/errno.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5804810Z       copying Cython/Includes/libc/time.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:35.5805260Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/numpy
+2022-12-27T02:58:35.5805620Z       copying Cython/Includes/numpy/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/numpy
+2022-12-27T02:58:35.5805950Z       copying Cython/Includes/numpy/math.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/numpy
+2022-12-27T02:58:35.5806240Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5806560Z       copying Cython/Includes/cpython/ref.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5806920Z       copying Cython/Includes/cpython/long.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5807250Z       copying Cython/Includes/cpython/iterator.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5807580Z       copying Cython/Includes/cpython/weakref.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5807960Z       copying Cython/Includes/cpython/cobject.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5808320Z       copying Cython/Includes/cpython/set.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5808680Z       copying Cython/Includes/cpython/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5809000Z       copying Cython/Includes/cpython/object.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5809350Z       copying Cython/Includes/cpython/slice.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5809710Z       copying Cython/Includes/cpython/getargs.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5810080Z       copying Cython/Includes/cpython/module.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5810540Z       copying Cython/Includes/cpython/version.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5810960Z       copying Cython/Includes/cpython/buffer.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5811340Z       copying Cython/Includes/cpython/bytes.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5811690Z       copying Cython/Includes/cpython/exc.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5812020Z       copying Cython/Includes/cpython/int.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5812430Z       copying Cython/Includes/cpython/mapping.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5812760Z       copying Cython/Includes/cpython/string.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5813110Z       copying Cython/Includes/cpython/dict.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5813490Z       copying Cython/Includes/cpython/float.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5813860Z       copying Cython/Includes/cpython/complex.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5814240Z       copying Cython/Includes/cpython/array.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5814620Z       copying Cython/Includes/cpython/function.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5814990Z       copying Cython/Includes/cpython/sequence.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5815350Z       copying Cython/Includes/cpython/method.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5815860Z       copying Cython/Includes/cpython/oldbuffer.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5816260Z       copying Cython/Includes/cpython/longintrepr.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5816630Z       copying Cython/Includes/cpython/pycapsule.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5817010Z       copying Cython/Includes/cpython/tuple.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5817340Z       copying Cython/Includes/cpython/list.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5817720Z       copying Cython/Includes/cpython/pystate.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5818050Z       copying Cython/Includes/cpython/mem.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5818430Z       copying Cython/Includes/cpython/datetime.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5818770Z       copying Cython/Includes/cpython/pythread.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5819140Z       copying Cython/Includes/cpython/instance.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5819550Z       copying Cython/Includes/cpython/unicode.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5819980Z       copying Cython/Includes/cpython/number.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5820320Z       copying Cython/Includes/cpython/type.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5820690Z       copying Cython/Includes/cpython/bool.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:35.5821070Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5821540Z       copying Cython/Includes/libcpp/unordered_set.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5821950Z       copying Cython/Includes/libcpp/memory.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5822320Z       copying Cython/Includes/libcpp/iterator.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5822690Z       copying Cython/Includes/libcpp/set.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5823020Z       copying Cython/Includes/libcpp/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5823380Z       copying Cython/Includes/libcpp/limits.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5823740Z       copying Cython/Includes/libcpp/deque.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5824070Z       copying Cython/Includes/libcpp/stack.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5824400Z       copying Cython/Includes/libcpp/string.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5824750Z       copying Cython/Includes/libcpp/typeindex.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5825070Z       copying Cython/Includes/libcpp/map.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5825390Z       copying Cython/Includes/libcpp/complex.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5825690Z       copying Cython/Includes/libcpp/vector.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5826090Z       copying Cython/Includes/libcpp/functional.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5826650Z       copying Cython/Includes/libcpp/algorithm.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5827030Z       copying Cython/Includes/libcpp/list.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5827360Z       copying Cython/Includes/libcpp/queue.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5827740Z       copying Cython/Includes/libcpp/unordered_map.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5828080Z       copying Cython/Includes/libcpp/cast.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5828430Z       copying Cython/Includes/libcpp/typeinfo.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5828730Z       copying Cython/Includes/libcpp/pair.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5829030Z       copying Cython/Includes/libcpp/utility.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:35.5829300Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5829600Z       copying Cython/Includes/Deprecated/python_number.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5829940Z       copying Cython/Includes/Deprecated/python_unicode.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5830270Z       copying Cython/Includes/Deprecated/python_dict.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5830590Z       copying Cython/Includes/Deprecated/python_mem.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5830900Z       copying Cython/Includes/Deprecated/stl.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5831220Z       copying Cython/Includes/Deprecated/python2.5.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5831660Z       copying Cython/Includes/Deprecated/python_method.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5832030Z       copying Cython/Includes/Deprecated/python_pycapsule.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5832360Z       copying Cython/Includes/Deprecated/python_oldbuffer.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5832690Z       copying Cython/Includes/Deprecated/python_complex.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5833020Z       copying Cython/Includes/Deprecated/python_bytes.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5833350Z       copying Cython/Includes/Deprecated/python_iterator.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5833680Z       copying Cython/Includes/Deprecated/python_long.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5833990Z       copying Cython/Includes/Deprecated/stdio.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5834310Z       copying Cython/Includes/Deprecated/stdlib.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5834630Z       copying Cython/Includes/Deprecated/python_float.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5834950Z       copying Cython/Includes/Deprecated/python_buffer.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5835280Z       copying Cython/Includes/Deprecated/python_mapping.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5835760Z       copying Cython/Includes/Deprecated/python_instance.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5836090Z       copying Cython/Includes/Deprecated/python_int.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5836410Z       copying Cython/Includes/Deprecated/python_exc.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5836730Z       copying Cython/Includes/Deprecated/python_string.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5837140Z       copying Cython/Includes/Deprecated/python_object.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5837500Z       copying Cython/Includes/Deprecated/python_bool.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5837820Z       copying Cython/Includes/Deprecated/python_module.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5838140Z       copying Cython/Includes/Deprecated/python_set.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5838470Z       copying Cython/Includes/Deprecated/python_getargs.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5838790Z       copying Cython/Includes/Deprecated/python_type.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5839110Z       copying Cython/Includes/Deprecated/python_version.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5839440Z       copying Cython/Includes/Deprecated/python_tuple.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5839770Z       copying Cython/Includes/Deprecated/python_weakref.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5840140Z       copying Cython/Includes/Deprecated/python_ref.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5840590Z       copying Cython/Includes/Deprecated/python_cobject.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5840950Z       copying Cython/Includes/Deprecated/python_function.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5841280Z       copying Cython/Includes/Deprecated/python_sequence.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5841600Z       copying Cython/Includes/Deprecated/python.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5841920Z       copying Cython/Includes/Deprecated/python_list.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:35.5842230Z       copying Cython/Compiler/ParseTreeTransforms.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5842530Z       copying Cython/Compiler/Scanning.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5842820Z       copying Cython/Compiler/Parsing.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5843100Z       copying Cython/Compiler/FlowControl.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5843390Z       copying Cython/Compiler/Code.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5843660Z       copying Cython/Compiler/Visitor.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:35.5843940Z       copying Cython/Runtime/refnanny.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Runtime
+2022-12-27T02:58:35.5844230Z       copying Cython/Debugger/Tests/codefile -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:35.5844520Z       copying Cython/Debugger/Tests/cfuncs.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:35.5844950Z       copying Cython/Plex/Scanners.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5845220Z       copying Cython/Plex/Actions.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:35.5845500Z       copying Cython/Utility/CpdefEnums.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5845800Z       copying Cython/Utility/TestCyUtilityLoader.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5846080Z       copying Cython/Utility/CppConvert.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5846370Z       copying Cython/Utility/TestCythonScope.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5846650Z       copying Cython/Utility/MemoryView.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5846920Z       copying Cython/Utility/CConvert.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5847200Z       copying Cython/Utility/ObjectHandling.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5847480Z       copying Cython/Utility/Buffer.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5847750Z       copying Cython/Utility/Builtins.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5848020Z       copying Cython/Utility/Overflow.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5848290Z       copying Cython/Utility/Capsule.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5848570Z       copying Cython/Utility/FunctionArguments.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5848860Z       copying Cython/Utility/TestUtilityLoader.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5849150Z       copying Cython/Utility/MemoryView_C.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5849540Z       copying Cython/Utility/Printing.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5849860Z       copying Cython/Utility/CythonFunction.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5850140Z       copying Cython/Utility/Complex.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5850410Z       copying Cython/Utility/StringTools.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5850690Z       copying Cython/Utility/ImportExport.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5850960Z       copying Cython/Utility/CMath.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5851240Z       copying Cython/Utility/CommonStructures.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5851510Z       copying Cython/Utility/Embed.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5851800Z       copying Cython/Utility/ExtensionTypes.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5852080Z       copying Cython/Utility/Optimize.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5852360Z       copying Cython/Utility/ModuleSetupCode.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5852630Z       copying Cython/Utility/Profile.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5852910Z       copying Cython/Utility/Exceptions.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5853180Z       copying Cython/Utility/AsyncGen.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5853510Z       copying Cython/Utility/TypeConversion.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5854100Z       copying Cython/Utility/Coroutine.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5855010Z       copying Cython/Utility/arrayarray.h -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5855320Z       copying Cython/Utility/CppSupport.cpp -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:35.5855500Z       running build_ext
+2022-12-27T02:58:35.5855680Z       building 'Cython.Plex.Scanners' extension
+2022-12-27T02:58:35.5855890Z       creating build/temp.macosx-11.0-arm64-cpython-39
+2022-12-27T02:58:35.5856120Z       creating build/temp.macosx-11.0-arm64-cpython-39/private
+2022-12-27T02:58:35.5856350Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var
+2022-12-27T02:58:35.5856590Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders
+2022-12-27T02:58:35.5857210Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51
+2022-12-27T02:58:35.5857970Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn
+2022-12-27T02:58:35.5858520Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T
+2022-12-27T02:58:35.5859220Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf
+2022-12-27T02:58:35.5859980Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a
+2022-12-27T02:58:35.5860680Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython
+2022-12-27T02:58:35.5861490Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex
+2022-12-27T02:58:35.5863620Z       gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.9/include/python3.9 -c /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c -o build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.o
+2022-12-27T02:58:35.5865030Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:3495:51: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5865510Z                 __pyx_t_8 = (__pyx_v_data != Py_None)&&(__Pyx_PyUnicode_IS_TRUE(__pyx_v_data) != 0);
+2022-12-27T02:58:35.5865780Z                                                         ^
+2022-12-27T02:58:35.5866370Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:422:108: note: expanded from macro '__Pyx_PyUnicode_IS_TRUE'
+2022-12-27T02:58:35.5866850Z         #define __Pyx_PyUnicode_IS_TRUE(u)      (0 != (likely(PyUnicode_IS_READY(u)) ? PyUnicode_GET_LENGTH(u) : PyUnicode_GET_SIZE(u)))
+2022-12-27T02:58:35.5867140Z                                                                                                                  ^
+2022-12-27T02:58:35.5867690Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5868060Z             PyUnicode_WSTR_LENGTH(op) :                    \
+2022-12-27T02:58:35.5868270Z             ^
+2022-12-27T02:58:35.5869120Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:35.5869540Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:35.5869800Z                                         ^
+2022-12-27T02:58:35.5870370Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5870750Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:35.5870940Z       ^
+2022-12-27T02:58:35.5871430Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5871820Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5872080Z                                                            ^
+2022-12-27T02:58:35.5872690Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:3495:51: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5873200Z                 __pyx_t_8 = (__pyx_v_data != Py_None)&&(__Pyx_PyUnicode_IS_TRUE(__pyx_v_data) != 0);
+2022-12-27T02:58:35.5873470Z                                                         ^
+2022-12-27T02:58:35.5874110Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:422:108: note: expanded from macro '__Pyx_PyUnicode_IS_TRUE'
+2022-12-27T02:58:35.5874610Z         #define __Pyx_PyUnicode_IS_TRUE(u)      (0 != (likely(PyUnicode_IS_READY(u)) ? PyUnicode_GET_LENGTH(u) : PyUnicode_GET_SIZE(u)))
+2022-12-27T02:58:35.5874940Z                                                                                                                  ^
+2022-12-27T02:58:35.5875750Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5876190Z             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+2022-12-27T02:58:35.5876400Z                    ^
+2022-12-27T02:58:35.5876980Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5877400Z       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+2022-12-27T02:58:35.5877630Z       ^
+2022-12-27T02:58:35.5878110Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5878480Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5878760Z                                                            ^
+2022-12-27T02:58:35.5879480Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:3495:51: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5880020Z                 __pyx_t_8 = (__pyx_v_data != Py_None)&&(__Pyx_PyUnicode_IS_TRUE(__pyx_v_data) != 0);
+2022-12-27T02:58:35.5880310Z                                                         ^
+2022-12-27T02:58:35.5880950Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:422:108: note: expanded from macro '__Pyx_PyUnicode_IS_TRUE'
+2022-12-27T02:58:35.5881440Z         #define __Pyx_PyUnicode_IS_TRUE(u)      (0 != (likely(PyUnicode_IS_READY(u)) ? PyUnicode_GET_LENGTH(u) : PyUnicode_GET_SIZE(u)))
+2022-12-27T02:58:35.5881760Z                                                                                                                  ^
+2022-12-27T02:58:35.5882650Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5883010Z              PyUnicode_WSTR_LENGTH(op)))
+2022-12-27T02:58:35.5883210Z              ^
+2022-12-27T02:58:35.5883730Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:35.5884140Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:35.5884390Z                                         ^
+2022-12-27T02:58:35.5884980Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5885330Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:35.5885500Z       ^
+2022-12-27T02:58:35.5885950Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5886340Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5886600Z                                                            ^
+2022-12-27T02:58:35.5887240Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:8518:46: error: no member named 'tp_print' in 'struct _typeobject'
+2022-12-27T02:58:35.5887680Z         __pyx_type_6Cython_4Plex_8Scanners_Scanner.tp_print = 0;
+2022-12-27T02:58:35.5887930Z         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+2022-12-27T02:58:35.5888630Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:22: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5889120Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5889360Z                            ^
+2022-12-27T02:58:35.5890160Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5890590Z             PyUnicode_WSTR_LENGTH(op) :                    \
+2022-12-27T02:58:35.5890810Z             ^
+2022-12-27T02:58:35.5891350Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:35.5891780Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:35.5892050Z                                         ^
+2022-12-27T02:58:35.5892630Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5893010Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:35.5893200Z       ^
+2022-12-27T02:58:35.5893680Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5894060Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5894330Z                                                            ^
+2022-12-27T02:58:35.5895020Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:22: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5895490Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5895720Z                            ^
+2022-12-27T02:58:35.5896260Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5896850Z             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+2022-12-27T02:58:35.5897070Z                    ^
+2022-12-27T02:58:35.5897670Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5898090Z       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+2022-12-27T02:58:35.5898330Z       ^
+2022-12-27T02:58:35.5898790Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5899170Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5899440Z                                                            ^
+2022-12-27T02:58:35.5900200Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:22: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5900700Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5900950Z                            ^
+2022-12-27T02:58:35.5901460Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5901810Z              PyUnicode_WSTR_LENGTH(op)))
+2022-12-27T02:58:35.5902000Z              ^
+2022-12-27T02:58:35.5902510Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:35.5902910Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:35.5903160Z                                         ^
+2022-12-27T02:58:35.5903730Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5904360Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:35.5904590Z       ^
+2022-12-27T02:58:35.5905100Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5905490Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5905760Z                                                            ^
+2022-12-27T02:58:35.5906440Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:52: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5906930Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5907180Z                                                          ^
+2022-12-27T02:58:35.5907710Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5908070Z             PyUnicode_WSTR_LENGTH(op) :                    \
+2022-12-27T02:58:35.5908270Z             ^
+2022-12-27T02:58:35.5908790Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:35.5909180Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:35.5909450Z                                         ^
+2022-12-27T02:58:35.5910020Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5910400Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:35.5910790Z       ^
+2022-12-27T02:58:35.5911270Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5911660Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5911920Z                                                            ^
+2022-12-27T02:58:35.5912620Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:52: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5913090Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5913350Z                                                          ^
+2022-12-27T02:58:35.5913880Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5914250Z             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+2022-12-27T02:58:35.5914470Z                    ^
+2022-12-27T02:58:35.5915010Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5915440Z       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+2022-12-27T02:58:35.5915670Z       ^
+2022-12-27T02:58:35.5916160Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5916540Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5916800Z                                                            ^
+2022-12-27T02:58:35.5917510Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:52: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5918180Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5918490Z                                                          ^
+2022-12-27T02:58:35.5919050Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5919420Z              PyUnicode_WSTR_LENGTH(op)))
+2022-12-27T02:58:35.5919620Z              ^
+2022-12-27T02:58:35.5920210Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:35.5920610Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:35.5920870Z                                         ^
+2022-12-27T02:58:35.5921460Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5921840Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:35.5922020Z       ^
+2022-12-27T02:58:35.5922500Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5922870Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5923150Z                                                            ^
+2022-12-27T02:58:35.5923860Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:26: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5924350Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5924600Z                                ^
+2022-12-27T02:58:35.5925350Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5925730Z             PyUnicode_WSTR_LENGTH(op) :                    \
+2022-12-27T02:58:35.5925940Z             ^
+2022-12-27T02:58:35.5926480Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:35.5926890Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:35.5927160Z                                         ^
+2022-12-27T02:58:35.5927730Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5928110Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:35.5928300Z       ^
+2022-12-27T02:58:35.5928790Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5929170Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5929450Z                                                            ^
+2022-12-27T02:58:35.5930140Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:26: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5930610Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5930860Z                                ^
+2022-12-27T02:58:35.5931400Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5931800Z             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+2022-12-27T02:58:35.5932030Z                    ^
+2022-12-27T02:58:35.5932780Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5933280Z       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+2022-12-27T02:58:35.5933520Z       ^
+2022-12-27T02:58:35.5934020Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5934400Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5934660Z                                                            ^
+2022-12-27T02:58:35.5935350Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:26: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5935850Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5936100Z                                ^
+2022-12-27T02:58:35.5936710Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5937140Z              PyUnicode_WSTR_LENGTH(op)))
+2022-12-27T02:58:35.5937420Z              ^
+2022-12-27T02:58:35.5937960Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:35.5938370Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:35.5938620Z                                         ^
+2022-12-27T02:58:35.5939200Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5939840Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:35.5940030Z       ^
+2022-12-27T02:58:35.5940550Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5940930Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5941210Z                                                            ^
+2022-12-27T02:58:35.5941890Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:59: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5942370Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5942650Z                                                                 ^
+2022-12-27T02:58:35.5943210Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5943590Z             PyUnicode_WSTR_LENGTH(op) :                    \
+2022-12-27T02:58:35.5943800Z             ^
+2022-12-27T02:58:35.5944320Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:35.5944730Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:35.5944990Z                                         ^
+2022-12-27T02:58:35.5945580Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5945950Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:35.5946120Z       ^
+2022-12-27T02:58:35.5946600Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5946980Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5947400Z                                                            ^
+2022-12-27T02:58:35.5948140Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:59: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5948620Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5948890Z                                                                 ^
+2022-12-27T02:58:35.5949430Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5949810Z             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+2022-12-27T02:58:35.5950040Z                    ^
+2022-12-27T02:58:35.5950610Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5951050Z       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+2022-12-27T02:58:35.5951280Z       ^
+2022-12-27T02:58:35.5951760Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5952130Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5952400Z                                                            ^
+2022-12-27T02:58:35.5953090Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:59: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5953790Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:35.5954040Z                                                                 ^
+2022-12-27T02:58:35.5954800Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:35.5955150Z              PyUnicode_WSTR_LENGTH(op)))
+2022-12-27T02:58:35.5955350Z              ^
+2022-12-27T02:58:35.5955880Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:35.5956290Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:35.5956540Z                                         ^
+2022-12-27T02:58:35.5957120Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5957500Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:35.5957690Z       ^
+2022-12-27T02:58:35.5958180Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5958540Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5958820Z                                                            ^
+2022-12-27T02:58:35.5959520Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9540:16: warning: 'PyUnicode_FromUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:35.5960020Z               return PyUnicode_FromUnicode(NULL, 0);
+2022-12-27T02:58:35.5960240Z                      ^
+2022-12-27T02:58:35.5960830Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:551:1: note: 'PyUnicode_FromUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:35.5961270Z       Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(
+2022-12-27T02:58:35.5961650Z       ^
+2022-12-27T02:58:35.5962200Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:35.5962510Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:35.5962670Z                                                            ^
+2022-12-27T02:58:35.5962790Z       16 warnings and 1 error generated.
+2022-12-27T02:58:35.5963000Z       error: command '/usr/bin/gcc' failed with exit code 1
+2022-12-27T02:58:35.5963140Z       [end of output]
+2022-12-27T02:58:35.5963240Z   
+2022-12-27T02:58:35.5963390Z   note: This error originates from a subprocess, and is likely not a problem with pip.
+2022-12-27T02:58:35.5963560Z   ERROR: Failed building wheel for cython
+2022-12-27T02:58:35.8528700Z Failed to build cython
+2022-12-27T02:58:35.9085290Z Installing collected packages: enum34, six, protobuf, cython, coverage
+2022-12-27T02:58:36.0977050Z   Attempting uninstall: cython
+2022-12-27T02:58:36.0983700Z     Found existing installation: Cython 0.29.32
+2022-12-27T02:58:36.2571780Z     Uninstalling Cython-0.29.32:
+2022-12-27T02:58:36.2681210Z       Successfully uninstalled Cython-0.29.32
+2022-12-27T02:58:36.2694110Z   Running setup.py install for cython: started
+2022-12-27T02:58:36.9418760Z   Running setup.py install for cython: finished with status 'error'
+2022-12-27T02:58:36.9672630Z   error: subprocess-exited-with-error
+2022-12-27T02:58:36.9672840Z   
+2022-12-27T02:58:36.9673120Z   × Running setup.py install for cython did not run successfully.
+2022-12-27T02:58:36.9673340Z   │ exit code: 1
+2022-12-27T02:58:36.9673520Z   ╰─> [562 lines of output]
+2022-12-27T02:58:36.9673700Z       Unable to find pgen, not compiling formal grammar.
+2022-12-27T02:58:36.9673870Z       running install
+2022-12-27T02:58:36.9674880Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+2022-12-27T02:58:36.9675250Z         warnings.warn(
+2022-12-27T02:58:36.9675400Z       running build
+2022-12-27T02:58:36.9675530Z       running build_py
+2022-12-27T02:58:36.9675670Z       creating build
+2022-12-27T02:58:36.9675910Z       creating build/lib.macosx-11.0-arm64-cpython-39
+2022-12-27T02:58:36.9676180Z       copying cython.py -> build/lib.macosx-11.0-arm64-cpython-39
+2022-12-27T02:58:36.9676460Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:36.9676760Z       copying Cython/TestUtils.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:36.9677090Z       copying Cython/StringIOTree.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:36.9677400Z       copying Cython/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:36.9677710Z       copying Cython/Coverage.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:36.9678020Z       copying Cython/Debugging.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:36.9678320Z       copying Cython/Utils.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:36.9678620Z       copying Cython/Shadow.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:36.9679020Z       copying Cython/CodeWriter.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython
+2022-12-27T02:58:36.9679320Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:36.9679630Z       copying Cython/Build/Cythonize.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:36.9680040Z       copying Cython/Build/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:36.9680380Z       copying Cython/Build/IpythonMagic.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:36.9680880Z       copying Cython/Build/BuildExecutable.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:36.9681250Z       copying Cython/Build/Distutils.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:36.9681590Z       copying Cython/Build/Dependencies.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:36.9681920Z       copying Cython/Build/Inline.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build
+2022-12-27T02:58:36.9682220Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9682540Z       copying Cython/Compiler/Optimize.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9682890Z       copying Cython/Compiler/Options.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9683240Z       copying Cython/Compiler/CodeGeneration.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9683600Z       copying Cython/Compiler/ModuleNode.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9683940Z       copying Cython/Compiler/DebugFlags.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9684290Z       copying Cython/Compiler/TypeSlots.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9684620Z       copying Cython/Compiler/Version.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9684950Z       copying Cython/Compiler/Parsing.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9685230Z       copying Cython/Compiler/Symtab.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9685500Z       copying Cython/Compiler/UtilNodes.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9685770Z       copying Cython/Compiler/Pythran.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9686150Z       copying Cython/Compiler/Naming.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9686430Z       copying Cython/Compiler/UtilityCode.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9686710Z       copying Cython/Compiler/TreePath.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9686980Z       copying Cython/Compiler/CmdLine.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9687250Z       copying Cython/Compiler/MemoryView.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9687530Z       copying Cython/Compiler/Code.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9687800Z       copying Cython/Compiler/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9688070Z       copying Cython/Compiler/TreeFragment.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9688380Z       copying Cython/Compiler/ParseTreeTransforms.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9688660Z       copying Cython/Compiler/Annotate.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9688930Z       copying Cython/Compiler/Lexicon.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9689210Z       copying Cython/Compiler/Interpreter.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9689490Z       copying Cython/Compiler/AutoDocTransforms.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9689780Z       copying Cython/Compiler/Visitor.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9690050Z       copying Cython/Compiler/Pipeline.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9690330Z       copying Cython/Compiler/Buffer.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9690680Z       copying Cython/Compiler/ExprNodes.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9690990Z       copying Cython/Compiler/CythonScope.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9691260Z       copying Cython/Compiler/Scanning.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9691690Z       copying Cython/Compiler/FusedNode.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9692050Z       copying Cython/Compiler/TypeInference.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9692650Z       copying Cython/Compiler/Builtin.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9693010Z       copying Cython/Compiler/Future.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9693360Z       copying Cython/Compiler/Errors.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9693720Z       copying Cython/Compiler/Nodes.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9694040Z       copying Cython/Compiler/Main.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9694470Z       copying Cython/Compiler/StringEncoding.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9694860Z       copying Cython/Compiler/AnalysedTreeTransforms.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9695250Z       copying Cython/Compiler/FlowControl.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9695580Z       copying Cython/Compiler/PyrexTypes.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9695960Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Runtime
+2022-12-27T02:58:36.9696300Z       copying Cython/Runtime/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Runtime
+2022-12-27T02:58:36.9696710Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Distutils
+2022-12-27T02:58:36.9707730Z       copying Cython/Distutils/old_build_ext.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Distutils
+2022-12-27T02:58:36.9708150Z       copying Cython/Distutils/build_ext.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Distutils
+2022-12-27T02:58:36.9708450Z       copying Cython/Distutils/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Distutils
+2022-12-27T02:58:36.9708740Z       copying Cython/Distutils/extension.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Distutils
+2022-12-27T02:58:36.9708990Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:36.9709260Z       copying Cython/Debugger/libcython.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:36.9709550Z       copying Cython/Debugger/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:36.9709830Z       copying Cython/Debugger/Cygdb.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:36.9710120Z       copying Cython/Debugger/DebugWriter.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:36.9710400Z       copying Cython/Debugger/libpython.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger
+2022-12-27T02:58:36.9710660Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:36.9710960Z       copying Cython/Debugger/Tests/test_libcython_in_gdb.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:36.9711280Z       copying Cython/Debugger/Tests/TestLibCython.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:36.9711570Z       copying Cython/Debugger/Tests/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:36.9711880Z       copying Cython/Debugger/Tests/test_libpython_in_gdb.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:36.9712280Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9712580Z       copying Cython/Plex/Machines.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9712850Z       copying Cython/Plex/Actions.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9713110Z       copying Cython/Plex/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9713370Z       copying Cython/Plex/Timing.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9713640Z       copying Cython/Plex/Transitions.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9713910Z       copying Cython/Plex/Regexps.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9714170Z       copying Cython/Plex/DFA.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9714440Z       copying Cython/Plex/Errors.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9714710Z       copying Cython/Plex/Traditional.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9714980Z       copying Cython/Plex/Lexicons.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9715240Z       copying Cython/Plex/Scanners.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9715470Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:36.9715740Z       copying Cython/Tests/TestStringIOTree.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:36.9716030Z       copying Cython/Tests/TestCodeWriter.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:36.9716310Z       copying Cython/Tests/TestJediTyper.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:36.9716700Z       copying Cython/Tests/xmlrunner.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:36.9716980Z       copying Cython/Tests/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tests
+2022-12-27T02:58:36.9717230Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Build/Tests
+2022-12-27T02:58:36.9717510Z       copying Cython/Build/Tests/TestInline.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build/Tests
+2022-12-27T02:58:36.9717800Z       copying Cython/Build/Tests/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build/Tests
+2022-12-27T02:58:36.9718100Z       copying Cython/Build/Tests/TestIpythonMagic.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build/Tests
+2022-12-27T02:58:36.9718410Z       copying Cython/Build/Tests/TestStripLiterals.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Build/Tests
+2022-12-27T02:58:36.9718680Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9718960Z       copying Cython/Compiler/Tests/TestGrammar.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9719270Z       copying Cython/Compiler/Tests/TestCmdLine.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9719590Z       copying Cython/Compiler/Tests/TestSignatureMatching.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9719950Z       copying Cython/Compiler/Tests/TestTreeFragment.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9720290Z       copying Cython/Compiler/Tests/TestParseTreeTransforms.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9720610Z       copying Cython/Compiler/Tests/TestBuffer.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9720920Z       copying Cython/Compiler/Tests/TestUtilityLoad.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9721230Z       copying Cython/Compiler/Tests/TestFlowControl.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9721620Z       copying Cython/Compiler/Tests/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9721950Z       copying Cython/Compiler/Tests/TestTreePath.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9722260Z       copying Cython/Compiler/Tests/TestTypes.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9722550Z       copying Cython/Compiler/Tests/TestVisitor.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9722850Z       copying Cython/Compiler/Tests/TestMemView.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler/Tests
+2022-12-27T02:58:36.9723110Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9723370Z       copying Cython/Utility/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9723620Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Tempita
+2022-12-27T02:58:36.9723870Z       copying Cython/Tempita/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tempita
+2022-12-27T02:58:36.9724140Z       copying Cython/Tempita/_looper.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tempita
+2022-12-27T02:58:36.9724420Z       copying Cython/Tempita/_tempita.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tempita
+2022-12-27T02:58:36.9724680Z       copying Cython/Tempita/compat3.py -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Tempita
+2022-12-27T02:58:36.9724930Z       creating build/lib.macosx-11.0-arm64-cpython-39/pyximport
+2022-12-27T02:58:36.9725190Z       copying pyximport/pyximport.py -> build/lib.macosx-11.0-arm64-cpython-39/pyximport
+2022-12-27T02:58:36.9725450Z       copying pyximport/__init__.py -> build/lib.macosx-11.0-arm64-cpython-39/pyximport
+2022-12-27T02:58:36.9725700Z       copying pyximport/pyxbuild.py -> build/lib.macosx-11.0-arm64-cpython-39/pyximport
+2022-12-27T02:58:36.9726050Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes
+2022-12-27T02:58:36.9726320Z       copying Cython/Includes/openmp.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes
+2022-12-27T02:58:36.9726570Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9726850Z       copying Cython/Includes/posix/types.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9727160Z       copying Cython/Includes/posix/select.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9727460Z       copying Cython/Includes/posix/resource.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9727750Z       copying Cython/Includes/posix/wait.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9728040Z       copying Cython/Includes/posix/stat.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9728340Z       copying Cython/Includes/posix/dlfcn.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9728630Z       copying Cython/Includes/posix/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9728930Z       copying Cython/Includes/posix/strings.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9729220Z       copying Cython/Includes/posix/stdio.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9729520Z       copying Cython/Includes/posix/stdlib.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9729800Z       copying Cython/Includes/posix/mman.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9730090Z       copying Cython/Includes/posix/ioctl.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9730390Z       copying Cython/Includes/posix/signal.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9730750Z       copying Cython/Includes/posix/fcntl.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9731080Z       copying Cython/Includes/posix/unistd.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9731370Z       copying Cython/Includes/posix/time.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/posix
+2022-12-27T02:58:36.9731630Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9731910Z       copying Cython/Includes/libc/locale.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9732190Z       copying Cython/Includes/libc/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9732480Z       copying Cython/Includes/libc/math.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9732770Z       copying Cython/Includes/libc/limits.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9733060Z       copying Cython/Includes/libc/setjmp.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9733330Z       copying Cython/Includes/libc/string.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9733620Z       copying Cython/Includes/libc/stdint.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9733920Z       copying Cython/Includes/libc/stdio.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9734200Z       copying Cython/Includes/libc/stdlib.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9734490Z       copying Cython/Includes/libc/float.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9734870Z       copying Cython/Includes/libc/signal.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9735150Z       copying Cython/Includes/libc/stddef.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9735430Z       copying Cython/Includes/libc/errno.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9735710Z       copying Cython/Includes/libc/time.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libc
+2022-12-27T02:58:36.9735970Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/numpy
+2022-12-27T02:58:36.9736240Z       copying Cython/Includes/numpy/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/numpy
+2022-12-27T02:58:36.9736530Z       copying Cython/Includes/numpy/math.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/numpy
+2022-12-27T02:58:36.9736790Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9737070Z       copying Cython/Includes/cpython/ref.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9737370Z       copying Cython/Includes/cpython/long.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9737670Z       copying Cython/Includes/cpython/iterator.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9737970Z       copying Cython/Includes/cpython/weakref.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9738270Z       copying Cython/Includes/cpython/cobject.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9738570Z       copying Cython/Includes/cpython/set.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9738860Z       copying Cython/Includes/cpython/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9739160Z       copying Cython/Includes/cpython/object.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9739530Z       copying Cython/Includes/cpython/slice.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9739860Z       copying Cython/Includes/cpython/getargs.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9740210Z       copying Cython/Includes/cpython/module.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9740500Z       copying Cython/Includes/cpython/version.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9740790Z       copying Cython/Includes/cpython/buffer.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9741090Z       copying Cython/Includes/cpython/bytes.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9741390Z       copying Cython/Includes/cpython/exc.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9741680Z       copying Cython/Includes/cpython/int.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9741970Z       copying Cython/Includes/cpython/mapping.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9742270Z       copying Cython/Includes/cpython/string.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9742570Z       copying Cython/Includes/cpython/dict.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9742870Z       copying Cython/Includes/cpython/float.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9743160Z       copying Cython/Includes/cpython/complex.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9743560Z       copying Cython/Includes/cpython/array.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9743870Z       copying Cython/Includes/cpython/function.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9744180Z       copying Cython/Includes/cpython/sequence.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9744480Z       copying Cython/Includes/cpython/method.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9744790Z       copying Cython/Includes/cpython/oldbuffer.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9745100Z       copying Cython/Includes/cpython/longintrepr.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9745410Z       copying Cython/Includes/cpython/pycapsule.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9745720Z       copying Cython/Includes/cpython/tuple.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9746010Z       copying Cython/Includes/cpython/list.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9746310Z       copying Cython/Includes/cpython/pystate.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9746610Z       copying Cython/Includes/cpython/mem.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9746910Z       copying Cython/Includes/cpython/datetime.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9747210Z       copying Cython/Includes/cpython/pythread.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9747520Z       copying Cython/Includes/cpython/instance.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9747810Z       copying Cython/Includes/cpython/unicode.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9748180Z       copying Cython/Includes/cpython/number.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9748510Z       copying Cython/Includes/cpython/type.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9748810Z       copying Cython/Includes/cpython/bool.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/cpython
+2022-12-27T02:58:36.9749070Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9749360Z       copying Cython/Includes/libcpp/unordered_set.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9749670Z       copying Cython/Includes/libcpp/memory.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9749970Z       copying Cython/Includes/libcpp/iterator.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9750270Z       copying Cython/Includes/libcpp/set.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9750570Z       copying Cython/Includes/libcpp/__init__.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9750860Z       copying Cython/Includes/libcpp/limits.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9751160Z       copying Cython/Includes/libcpp/deque.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9751450Z       copying Cython/Includes/libcpp/stack.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9751740Z       copying Cython/Includes/libcpp/string.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9752040Z       copying Cython/Includes/libcpp/typeindex.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9752430Z       copying Cython/Includes/libcpp/map.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9752730Z       copying Cython/Includes/libcpp/complex.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9753030Z       copying Cython/Includes/libcpp/vector.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9753330Z       copying Cython/Includes/libcpp/functional.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9753640Z       copying Cython/Includes/libcpp/algorithm.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9753930Z       copying Cython/Includes/libcpp/list.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9754220Z       copying Cython/Includes/libcpp/queue.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9754540Z       copying Cython/Includes/libcpp/unordered_map.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9754840Z       copying Cython/Includes/libcpp/cast.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9755140Z       copying Cython/Includes/libcpp/typeinfo.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9755440Z       copying Cython/Includes/libcpp/pair.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9755740Z       copying Cython/Includes/libcpp/utility.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/libcpp
+2022-12-27T02:58:36.9756010Z       creating build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9756310Z       copying Cython/Includes/Deprecated/python_number.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9756640Z       copying Cython/Includes/Deprecated/python_unicode.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9757050Z       copying Cython/Includes/Deprecated/python_dict.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9757400Z       copying Cython/Includes/Deprecated/python_mem.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9757720Z       copying Cython/Includes/Deprecated/stl.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9758040Z       copying Cython/Includes/Deprecated/python2.5.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9758360Z       copying Cython/Includes/Deprecated/python_method.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9758690Z       copying Cython/Includes/Deprecated/python_pycapsule.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9759030Z       copying Cython/Includes/Deprecated/python_oldbuffer.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9759370Z       copying Cython/Includes/Deprecated/python_complex.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9759690Z       copying Cython/Includes/Deprecated/python_bytes.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9760050Z       copying Cython/Includes/Deprecated/python_iterator.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9760390Z       copying Cython/Includes/Deprecated/python_long.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9760710Z       copying Cython/Includes/Deprecated/stdio.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9761020Z       copying Cython/Includes/Deprecated/stdlib.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9761440Z       copying Cython/Includes/Deprecated/python_float.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9761790Z       copying Cython/Includes/Deprecated/python_buffer.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9762120Z       copying Cython/Includes/Deprecated/python_mapping.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9762450Z       copying Cython/Includes/Deprecated/python_instance.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9762770Z       copying Cython/Includes/Deprecated/python_int.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9763090Z       copying Cython/Includes/Deprecated/python_exc.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9763420Z       copying Cython/Includes/Deprecated/python_string.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9763740Z       copying Cython/Includes/Deprecated/python_object.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9764060Z       copying Cython/Includes/Deprecated/python_bool.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9764380Z       copying Cython/Includes/Deprecated/python_module.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9764700Z       copying Cython/Includes/Deprecated/python_set.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9765030Z       copying Cython/Includes/Deprecated/python_getargs.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9765350Z       copying Cython/Includes/Deprecated/python_type.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9765740Z       copying Cython/Includes/Deprecated/python_version.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9766100Z       copying Cython/Includes/Deprecated/python_tuple.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9766430Z       copying Cython/Includes/Deprecated/python_weakref.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9766750Z       copying Cython/Includes/Deprecated/python_ref.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9767090Z       copying Cython/Includes/Deprecated/python_cobject.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9767420Z       copying Cython/Includes/Deprecated/python_function.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9767750Z       copying Cython/Includes/Deprecated/python_sequence.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9768070Z       copying Cython/Includes/Deprecated/python.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9768400Z       copying Cython/Includes/Deprecated/python_list.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Includes/Deprecated
+2022-12-27T02:58:36.9768720Z       copying Cython/Compiler/ParseTreeTransforms.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9769020Z       copying Cython/Compiler/Scanning.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9769290Z       copying Cython/Compiler/Parsing.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9769580Z       copying Cython/Compiler/FlowControl.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9769860Z       copying Cython/Compiler/Code.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9770240Z       copying Cython/Compiler/Visitor.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Compiler
+2022-12-27T02:58:36.9770510Z       copying Cython/Runtime/refnanny.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Runtime
+2022-12-27T02:58:36.9770800Z       copying Cython/Debugger/Tests/codefile -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:36.9771090Z       copying Cython/Debugger/Tests/cfuncs.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Debugger/Tests
+2022-12-27T02:58:36.9771370Z       copying Cython/Plex/Scanners.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9771630Z       copying Cython/Plex/Actions.pxd -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Plex
+2022-12-27T02:58:36.9771920Z       copying Cython/Utility/CpdefEnums.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9772340Z       copying Cython/Utility/TestCyUtilityLoader.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9772640Z       copying Cython/Utility/CppConvert.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9772930Z       copying Cython/Utility/TestCythonScope.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9773220Z       copying Cython/Utility/MemoryView.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9773500Z       copying Cython/Utility/CConvert.pyx -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9773770Z       copying Cython/Utility/ObjectHandling.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9774050Z       copying Cython/Utility/Buffer.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9774320Z       copying Cython/Utility/Builtins.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9774590Z       copying Cython/Utility/Overflow.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9774930Z       copying Cython/Utility/Capsule.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9775250Z       copying Cython/Utility/FunctionArguments.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9775550Z       copying Cython/Utility/TestUtilityLoader.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9775830Z       copying Cython/Utility/MemoryView_C.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9776100Z       copying Cython/Utility/Printing.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9776380Z       copying Cython/Utility/CythonFunction.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9776650Z       copying Cython/Utility/Complex.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9776920Z       copying Cython/Utility/StringTools.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9777200Z       copying Cython/Utility/ImportExport.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9777470Z       copying Cython/Utility/CMath.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9777750Z       copying Cython/Utility/CommonStructures.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9778020Z       copying Cython/Utility/Embed.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9778290Z       copying Cython/Utility/ExtensionTypes.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9778570Z       copying Cython/Utility/Optimize.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9778850Z       copying Cython/Utility/ModuleSetupCode.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9779330Z       copying Cython/Utility/Profile.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9779610Z       copying Cython/Utility/Exceptions.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9779920Z       copying Cython/Utility/AsyncGen.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9780200Z       copying Cython/Utility/TypeConversion.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9780480Z       copying Cython/Utility/Coroutine.c -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9780750Z       copying Cython/Utility/arrayarray.h -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9781030Z       copying Cython/Utility/CppSupport.cpp -> build/lib.macosx-11.0-arm64-cpython-39/Cython/Utility
+2022-12-27T02:58:36.9781190Z       running build_ext
+2022-12-27T02:58:36.9781370Z       building 'Cython.Plex.Scanners' extension
+2022-12-27T02:58:36.9781580Z       creating build/temp.macosx-11.0-arm64-cpython-39
+2022-12-27T02:58:36.9781800Z       creating build/temp.macosx-11.0-arm64-cpython-39/private
+2022-12-27T02:58:36.9782030Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var
+2022-12-27T02:58:36.9782270Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders
+2022-12-27T02:58:36.9782520Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51
+2022-12-27T02:58:36.9782800Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn
+2022-12-27T02:58:36.9783110Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T
+2022-12-27T02:58:36.9783440Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf
+2022-12-27T02:58:36.9783830Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a
+2022-12-27T02:58:36.9784310Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython
+2022-12-27T02:58:36.9784780Z       creating build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex
+2022-12-27T02:58:36.9785740Z       gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.9/include/python3.9 -c /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c -o build/temp.macosx-11.0-arm64-cpython-39/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.o
+2022-12-27T02:58:36.9786530Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:3495:51: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9786820Z                 __pyx_t_8 = (__pyx_v_data != Py_None)&&(__Pyx_PyUnicode_IS_TRUE(__pyx_v_data) != 0);
+2022-12-27T02:58:36.9786980Z                                                         ^
+2022-12-27T02:58:36.9787320Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:422:108: note: expanded from macro '__Pyx_PyUnicode_IS_TRUE'
+2022-12-27T02:58:36.9787610Z         #define __Pyx_PyUnicode_IS_TRUE(u)      (0 != (likely(PyUnicode_IS_READY(u)) ? PyUnicode_GET_LENGTH(u) : PyUnicode_GET_SIZE(u)))
+2022-12-27T02:58:36.9787900Z                                                                                                                  ^
+2022-12-27T02:58:36.9788220Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9788420Z             PyUnicode_WSTR_LENGTH(op) :                    \
+2022-12-27T02:58:36.9788550Z             ^
+2022-12-27T02:58:36.9788830Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:36.9789070Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:36.9789210Z                                         ^
+2022-12-27T02:58:36.9789520Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9789740Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:36.9789850Z       ^
+2022-12-27T02:58:36.9790100Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9790320Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9790470Z                                                            ^
+2022-12-27T02:58:36.9790840Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:3495:51: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9791120Z                 __pyx_t_8 = (__pyx_v_data != Py_None)&&(__Pyx_PyUnicode_IS_TRUE(__pyx_v_data) != 0);
+2022-12-27T02:58:36.9791280Z                                                         ^
+2022-12-27T02:58:36.9791770Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:422:108: note: expanded from macro '__Pyx_PyUnicode_IS_TRUE'
+2022-12-27T02:58:36.9792070Z         #define __Pyx_PyUnicode_IS_TRUE(u)      (0 != (likely(PyUnicode_IS_READY(u)) ? PyUnicode_GET_LENGTH(u) : PyUnicode_GET_SIZE(u)))
+2022-12-27T02:58:36.9792280Z                                                                                                                  ^
+2022-12-27T02:58:36.9792590Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9792810Z             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+2022-12-27T02:58:36.9792930Z                    ^
+2022-12-27T02:58:36.9793230Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9793480Z       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+2022-12-27T02:58:36.9793620Z       ^
+2022-12-27T02:58:36.9793860Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9794080Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9794230Z                                                            ^
+2022-12-27T02:58:36.9794600Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:3495:51: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9794880Z                 __pyx_t_8 = (__pyx_v_data != Py_None)&&(__Pyx_PyUnicode_IS_TRUE(__pyx_v_data) != 0);
+2022-12-27T02:58:36.9795040Z                                                         ^
+2022-12-27T02:58:36.9795480Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:422:108: note: expanded from macro '__Pyx_PyUnicode_IS_TRUE'
+2022-12-27T02:58:36.9795760Z         #define __Pyx_PyUnicode_IS_TRUE(u)      (0 != (likely(PyUnicode_IS_READY(u)) ? PyUnicode_GET_LENGTH(u) : PyUnicode_GET_SIZE(u)))
+2022-12-27T02:58:36.9795960Z                                                                                                                  ^
+2022-12-27T02:58:36.9796260Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9796470Z              PyUnicode_WSTR_LENGTH(op)))
+2022-12-27T02:58:36.9796580Z              ^
+2022-12-27T02:58:36.9796860Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:36.9797100Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:36.9797260Z                                         ^
+2022-12-27T02:58:36.9797560Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9797770Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:36.9797880Z       ^
+2022-12-27T02:58:36.9798130Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9798410Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9798570Z                                                            ^
+2022-12-27T02:58:36.9798980Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:8518:46: error: no member named 'tp_print' in 'struct _typeobject'
+2022-12-27T02:58:36.9799230Z         __pyx_type_6Cython_4Plex_8Scanners_Scanner.tp_print = 0;
+2022-12-27T02:58:36.9799450Z         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+2022-12-27T02:58:36.9799850Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:22: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9800170Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9800310Z                            ^
+2022-12-27T02:58:36.9800590Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9800810Z             PyUnicode_WSTR_LENGTH(op) :                    \
+2022-12-27T02:58:36.9800930Z             ^
+2022-12-27T02:58:36.9801210Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:36.9801440Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:36.9801590Z                                         ^
+2022-12-27T02:58:36.9801900Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9802100Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:36.9802210Z       ^
+2022-12-27T02:58:36.9802460Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9802670Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9802830Z                                                            ^
+2022-12-27T02:58:36.9803310Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:22: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9803590Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9803730Z                            ^
+2022-12-27T02:58:36.9804010Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9804220Z             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+2022-12-27T02:58:36.9804350Z                    ^
+2022-12-27T02:58:36.9804650Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9804900Z       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+2022-12-27T02:58:36.9805030Z       ^
+2022-12-27T02:58:36.9805280Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9805490Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9805650Z                                                            ^
+2022-12-27T02:58:36.9806020Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:22: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9806290Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9806430Z                            ^
+2022-12-27T02:58:36.9806710Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9806910Z              PyUnicode_WSTR_LENGTH(op)))
+2022-12-27T02:58:36.9807020Z              ^
+2022-12-27T02:58:36.9807400Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:36.9807660Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:36.9807810Z                                         ^
+2022-12-27T02:58:36.9808180Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9808390Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:36.9808490Z       ^
+2022-12-27T02:58:36.9808750Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9808960Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9809120Z                                                            ^
+2022-12-27T02:58:36.9809490Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:52: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9809760Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9809920Z                                                          ^
+2022-12-27T02:58:36.9810200Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9810410Z             PyUnicode_WSTR_LENGTH(op) :                    \
+2022-12-27T02:58:36.9810530Z             ^
+2022-12-27T02:58:36.9810800Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:36.9811120Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:36.9811280Z                                         ^
+2022-12-27T02:58:36.9811590Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9811800Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:36.9811910Z       ^
+2022-12-27T02:58:36.9812160Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9812370Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9812520Z                                                            ^
+2022-12-27T02:58:36.9812890Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:52: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9813160Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9813320Z                                                          ^
+2022-12-27T02:58:36.9813600Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9813810Z             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+2022-12-27T02:58:36.9813940Z                    ^
+2022-12-27T02:58:36.9814240Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9814480Z       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+2022-12-27T02:58:36.9814620Z       ^
+2022-12-27T02:58:36.9814870Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9815150Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9815330Z                                                            ^
+2022-12-27T02:58:36.9815720Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9075:52: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9816000Z                           (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9816150Z                                                          ^
+2022-12-27T02:58:36.9816440Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9816640Z              PyUnicode_WSTR_LENGTH(op)))
+2022-12-27T02:58:36.9816760Z              ^
+2022-12-27T02:58:36.9817030Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:36.9817270Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:36.9817420Z                                         ^
+2022-12-27T02:58:36.9817720Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9817930Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:36.9818040Z       ^
+2022-12-27T02:58:36.9818290Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9818500Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9818750Z                                                            ^
+2022-12-27T02:58:36.9819140Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:26: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9819420Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9819560Z                                ^
+2022-12-27T02:58:36.9819840Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9820100Z             PyUnicode_WSTR_LENGTH(op) :                    \
+2022-12-27T02:58:36.9820210Z             ^
+2022-12-27T02:58:36.9820500Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:36.9820730Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:36.9820890Z                                         ^
+2022-12-27T02:58:36.9821200Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9821410Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:36.9821510Z       ^
+2022-12-27T02:58:36.9821770Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9821980Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9822140Z                                                            ^
+2022-12-27T02:58:36.9822500Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:26: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9822850Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9823020Z                                ^
+2022-12-27T02:58:36.9823310Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9823520Z             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+2022-12-27T02:58:36.9823650Z                    ^
+2022-12-27T02:58:36.9823950Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9824190Z       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+2022-12-27T02:58:36.9824320Z       ^
+2022-12-27T02:58:36.9824570Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9824780Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9824940Z                                                            ^
+2022-12-27T02:58:36.9825310Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:26: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9825580Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9825730Z                                ^
+2022-12-27T02:58:36.9826010Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9826200Z              PyUnicode_WSTR_LENGTH(op)))
+2022-12-27T02:58:36.9826720Z              ^
+2022-12-27T02:58:36.9827570Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:36.9827830Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:36.9827990Z                                         ^
+2022-12-27T02:58:36.9828310Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9828520Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:36.9828630Z       ^
+2022-12-27T02:58:36.9828900Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9829120Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9829280Z                                                            ^
+2022-12-27T02:58:36.9829670Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:59: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9829970Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9830130Z                                                                 ^
+2022-12-27T02:58:36.9830410Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9830620Z             PyUnicode_WSTR_LENGTH(op) :                    \
+2022-12-27T02:58:36.9830740Z             ^
+2022-12-27T02:58:36.9831020Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:36.9831250Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:36.9831400Z                                         ^
+2022-12-27T02:58:36.9831840Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9832080Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:36.9832180Z       ^
+2022-12-27T02:58:36.9832440Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9832660Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9832810Z                                                            ^
+2022-12-27T02:58:36.9833180Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:59: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9833460Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9833620Z                                                                 ^
+2022-12-27T02:58:36.9833910Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9834120Z             ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+2022-12-27T02:58:36.9834250Z                    ^
+2022-12-27T02:58:36.9834540Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9834780Z       Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+2022-12-27T02:58:36.9834990Z       ^
+2022-12-27T02:58:36.9835300Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9835770Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9835930Z                                                            ^
+2022-12-27T02:58:36.9836340Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9091:59: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9836630Z                               (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+2022-12-27T02:58:36.9836780Z                                                                 ^
+2022-12-27T02:58:36.9837070Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+2022-12-27T02:58:36.9837280Z              PyUnicode_WSTR_LENGTH(op)))
+2022-12-27T02:58:36.9837390Z              ^
+2022-12-27T02:58:36.9837670Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+2022-12-27T02:58:36.9837900Z       #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+2022-12-27T02:58:36.9838050Z                                         ^
+2022-12-27T02:58:36.9838360Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9838570Z       Py_DEPRECATED(3.3)
+2022-12-27T02:58:36.9838680Z       ^
+2022-12-27T02:58:36.9838920Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9839130Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9839290Z                                                            ^
+2022-12-27T02:58:36.9839750Z       /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-install-zuemhhhf/cython_b2a87818db2649009f250b4c6731e15a/Cython/Plex/Scanners.c:9540:16: warning: 'PyUnicode_FromUnicode' is deprecated [-Wdeprecated-declarations]
+2022-12-27T02:58:36.9840080Z               return PyUnicode_FromUnicode(NULL, 0);
+2022-12-27T02:58:36.9840210Z                      ^
+2022-12-27T02:58:36.9840520Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h:551:1: note: 'PyUnicode_FromUnicode' has been explicitly marked deprecated here
+2022-12-27T02:58:36.9840760Z       Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(
+2022-12-27T02:58:36.9840890Z       ^
+2022-12-27T02:58:36.9841140Z       /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h:508:54: note: expanded from macro 'Py_DEPRECATED'
+2022-12-27T02:58:36.9841350Z       #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+2022-12-27T02:58:36.9841500Z                                                            ^
+2022-12-27T02:58:36.9841620Z       16 warnings and 1 error generated.
+2022-12-27T02:58:36.9841820Z       error: command '/usr/bin/gcc' failed with exit code 1
+2022-12-27T02:58:36.9841950Z       [end of output]
+2022-12-27T02:58:36.9842050Z   
+2022-12-27T02:58:36.9842200Z   note: This error originates from a subprocess, and is likely not a problem with pip.
+2022-12-27T02:58:36.9842410Z error: legacy-install-failure
+2022-12-27T02:58:36.9842500Z 
+2022-12-27T02:58:36.9842630Z × Encountered error while trying to install package.
+2022-12-27T02:58:36.9842800Z ╰─> cython
+2022-12-27T02:58:36.9842860Z 
+2022-12-27T02:58:36.9842950Z note: This is an issue with the package mentioned above, not pip.
+2022-12-27T02:58:36.9843110Z hint: See above for output from the failure.
+2022-12-27T02:58:36.9843240Z   Rolling back uninstall of Cython
+2022-12-27T02:58:36.9843520Z   Moving to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/bin/cygdb
+2022-12-27T02:58:36.9843980Z    from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-uninstall-isro4h70/cygdb
+2022-12-27T02:58:36.9844400Z   Moving to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/bin/cython
+2022-12-27T02:58:36.9844700Z    from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-uninstall-isro4h70/cython
+2022-12-27T02:58:36.9845010Z   Moving to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/bin/cythonize
+2022-12-27T02:58:36.9845300Z    from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-uninstall-isro4h70/cythonize
+2022-12-27T02:58:36.9845640Z   Moving to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages/Cython-0.29.32.dist-info/
+2022-12-27T02:58:36.9846020Z    from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages/~ython-0.29.32.dist-info
+2022-12-27T02:58:36.9846390Z   Moving to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages/Cython/
+2022-12-27T02:58:36.9846730Z    from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages/~ython
+2022-12-27T02:58:36.9847120Z   Moving to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages/__pycache__/cython.cpython-39.pyc
+2022-12-27T02:58:36.9847460Z    from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-uninstall-tezfli1e/cython.cpython-39.pyc
+2022-12-27T02:58:36.9847790Z   Moving to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages/cython.py
+2022-12-27T02:58:36.9848100Z    from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-uninstall-29s6febw/cython.py
+2022-12-27T02:58:36.9848530Z   Moving to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages/pyximport/
+2022-12-27T02:58:36.9848910Z    from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-0yd25viy/cp39-macosx_arm64/build/venv/lib/python3.9/site-packages/~yximport
+2022-12-27T02:58:37.1668420Z ##[endgroup]
+2022-12-27T02:58:37.1689210Z ##[error]Command pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi failed with code 1. None
+2022-12-27T02:58:37.1695250Z 
+2022-12-27T02:58:37.1695540Z                                                              [31m✕ [0m13.58s
+2022-12-27T02:58:37.2245520Z ##[error]Process completed with exit code 1.
+2022-12-27T02:58:37.2291140Z ##[group]Run rm -rf build_grpcio114139 wheelsout
+2022-12-27T02:58:37.2291340Z [36;1mrm -rf build_grpcio114139 wheelsout[0m
+2022-12-27T02:58:37.2307040Z shell: /bin/bash -e {0}
+2022-12-27T02:58:37.2307150Z env:
+2022-12-27T02:58:37.2307300Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:37.2307520Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.9.16/x64/lib/pkgconfig
+2022-12-27T02:58:37.2307720Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:37.2307890Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:37.2308060Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.9.16/x64
+2022-12-27T02:58:37.2308200Z ##[endgroup]
+2022-12-27T02:58:37.3594910Z Cleaning up orphan processes

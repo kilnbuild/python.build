@@ -1,0 +1,453 @@
+2022-12-27T08:54:29.8607481Z Requested labels: self-hosted, macOS, X64
+2022-12-27T08:54:29.8607575Z Job defined at: kilnbuild/python.build/.github/workflows/mac_arm_build.yml@refs/heads/main
+2022-12-27T08:54:29.8607603Z Waiting for a runner to pick up this job...
+2022-12-27T11:31:43.4113824Z Job is about to start running on the runner: k2 (organization)
+2022-12-27T11:31:45.8386440Z Current runner version: '2.300.2'
+2022-12-27T11:31:45.8391430Z Runner name: 'k2'
+2022-12-27T11:31:45.8391680Z Runner group name: 'Default'
+2022-12-27T11:31:45.8392100Z Machine name: 'k2'
+2022-12-27T11:31:45.8393570Z ##[group]GITHUB_TOKEN Permissions
+2022-12-27T11:31:45.8393990Z Actions: write
+2022-12-27T11:31:45.8394130Z Checks: write
+2022-12-27T11:31:45.8394270Z Contents: write
+2022-12-27T11:31:45.8394400Z Deployments: write
+2022-12-27T11:31:45.8394540Z Discussions: write
+2022-12-27T11:31:45.8394670Z Issues: write
+2022-12-27T11:31:45.8394800Z Metadata: read
+2022-12-27T11:31:45.8394930Z Packages: write
+2022-12-27T11:31:45.8395060Z Pages: write
+2022-12-27T11:31:45.8395200Z PullRequests: write
+2022-12-27T11:31:45.8395360Z RepositoryProjects: write
+2022-12-27T11:31:45.8395520Z SecurityEvents: write
+2022-12-27T11:31:45.8395660Z Statuses: write
+2022-12-27T11:31:45.8395800Z ##[endgroup]
+2022-12-27T11:31:45.8398460Z Secret source: Actions
+2022-12-27T11:31:45.8398850Z Prepare workflow directory
+2022-12-27T11:31:45.9059160Z Prepare all required actions
+2022-12-27T11:31:45.9175960Z Getting action download info
+2022-12-27T11:31:46.3759770Z Download action repository 'actions/setup-python@v4' (SHA:5ccb29d8773c3f3f653e1705f474dfaa8a06a912)
+2022-12-27T11:31:48.1527620Z Download action repository 'actions/upload-artifact@v3' (SHA:83fd05a356d7e2593de66fc9913b3002723633cb)
+2022-12-27T11:31:50.4522850Z ##[group]Run echo '{
+2022-12-27T11:31:50.4523130Z [36;1mecho '{[0m
+2022-12-27T11:31:50.4523260Z [36;1m  "package_name": "lxml",[0m
+2022-12-27T11:31:50.4523580Z [36;1m  "package_url": "https://files.pythonhosted.org/packages/a6/09/aabce8833f69baf5543ee714f31552a4e173cf6f6e8c5c5f172ab7cf7e04/lxml-2.2.2.tar.gz",[0m
+2022-12-27T11:31:50.4523830Z [36;1m  "package_version": "2.2.2",[0m
+2022-12-27T11:31:50.4524010Z [36;1m  "python_version": "3.10",[0m
+2022-12-27T11:31:50.4524150Z [36;1m  "use_ccache": "true"[0m
+2022-12-27T11:31:50.4524290Z [36;1m}'[0m
+2022-12-27T11:31:50.4539740Z shell: /bin/bash -e {0}
+2022-12-27T11:31:50.4539890Z ##[endgroup]
+2022-12-27T11:31:50.4757940Z {
+2022-12-27T11:31:50.4759410Z   "package_name": "lxml",
+2022-12-27T11:31:50.4760100Z   "package_url": "https://files.pythonhosted.org/packages/a6/09/aabce8833f69baf5543ee714f31552a4e173cf6f6e8c5c5f172ab7cf7e04/lxml-2.2.2.tar.gz",
+2022-12-27T11:31:50.4760440Z   "package_version": "2.2.2",
+2022-12-27T11:31:50.4760640Z   "python_version": "3.10",
+2022-12-27T11:31:50.4760820Z   "use_ccache": "true"
+2022-12-27T11:31:50.4760980Z }
+2022-12-27T11:31:50.4970210Z ##[group]Run actions/setup-python@v4
+2022-12-27T11:31:50.4970470Z with:
+2022-12-27T11:31:50.4970650Z   python-version: 3.10
+2022-12-27T11:31:50.4970810Z   check-latest: false
+2022-12-27T11:31:50.4971100Z   token: ***
+2022-12-27T11:31:50.4971340Z   update-environment: true
+2022-12-27T11:31:50.4971490Z ##[endgroup]
+2022-12-27T11:31:50.6231550Z ##[group]Installed versions
+2022-12-27T11:31:50.6267960Z Successfully set up CPython (3.10.9)
+2022-12-27T11:31:50.6268850Z ##[endgroup]
+2022-12-27T11:31:50.6414600Z ##[group]Run if [ "true" == "true" ]
+2022-12-27T11:31:50.6414900Z [36;1mif [ "true" == "true" ][0m
+2022-12-27T11:31:50.6415090Z [36;1mthen[0m
+2022-12-27T11:31:50.6415400Z [36;1m  echo "CCACHE_PATH_PREPEND=/usr/local/opt/ccache/libexec" >> $GITHUB_OUTPUT[0m
+2022-12-27T11:31:50.6415580Z [36;1melse[0m
+2022-12-27T11:31:50.6415780Z [36;1m  echo "CCACHE_PATH_PREPEND=" >> $GITHUB_OUTPUT[0m
+2022-12-27T11:31:50.6416260Z [36;1mfi[0m
+2022-12-27T11:31:50.6432970Z shell: /bin/bash -e {0}
+2022-12-27T11:31:50.6433140Z env:
+2022-12-27T11:31:50.6433360Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6433630Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/pkgconfig
+2022-12-27T11:31:50.6433970Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6434180Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6434470Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6434990Z ##[endgroup]
+2022-12-27T11:31:50.6556620Z ##[group]Run echo "BUILD_NAME=$(echo lxml_2.2.2_3.10 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+2022-12-27T11:31:50.6557100Z [36;1mecho "BUILD_NAME=$(echo lxml_2.2.2_3.10 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT[0m
+2022-12-27T11:31:50.6571220Z shell: /bin/bash -e {0}
+2022-12-27T11:31:50.6571380Z env:
+2022-12-27T11:31:50.6571600Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6571950Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/pkgconfig
+2022-12-27T11:31:50.6572180Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6572420Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6572660Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6572830Z ##[endgroup]
+2022-12-27T11:31:50.6737250Z ##[group]Run echo "PYTHON_NO_DOTS=$(echo 3.10 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+2022-12-27T11:31:50.6737710Z [36;1mecho "PYTHON_NO_DOTS=$(echo 3.10 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT[0m
+2022-12-27T11:31:50.6752190Z shell: /bin/bash -e {0}
+2022-12-27T11:31:50.6752340Z env:
+2022-12-27T11:31:50.6752550Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6752810Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/pkgconfig
+2022-12-27T11:31:50.6753030Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6753300Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6753530Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6753720Z ##[endgroup]
+2022-12-27T11:31:50.6867680Z ##[group]Run rm -rf build_lxml222310
+2022-12-27T11:31:50.6868000Z [36;1mrm -rf build_lxml222310[0m
+2022-12-27T11:31:50.6868170Z [36;1mmkdir build_lxml222310[0m
+2022-12-27T11:31:50.6868390Z [36;1mcd build_lxml222310[0m
+2022-12-27T11:31:50.6868720Z [36;1m/usr/local/bin/wget --quiet https://files.pythonhosted.org/packages/a6/09/aabce8833f69baf5543ee714f31552a4e173cf6f6e8c5c5f172ab7cf7e04/lxml-2.2.2.tar.gz[0m
+2022-12-27T11:31:50.6869000Z [36;1mtar xf *.tar.gz[0m
+2022-12-27T11:31:50.6869140Z [36;1mcd *[0m
+2022-12-27T11:31:50.6869330Z [36;1mpython -m pip install cibuildwheel==2.11.3[0m
+2022-12-27T11:31:50.6869600Z [36;1mpython -m cibuildwheel --output-dir ../wheelsout[0m
+2022-12-27T11:31:50.6883430Z shell: /bin/bash -e {0}
+2022-12-27T11:31:50.6883640Z env:
+2022-12-27T11:31:50.6883850Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6884120Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/pkgconfig
+2022-12-27T11:31:50.6884430Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6884640Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6884880Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:50.6885120Z   CIBW_ARCHS_MACOS: arm64
+2022-12-27T11:31:50.6885260Z   CIBW_TEST_SKIP: *_arm64
+2022-12-27T11:31:50.6885440Z   CIBW_BUILD: cp310-macosx_arm64
+2022-12-27T11:31:50.6885630Z   CIBW_BUILD_FRONTEND: pip
+2022-12-27T11:31:50.6885780Z   CIBW_BUILD_VERBOSITY: 3
+2022-12-27T11:31:50.6886120Z   CIBW_ENVIRONMENT_MACOS:  CFLAGS="-I/usr/local/opt/openssl@3/include" LDFLAGS="-L/usr/local/opt/openssl@3/lib" CPPFLAGS="-I/usr/local/opt/openssl@3/include" MAKEFLAGS="-j$(sysctl -n hw.logicalcpu)" PATH=/usr/local/opt/ccache/libexec:$PATH
+2022-12-27T11:31:50.6886490Z   CIBW_BEFORE_BUILD: pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi
+2022-12-27T11:31:50.6886740Z   MAKEFLAGS: -j$(sysctl -n hw.logicalcpu)
+2022-12-27T11:31:50.6886890Z ##[endgroup]
+2022-12-27T11:31:51.1762370Z Requirement already satisfied: cibuildwheel==2.11.3 in /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (2.11.3)
+2022-12-27T11:31:51.2010550Z Requirement already satisfied: platformdirs in /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from cibuildwheel==2.11.3) (2.6.0)
+2022-12-27T11:31:51.2014030Z Requirement already satisfied: filelock in /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from cibuildwheel==2.11.3) (3.8.2)
+2022-12-27T11:31:51.2023090Z Requirement already satisfied: typing-extensions>=4.1.0 in /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from cibuildwheel==2.11.3) (4.4.0)
+2022-12-27T11:31:51.2028840Z Requirement already satisfied: tomli in /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from cibuildwheel==2.11.3) (2.0.1)
+2022-12-27T11:31:51.2033680Z Requirement already satisfied: bashlex!=0.13 in /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from cibuildwheel==2.11.3) (0.16)
+2022-12-27T11:31:51.2036790Z Requirement already satisfied: certifi in /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from cibuildwheel==2.11.3) (2022.12.7)
+2022-12-27T11:31:51.2041720Z Requirement already satisfied: packaging>=20.9 in /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from cibuildwheel==2.11.3) (22.0)
+2022-12-27T11:31:51.2045190Z Requirement already satisfied: bracex in /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from cibuildwheel==2.11.3) (2.3.post1)
+2022-12-27T11:31:51.3893800Z 
+2022-12-27T11:31:51.3894380Z      _ _       _ _   _       _           _
+2022-12-27T11:31:51.3894880Z  ___|_| |_ _ _|_| |_| |_ _ _| |_ ___ ___| |
+2022-12-27T11:31:51.3895720Z |  _| | . | | | | | . | | | |   | -_| -_| |
+2022-12-27T11:31:51.3896590Z |___|_|___|___|_|_|___|_____|_|_|___|___|_|
+2022-12-27T11:31:51.3896790Z 
+2022-12-27T11:31:51.3897030Z cibuildwheel version 2.11.3
+2022-12-27T11:31:51.3897220Z 
+2022-12-27T11:31:51.3897320Z Build options:
+2022-12-27T11:31:51.3897600Z   platform: macos
+2022-12-27T11:31:51.3957110Z   architectures: arm64[0m
+2022-12-27T11:31:51.3957450Z   build_selector: 
+2022-12-27T11:31:51.3958150Z     build_config: cp310-macosx_arm64
+2022-12-27T11:31:51.3958540Z     skip_config: 
+2022-12-27T11:31:51.3958880Z     requires_python: None
+2022-12-27T11:31:51.3959200Z     prerelease_pythons: False[0m
+2022-12-27T11:31:51.3959780Z   [38;5;244mcontainer_engine: docker[0m
+2022-12-27T11:31:51.3960320Z   output_dir: /Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/wheelsout[0m
+2022-12-27T11:31:51.3960910Z   package_dir: /Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2[0m
+2022-12-27T11:31:51.3961230Z   test_selector: 
+2022-12-27T11:31:51.3961580Z     skip_config: *_arm64[0m
+2022-12-27T11:31:51.3962040Z   [38;5;244mbefore_all: [0m
+2022-12-27T11:31:51.3962530Z   before_build: pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi[0m
+2022-12-27T11:31:51.3962950Z   [38;5;244mbefore_test: [0m
+2022-12-27T11:31:51.3963290Z   [38;5;244mbuild_frontend: pip[0m
+2022-12-27T11:31:51.3963580Z   build_verbosity: 3[0m
+2022-12-27T11:31:51.3963990Z   [38;5;244mconfig_settings: [0m
+2022-12-27T11:31:51.3964410Z   [38;5;244mdependency_constraints: pinned[0m
+2022-12-27T11:31:51.3964660Z   environment: 
+2022-12-27T11:31:51.3965020Z     CFLAGS="-I/usr/local/opt/openssl@3/include"
+2022-12-27T11:31:51.3965470Z     LDFLAGS="-L/usr/local/opt/openssl@3/lib"
+2022-12-27T11:31:51.3965880Z     CPPFLAGS="-I/usr/local/opt/openssl@3/include"
+2022-12-27T11:31:51.3966240Z     MAKEFLAGS="-j$(sysctl -n hw.logicalcpu)"
+2022-12-27T11:31:51.3966640Z     PATH=/usr/local/opt/ccache/libexec:$PATH[0m
+2022-12-27T11:31:51.3967060Z   [38;5;244mmanylinux_images: None[0m
+2022-12-27T11:31:51.3967440Z   [38;5;244mmusllinux_images: None[0m
+2022-12-27T11:31:51.3967960Z   [38;5;244mrepair_command: delocate-wheel --require-archs {delocate_archs} -w {dest_dir} -v {wheel}[0m
+2022-12-27T11:31:51.3968870Z   [38;5;244mtest_command: [0m
+2022-12-27T11:31:51.3969180Z   [38;5;244mtest_extras: [0m
+2022-12-27T11:31:51.3969520Z   [38;5;244mtest_requires: [0m
+2022-12-27T11:31:51.3969750Z 
+2022-12-27T11:31:51.3969910Z Cache folder: /Users/runner/Library/Caches/cibuildwheel
+2022-12-27T11:31:51.3976540Z 
+2022-12-27T11:31:51.3976850Z Here we go!
+2022-12-27T11:31:51.3977000Z 
+2022-12-27T11:31:51.4041410Z 
+2022-12-27T11:31:51.4041960Z [1m[34mBuilding cp310-macosx_arm64 wheel[0m
+2022-12-27T11:31:51.4042470Z CPython 3.10 macOS arm64 - Apple Silicon
+2022-12-27T11:31:51.4042690Z 
+2022-12-27T11:31:51.4045390Z ##[group]Installing Python cp310...
+2022-12-27T11:31:51.4045620Z 
+2022-12-27T11:31:51.4046050Z + pkgutil --pkgs
+2022-12-27T11:31:51.4154300Z ##[endgroup]
+2022-12-27T11:31:51.4155770Z                                                               [32m✓ [0m0.01s
+2022-12-27T11:31:51.4156180Z ##[group]Setting up build environment...
+2022-12-27T11:31:51.4156310Z 
+2022-12-27T11:31:51.4174610Z + /Users/runner/hostedtoolcache/Python/3.10.9/x64/bin/python -sS /Users/runner/Library/Caches/cibuildwheel/virtualenv-20.17.0.pyz --activators= --no-periodic-update --pip=22.3.1 --setuptools=65.6.3 --wheel=0.38.4 --symlink-app-data --python /Library/Frameworks/Python.framework/Versions/3.10/bin/python3 /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv
+2022-12-27T11:31:51.6112390Z created virtual environment CPython3.10.8.final.0-64 in 54ms
+2022-12-27T11:31:51.6112950Z   creator CPython3Posix(dest=/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv, clear=False, no_vcs_ignore=False, global=False)
+2022-12-27T11:31:51.6113830Z   seeder FromAppData(download=False, pip=22.3.1, setuptools=65.6.3, wheel=0.38.4, via=symlink, app_data_dir=/Users/runner/Library/Application Support/virtualenv)
+2022-12-27T11:31:51.6114210Z     added seed packages: pip==22.3.1, setuptools==65.6.3, wheel==0.38.4
+2022-12-27T11:31:51.6246580Z + python -m pip install --upgrade pip -c /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/cibuildwheel/resources/constraints-python310.txt
+2022-12-27T11:31:51.9201210Z Requirement already satisfied: pip in ./lib/python3.10/site-packages (22.3.1)
+2022-12-27T11:31:52.0479110Z + which pip
+2022-12-27T11:31:52.0495490Z /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv/bin/pip
+2022-12-27T11:31:52.0498980Z + pip --version
+2022-12-27T11:31:52.2458340Z pip 22.3.1 from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv/lib/python3.10/site-packages/pip (python 3.10)
+2022-12-27T11:31:52.2702200Z + which pip
+2022-12-27T11:31:52.2730310Z + which python
+2022-12-27T11:31:52.2748520Z /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv/bin/python
+2022-12-27T11:31:52.2751520Z + python --version
+2022-12-27T11:31:52.2800010Z Python 3.10.8
+2022-12-27T11:31:52.2803420Z + which python
+2022-12-27T11:31:52.2854990Z ##[endgroup]
+2022-12-27T11:31:52.2855520Z                                                               [32m✓ [0m0.87s
+2022-12-27T11:31:52.2855990Z ##[group]Installing build tools...
+2022-12-27T11:31:52.2856170Z 
+2022-12-27T11:31:52.2856750Z + pip install --upgrade setuptools wheel delocate -c /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/cibuildwheel/resources/constraints-python310.txt
+2022-12-27T11:31:52.5634360Z Requirement already satisfied: setuptools in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv/lib/python3.10/site-packages (65.6.3)
+2022-12-27T11:31:52.7551690Z Requirement already satisfied: wheel in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv/lib/python3.10/site-packages (0.38.4)
+2022-12-27T11:31:52.8092620Z Collecting delocate
+2022-12-27T11:31:52.8114980Z   Using cached delocate-0.10.3-py3-none-any.whl (142 kB)
+2022-12-27T11:31:52.8386500Z Collecting packaging>=20.9
+2022-12-27T11:31:52.8407200Z   Using cached packaging-21.3-py3-none-any.whl (40 kB)
+2022-12-27T11:31:52.8566060Z Collecting typing-extensions
+2022-12-27T11:31:52.8585780Z   Using cached typing_extensions-4.4.0-py3-none-any.whl (26 kB)
+2022-12-27T11:31:52.8914970Z Collecting pyparsing!=3.0.5,>=2.0.2
+2022-12-27T11:31:52.8932270Z   Using cached pyparsing-3.0.9-py3-none-any.whl (98 kB)
+2022-12-27T11:31:52.9251270Z Installing collected packages: typing-extensions, pyparsing, packaging, delocate
+2022-12-27T11:31:53.0485360Z Successfully installed delocate-0.10.3 packaging-21.3 pyparsing-3.0.9 typing-extensions-4.4.0
+2022-12-27T11:31:53.0985020Z ##[endgroup]
+2022-12-27T11:31:53.0985750Z                                                               [32m✓ [0m0.81s
+2022-12-27T11:31:53.0986210Z ##[group]Running before_build...
+2022-12-27T11:31:53.0986370Z 
+2022-12-27T11:31:53.0995080Z + pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi
+2022-12-27T11:31:53.6929850Z Collecting Cython
+2022-12-27T11:31:53.6975120Z   Using cached Cython-0.29.32-py2.py3-none-any.whl (986 kB)
+2022-12-27T11:31:53.7418180Z Installing collected packages: Cython
+2022-12-27T11:31:54.1407510Z Successfully installed Cython-0.29.32
+2022-12-27T11:31:54.1838420Z ##[endgroup]
+2022-12-27T11:31:54.1839410Z                                                               [32m✓ [0m1.09s
+2022-12-27T11:31:54.1839890Z ##[group]Building wheel...
+2022-12-27T11:31:54.1840170Z 
+2022-12-27T11:31:54.1844330Z + python -m pip wheel /Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2 --wheel-dir=/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/built_wheel --no-deps -vvv
+2022-12-27T11:31:54.4346670Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-ephem-wheel-cache-q_ng_479
+2022-12-27T11:31:54.4351360Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-i7x5urpn
+2022-12-27T11:31:54.4353270Z Initialized build tracking at /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-i7x5urpn
+2022-12-27T11:31:54.4355040Z Created build tracker: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-i7x5urpn
+2022-12-27T11:31:54.4356780Z Entered build tracker: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-i7x5urpn
+2022-12-27T11:31:54.4360400Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-og5f9_in
+2022-12-27T11:31:54.4366340Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-ephem-wheel-cache-pgl3v5x2
+2022-12-27T11:31:54.4506910Z Processing /Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2
+2022-12-27T11:31:54.4511960Z   Added file:///Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2 to build tracker '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-i7x5urpn'
+2022-12-27T11:31:54.4515790Z   Running setup.py (path:/Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2/setup.py) egg_info for package from file:///Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2
+2022-12-27T11:31:54.4518920Z   Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-z_1bfq9b
+2022-12-27T11:31:54.4520430Z   Preparing metadata (setup.py): started
+2022-12-27T11:31:54.4522880Z   Running command python setup.py egg_info
+2022-12-27T11:31:54.7995760Z   Building lxml version 2.2.2.
+2022-12-27T11:31:54.7997140Z   Building with Cython 0.29.32.
+2022-12-27T11:31:54.7999190Z   Using build configuration of libxslt 1.1.29
+2022-12-27T11:31:54.8001020Z   Building against libxml2/libxslt in the following directory: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib
+2022-12-27T11:31:54.8002700Z   running egg_info
+2022-12-27T11:31:54.8005350Z   creating /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-z_1bfq9b/lxml.egg-info
+2022-12-27T11:31:54.8006780Z   writing /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-z_1bfq9b/lxml.egg-info/PKG-INFO
+2022-12-27T11:31:54.8008720Z   writing dependency_links to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-z_1bfq9b/lxml.egg-info/dependency_links.txt
+2022-12-27T11:31:54.8010450Z   writing top-level names to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-z_1bfq9b/lxml.egg-info/top_level.txt
+2022-12-27T11:31:54.8012430Z   writing manifest file '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-z_1bfq9b/lxml.egg-info/SOURCES.txt'
+2022-12-27T11:31:54.8063350Z   reading manifest file '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-z_1bfq9b/lxml.egg-info/SOURCES.txt'
+2022-12-27T11:31:54.8065760Z   reading manifest template 'MANIFEST.in'
+2022-12-27T11:31:54.8864400Z   adding license file 'LICENSES.txt'
+2022-12-27T11:31:54.8923520Z   writing manifest file '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-z_1bfq9b/lxml.egg-info/SOURCES.txt'
+2022-12-27T11:31:54.9190080Z   Preparing metadata (setup.py): finished with status 'done'
+2022-12-27T11:31:54.9210900Z   Source in /Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2 has version 2.2.2, which satisfies requirement lxml==2.2.2 from file:///Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2
+2022-12-27T11:31:54.9214560Z   Removed lxml==2.2.2 from file:///Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2 from build tracker '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-i7x5urpn'
+2022-12-27T11:31:54.9229250Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-unpack-6sb7ehs_
+2022-12-27T11:31:54.9231450Z Building wheels for collected packages: lxml
+2022-12-27T11:31:54.9238130Z   Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-by1s_to5
+2022-12-27T11:31:54.9239640Z   Building wheel for lxml (setup.py): started
+2022-12-27T11:31:54.9241310Z   Destination directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-by1s_to5
+2022-12-27T11:31:54.9242620Z   Running command python setup.py bdist_wheel
+2022-12-27T11:31:55.1447570Z   Building lxml version 2.2.2.
+2022-12-27T11:31:55.1448610Z   Building with Cython 0.29.32.
+2022-12-27T11:31:55.1573790Z   Using build configuration of libxslt 1.1.29
+2022-12-27T11:31:55.2509880Z   Building against libxml2/libxslt in the following directory: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib
+2022-12-27T11:31:55.2727760Z   running bdist_wheel
+2022-12-27T11:31:55.2763630Z   running build
+2022-12-27T11:31:55.2765300Z   running build_py
+2022-12-27T11:31:55.2787800Z   creating build
+2022-12-27T11:31:55.2789940Z   creating build/lib.macosx-11.0-arm64-cpython-310
+2022-12-27T11:31:55.2791340Z   creating build/lib.macosx-11.0-arm64-cpython-310/lxml
+2022-12-27T11:31:55.2793450Z   copying src/lxml/_elementpath.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml
+2022-12-27T11:31:55.2794740Z   copying src/lxml/sax.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml
+2022-12-27T11:31:55.2798700Z   copying src/lxml/pyclasslookup.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml
+2022-12-27T11:31:55.2800550Z   copying src/lxml/__init__.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml
+2022-12-27T11:31:55.2802250Z   copying src/lxml/builder.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml
+2022-12-27T11:31:55.2805290Z   copying src/lxml/doctestcompare.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml
+2022-12-27T11:31:55.2807560Z   copying src/lxml/usedoctest.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml
+2022-12-27T11:31:55.2810420Z   copying src/lxml/cssselect.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml
+2022-12-27T11:31:55.2812700Z   copying src/lxml/ElementInclude.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml
+2022-12-27T11:31:55.2820160Z   creating build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2821420Z   copying src/lxml/html/soupparser.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2824700Z   copying src/lxml/html/defs.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2826710Z   copying src/lxml/html/_setmixin.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2829260Z   copying src/lxml/html/clean.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2831480Z   copying src/lxml/html/_diffcommand.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2833730Z   copying src/lxml/html/html5parser.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2836550Z   copying src/lxml/html/__init__.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2839570Z   copying src/lxml/html/formfill.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2842080Z   copying src/lxml/html/builder.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2844980Z   copying src/lxml/html/ElementSoup.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2847170Z   copying src/lxml/html/_html5builder.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2849730Z   copying src/lxml/html/usedoctest.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2852180Z   copying src/lxml/html/diff.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2855120Z   copying src/lxml/html/_dictmixin.py -> build/lib.macosx-11.0-arm64-cpython-310/lxml/html
+2022-12-27T11:31:55.2865680Z   running build_ext
+2022-12-27T11:31:55.2988130Z   skipping 'src/lxml/lxml.etree.c' Cython extension (up-to-date)
+2022-12-27T11:31:55.2991330Z   skipping 'src/lxml/lxml.objectify.c' Cython extension (up-to-date)
+2022-12-27T11:31:55.2992780Z   building 'lxml.etree' extension
+2022-12-27T11:31:55.2994370Z   creating build/temp.macosx-11.0-arm64-cpython-310
+2022-12-27T11:31:55.2995620Z   creating build/temp.macosx-11.0-arm64-cpython-310/src
+2022-12-27T11:31:55.2997260Z   creating build/temp.macosx-11.0-arm64-cpython-310/src/lxml
+2022-12-27T11:31:55.2999890Z   clang -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -I/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.10/include/python3.10 -c src/lxml/lxml.etree.c -o build/temp.macosx-11.0-arm64-cpython-310/src/lxml/lxml.etree.o -w -flat_namespace
+2022-12-27T11:31:55.7506310Z   src/lxml/lxml.etree.c:119803:5: error: expression is not assignable
+2022-12-27T11:31:55.7507330Z       ++Py_REFCNT(o);
+2022-12-27T11:31:55.7508880Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7510530Z   src/lxml/lxml.etree.c:119806:5: error: expression is not assignable
+2022-12-27T11:31:55.7511850Z       --Py_REFCNT(o);
+2022-12-27T11:31:55.7512710Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7514250Z   src/lxml/lxml.etree.c:120004:5: error: expression is not assignable
+2022-12-27T11:31:55.7515330Z       ++Py_REFCNT(o);
+2022-12-27T11:31:55.7516640Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7517940Z   src/lxml/lxml.etree.c:120007:5: error: expression is not assignable
+2022-12-27T11:31:55.7519310Z       --Py_REFCNT(o);
+2022-12-27T11:31:55.7520480Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7712440Z   src/lxml/lxml.etree.c:129326:5: error: expression is not assignable
+2022-12-27T11:31:55.7713440Z       ++Py_REFCNT(o);
+2022-12-27T11:31:55.7715050Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7716160Z   src/lxml/lxml.etree.c:129329:5: error: expression is not assignable
+2022-12-27T11:31:55.7717380Z       --Py_REFCNT(o);
+2022-12-27T11:31:55.7718560Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7724360Z   src/lxml/lxml.etree.c:129903:5: error: expression is not assignable
+2022-12-27T11:31:55.7726030Z       ++Py_REFCNT(o);
+2022-12-27T11:31:55.7726800Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7728550Z   src/lxml/lxml.etree.c:129906:5: error: expression is not assignable
+2022-12-27T11:31:55.7729500Z       --Py_REFCNT(o);
+2022-12-27T11:31:55.7730650Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7734190Z   src/lxml/lxml.etree.c:130290:5: error: expression is not assignable
+2022-12-27T11:31:55.7735160Z       ++Py_REFCNT(o);
+2022-12-27T11:31:55.7736630Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7738160Z   src/lxml/lxml.etree.c:130293:5: error: expression is not assignable
+2022-12-27T11:31:55.7739460Z       --Py_REFCNT(o);
+2022-12-27T11:31:55.7740580Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7742040Z   src/lxml/lxml.etree.c:130467:5: error: expression is not assignable
+2022-12-27T11:31:55.7743240Z       ++Py_REFCNT(o);
+2022-12-27T11:31:55.7808310Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7808580Z   src/lxml/lxml.etree.c:130470:5: error: expression is not assignable
+2022-12-27T11:31:55.7808890Z       --Py_REFCNT(o);
+2022-12-27T11:31:55.7809060Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7833690Z   src/lxml/lxml.etree.c:134351:5: error: expression is not assignable
+2022-12-27T11:31:55.7835340Z       ++Py_REFCNT(o);
+2022-12-27T11:31:55.7836940Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7838510Z   src/lxml/lxml.etree.c:134354:5: error: expression is not assignable
+2022-12-27T11:31:55.7840040Z       --Py_REFCNT(o);
+2022-12-27T11:31:55.7841370Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7845630Z   src/lxml/lxml.etree.c:134913:5: error: expression is not assignable
+2022-12-27T11:31:55.7846410Z       ++Py_REFCNT(o);
+2022-12-27T11:31:55.7847750Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7849040Z   src/lxml/lxml.etree.c:134916:5: error: expression is not assignable
+2022-12-27T11:31:55.7850170Z       --Py_REFCNT(o);
+2022-12-27T11:31:55.7851400Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7856640Z   src/lxml/lxml.etree.c:135461:5: error: expression is not assignable
+2022-12-27T11:31:55.7857850Z       ++Py_REFCNT(o);
+2022-12-27T11:31:55.7859030Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7860450Z   src/lxml/lxml.etree.c:135464:5: error: expression is not assignable
+2022-12-27T11:31:55.7861670Z       --Py_REFCNT(o);
+2022-12-27T11:31:55.7862840Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7869010Z   src/lxml/lxml.etree.c:136027:5: error: expression is not assignable
+2022-12-27T11:31:55.7870160Z       ++Py_REFCNT(o);
+2022-12-27T11:31:55.7871370Z       ^ ~~~~~~~~~~~~
+2022-12-27T11:31:55.7872780Z   fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2022-12-27T11:31:55.8294610Z   20 errors generated.
+2022-12-27T11:31:55.8333740Z   error: command '/usr/bin/clang' failed with exit code 1
+2022-12-27T11:31:55.8691820Z   error: subprocess-exited-with-error
+2022-12-27T11:31:55.8692180Z   
+2022-12-27T11:31:55.8692540Z   × python setup.py bdist_wheel did not run successfully.
+2022-12-27T11:31:55.8692850Z   │ exit code: 1
+2022-12-27T11:31:55.8693140Z   ╰─> See above for output.
+2022-12-27T11:31:55.8693340Z   
+2022-12-27T11:31:55.8693670Z   note: This error originates from a subprocess, and is likely not a problem with pip.
+2022-12-27T11:31:55.8700180Z   full command: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv/bin/python -u -c '
+2022-12-27T11:31:55.8700540Z   exec(compile('"'"''"'"''"'"'
+2022-12-27T11:31:55.8701740Z   # This is <pip-setuptools-caller> -- a caller that pip uses to run setup.py
+2022-12-27T11:31:55.8702690Z   #
+2022-12-27T11:31:55.8703520Z   # - It imports setuptools before invoking setup.py, to enable projects that directly
+2022-12-27T11:31:55.8704090Z   #   import from `distutils.core` to work with newer packaging standards.
+2022-12-27T11:31:55.8705030Z   # - It provides a clear error message when setuptools is not installed.
+2022-12-27T11:31:55.8705440Z   # - It sets `sys.argv[0]` to the underlying `setup.py`, when invoking `setup.py` so
+2022-12-27T11:31:55.8706110Z   #   setuptools doesn'"'"'t think the script is `-c`. This avoids the following warning:
+2022-12-27T11:31:55.8706430Z   #     manifest_maker: standard file '"'"'-c'"'"' not found".
+2022-12-27T11:31:55.8706790Z   # - It generates a shim setup.py, for handling setup.cfg-only projects.
+2022-12-27T11:31:55.8707270Z   import os, sys, tokenize
+2022-12-27T11:31:55.8707470Z   
+2022-12-27T11:31:55.8707660Z   try:
+2022-12-27T11:31:55.8707900Z       import setuptools
+2022-12-27T11:31:55.8708100Z   except ImportError as error:
+2022-12-27T11:31:55.8708290Z       print(
+2022-12-27T11:31:55.8708550Z           "ERROR: Can not execute `setup.py` since setuptools is not available in "
+2022-12-27T11:31:55.8708780Z           "the build environment.",
+2022-12-27T11:31:55.8708990Z           file=sys.stderr,
+2022-12-27T11:31:55.8709200Z       )
+2022-12-27T11:31:55.8709340Z       sys.exit(1)
+2022-12-27T11:31:55.8709510Z   
+2022-12-27T11:31:55.8709700Z   __file__ = %r
+2022-12-27T11:31:55.8709930Z   sys.argv[0] = __file__
+2022-12-27T11:31:55.8710100Z   
+2022-12-27T11:31:55.8710370Z   if os.path.exists(__file__):
+2022-12-27T11:31:55.8710650Z       filename = __file__
+2022-12-27T11:31:55.8710870Z       with tokenize.open(__file__) as f:
+2022-12-27T11:31:55.8711160Z           setup_py_code = f.read()
+2022-12-27T11:31:55.8711340Z   else:
+2022-12-27T11:31:55.8711600Z       filename = "<auto-generated setuptools caller>"
+2022-12-27T11:31:55.8711820Z       setup_py_code = "from setuptools import setup; setup()"
+2022-12-27T11:31:55.8712000Z   
+2022-12-27T11:31:55.8712120Z   exec(compile(setup_py_code, filename, "exec"))
+2022-12-27T11:31:55.8712880Z   '"'"''"'"''"'"' % ('"'"'/Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2/setup.py'"'"',), "<pip-setuptools-caller>", "exec"))' bdist_wheel -d /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-by1s_to5
+2022-12-27T11:31:55.8713380Z   cwd: /Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2/
+2022-12-27T11:31:55.8713630Z   ERROR: Failed building wheel for lxml
+2022-12-27T11:31:55.8713800Z   Running command python setup.py clean
+2022-12-27T11:31:55.8714040Z   Building wheel for lxml (setup.py): finished with status 'error'
+2022-12-27T11:31:55.8714210Z   Running setup.py clean for lxml
+2022-12-27T11:31:56.0908130Z   Building lxml version 2.2.2.
+2022-12-27T11:31:56.0909920Z   Building with Cython 0.29.32.
+2022-12-27T11:31:56.1033200Z   Using build configuration of libxslt 1.1.29
+2022-12-27T11:31:56.1956940Z   Building against libxml2/libxslt in the following directory: /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib
+2022-12-27T11:31:56.2075140Z   running clean
+2022-12-27T11:31:56.2098580Z   removing 'build/temp.macosx-11.0-arm64-cpython-310' (and everything under it)
+2022-12-27T11:31:56.2102080Z   removing 'build/lib.macosx-11.0-arm64-cpython-310' (and everything under it)
+2022-12-27T11:31:56.2121860Z   'build/bdist.macosx-11.0-arm64' does not exist -- can't clean it
+2022-12-27T11:31:56.2123540Z   'build/scripts-3.10' does not exist -- can't clean it
+2022-12-27T11:31:56.2125070Z   removing 'build'
+2022-12-27T11:31:56.2381730Z Failed to build lxml
+2022-12-27T11:31:56.2385860Z ERROR: Failed to build one or more wheels
+2022-12-27T11:31:56.2395190Z Exception information:
+2022-12-27T11:31:56.2395390Z Traceback (most recent call last):
+2022-12-27T11:31:56.2402620Z   File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 160, in exc_logging_wrapper
+2022-12-27T11:31:56.2403060Z     status = run_func(*args)
+2022-12-27T11:31:56.2403660Z   File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 247, in wrapper
+2022-12-27T11:31:56.2404430Z     return func(self, options, args)
+2022-12-27T11:31:56.2405000Z   File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/build/venv/lib/python3.10/site-packages/pip/_internal/commands/wheel.py", line 201, in run
+2022-12-27T11:31:56.2405420Z     raise CommandError("Failed to build one or more wheels")
+2022-12-27T11:31:56.2405710Z pip._internal.exceptions.CommandError: Failed to build one or more wheels
+2022-12-27T11:31:56.2406150Z Removed build tracker: '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-i7x5urpn'
+2022-12-27T11:31:56.2821100Z ##[endgroup]
+2022-12-27T11:31:56.2844390Z ##[error]Command ['python', '-m', 'pip', 'wheel', '/Users/runner/actions-runner/_work/python.build/python.build/build_lxml222310/lxml-2.2.2', '--wheel-dir=/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-r9zpd8ej/cp310-macosx_arm64/built_wheel', '--no-deps', '-vvv'] failed with code 1. None
+2022-12-27T11:31:56.2850530Z 
+2022-12-27T11:31:56.2850870Z                                                               [31m✕ [0m2.10s
+2022-12-27T11:31:56.3285590Z ##[error]Process completed with exit code 1.
+2022-12-27T11:31:56.3316640Z ##[group]Run rm -rf build_lxml222310 wheelsout
+2022-12-27T11:31:56.3316860Z [36;1mrm -rf build_lxml222310 wheelsout[0m
+2022-12-27T11:31:56.3331520Z shell: /bin/bash -e {0}
+2022-12-27T11:31:56.3331670Z env:
+2022-12-27T11:31:56.3331840Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:56.3332050Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.10.9/x64/lib/pkgconfig
+2022-12-27T11:31:56.3332240Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:56.3332400Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:56.3332570Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.10.9/x64
+2022-12-27T11:31:56.3332710Z ##[endgroup]
+2022-12-27T11:31:56.3848230Z Cleaning up orphan processes

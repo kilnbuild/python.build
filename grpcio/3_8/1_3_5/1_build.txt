@@ -1,0 +1,1340 @@
+2022-12-27T01:55:06.9053388Z Requested labels: self-hosted, macOS, X64
+2022-12-27T01:55:06.9053462Z Job defined at: kilnbuild/python.build/.github/workflows/mac_arm_build.yml@refs/heads/main
+2022-12-27T01:55:06.9053495Z Waiting for a runner to pick up this job...
+2022-12-27T02:26:02.1307553Z Job is about to start running on the runner: kr2 (organization)
+2022-12-27T02:26:08.5573710Z Current runner version: '2.300.2'
+2022-12-27T02:26:08.5580960Z Runner name: 'kr2'
+2022-12-27T02:26:08.5581350Z Runner group name: 'Default'
+2022-12-27T02:26:08.5582140Z Machine name: 'kr2'
+2022-12-27T02:26:08.5584800Z ##[group]GITHUB_TOKEN Permissions
+2022-12-27T02:26:08.5585450Z Actions: write
+2022-12-27T02:26:08.5585700Z Checks: write
+2022-12-27T02:26:08.5585940Z Contents: write
+2022-12-27T02:26:08.5586200Z Deployments: write
+2022-12-27T02:26:08.5586450Z Discussions: write
+2022-12-27T02:26:08.5586700Z Issues: write
+2022-12-27T02:26:08.5586950Z Metadata: read
+2022-12-27T02:26:08.5587190Z Packages: write
+2022-12-27T02:26:08.5587450Z Pages: write
+2022-12-27T02:26:08.5587710Z PullRequests: write
+2022-12-27T02:26:08.5588000Z RepositoryProjects: write
+2022-12-27T02:26:08.5588290Z SecurityEvents: write
+2022-12-27T02:26:08.5588560Z Statuses: write
+2022-12-27T02:26:08.5588800Z ##[endgroup]
+2022-12-27T02:26:08.5592350Z Secret source: Actions
+2022-12-27T02:26:08.5592840Z Prepare workflow directory
+2022-12-27T02:26:08.6703120Z Prepare all required actions
+2022-12-27T02:26:08.6903860Z Getting action download info
+2022-12-27T02:26:09.1296210Z Download action repository 'actions/setup-python@v4' (SHA:5ccb29d8773c3f3f653e1705f474dfaa8a06a912)
+2022-12-27T02:26:10.9997040Z Download action repository 'actions/upload-artifact@v3' (SHA:83fd05a356d7e2593de66fc9913b3002723633cb)
+2022-12-27T02:26:12.4552130Z ##[group]Run echo '{
+2022-12-27T02:26:12.4552650Z [36;1mecho '{[0m
+2022-12-27T02:26:12.4553020Z [36;1m  "environment_variables": "GRPC_PYTHON_BUILD_WITH_CYTHON=1 GRPC_BUILD_WITH_BORING_SSL_ASM='' GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=TRUE",[0m
+2022-12-27T02:26:12.4553440Z [36;1m  "package_name": "grpcio",[0m
+2022-12-27T02:26:12.4553870Z [36;1m  "package_url": "https://files.pythonhosted.org/packages/6a/9f/7b62076085ff783050a23cfe1b8fabdc355f39c8c9df09efde9ab9997a9e/grpcio-1.3.5.tar.gz",[0m
+2022-12-27T02:26:12.4554230Z [36;1m  "package_version": "1.3.5",[0m
+2022-12-27T02:26:12.4554430Z [36;1m  "python_version": "3.8",[0m
+2022-12-27T02:26:12.4554700Z [36;1m  "use_ccache": "true"[0m
+2022-12-27T02:26:12.4554970Z [36;1m}'[0m
+2022-12-27T02:26:12.4582760Z shell: /bin/bash -e {0}
+2022-12-27T02:26:12.4582970Z ##[endgroup]
+2022-12-27T02:26:12.4967030Z {
+2022-12-27T02:26:12.4970440Z   "environment_variables": "GRPC_PYTHON_BUILD_WITH_CYTHON=1 GRPC_BUILD_WITH_BORING_SSL_ASM= GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=TRUE",
+2022-12-27T02:26:12.4971120Z   "package_name": "grpcio",
+2022-12-27T02:26:12.4972290Z   "package_url": "https://files.pythonhosted.org/packages/6a/9f/7b62076085ff783050a23cfe1b8fabdc355f39c8c9df09efde9ab9997a9e/grpcio-1.3.5.tar.gz",
+2022-12-27T02:26:12.4972840Z   "package_version": "1.3.5",
+2022-12-27T02:26:12.4973140Z   "python_version": "3.8",
+2022-12-27T02:26:12.4973670Z   "use_ccache": "true"
+2022-12-27T02:26:12.4973990Z }
+2022-12-27T02:26:12.5374140Z ##[group]Run actions/setup-python@v4
+2022-12-27T02:26:12.5374530Z with:
+2022-12-27T02:26:12.5375010Z   python-version: 3.8
+2022-12-27T02:26:12.5375510Z   check-latest: false
+2022-12-27T02:26:12.5376130Z   token: ***
+2022-12-27T02:26:12.5376490Z   update-environment: true
+2022-12-27T02:26:12.5376980Z ##[endgroup]
+2022-12-27T02:26:12.7488270Z ##[group]Installed versions
+2022-12-27T02:26:12.7560670Z Successfully set up CPython (3.8.15)
+2022-12-27T02:26:12.7562510Z ##[endgroup]
+2022-12-27T02:26:12.7830790Z ##[group]Run if [ "true" == "true" ]
+2022-12-27T02:26:12.7831260Z [36;1mif [ "true" == "true" ][0m
+2022-12-27T02:26:12.7831660Z [36;1mthen[0m
+2022-12-27T02:26:12.7832070Z [36;1m  echo "CCACHE_PATH_PREPEND=/usr/local/opt/ccache/libexec" >> $GITHUB_OUTPUT[0m
+2022-12-27T02:26:12.7832580Z [36;1melse[0m
+2022-12-27T02:26:12.7832870Z [36;1m  echo "CCACHE_PATH_PREPEND=" >> $GITHUB_OUTPUT[0m
+2022-12-27T02:26:12.7833220Z [36;1mfi[0m
+2022-12-27T02:26:12.7864860Z shell: /bin/bash -e {0}
+2022-12-27T02:26:12.7865170Z env:
+2022-12-27T02:26:12.7865600Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.7866280Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T02:26:12.7868020Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.7868420Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.7869050Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.7869530Z ##[endgroup]
+2022-12-27T02:26:12.8158670Z ##[group]Run echo "BUILD_NAME=$(echo grpcio_1.3.5_3.8 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+2022-12-27T02:26:12.8159370Z [36;1mecho "BUILD_NAME=$(echo grpcio_1.3.5_3.8 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT[0m
+2022-12-27T02:26:12.8185770Z shell: /bin/bash -e {0}
+2022-12-27T02:26:12.8186060Z env:
+2022-12-27T02:26:12.8186360Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8186820Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T02:26:12.8187240Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8187680Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8188100Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8188470Z ##[endgroup]
+2022-12-27T02:26:12.8398000Z ##[group]Run echo "PYTHON_NO_DOTS=$(echo 3.8 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+2022-12-27T02:26:12.8398760Z [36;1mecho "PYTHON_NO_DOTS=$(echo 3.8 | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT[0m
+2022-12-27T02:26:12.8424980Z shell: /bin/bash -e {0}
+2022-12-27T02:26:12.8425290Z env:
+2022-12-27T02:26:12.8425590Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8426990Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T02:26:12.8427450Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8427880Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8428300Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8428720Z ##[endgroup]
+2022-12-27T02:26:12.8652470Z ##[group]Run rm -rf build_grpcio13538
+2022-12-27T02:26:12.8653010Z [36;1mrm -rf build_grpcio13538[0m
+2022-12-27T02:26:12.8653360Z [36;1mmkdir build_grpcio13538[0m
+2022-12-27T02:26:12.8653760Z [36;1mcd build_grpcio13538[0m
+2022-12-27T02:26:12.8654280Z [36;1m/usr/local/bin/wget --quiet https://files.pythonhosted.org/packages/6a/9f/7b62076085ff783050a23cfe1b8fabdc355f39c8c9df09efde9ab9997a9e/grpcio-1.3.5.tar.gz[0m
+2022-12-27T02:26:12.8654710Z [36;1mtar xf *.tar.gz[0m
+2022-12-27T02:26:12.8655050Z [36;1mcd grpcio-*/[0m
+2022-12-27T02:26:12.8655490Z [36;1mpython -m pip install cibuildwheel==2.11.3[0m
+2022-12-27T02:26:12.8655840Z [36;1mpython -m cibuildwheel --output-dir ../wheelsout[0m
+2022-12-27T02:26:12.8683820Z shell: /bin/bash -e {0}
+2022-12-27T02:26:12.8684150Z env:
+2022-12-27T02:26:12.8684660Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8685180Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T02:26:12.8685580Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8686170Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8686690Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:12.8687100Z   CIBW_ARCHS_MACOS: arm64
+2022-12-27T02:26:12.8687360Z   CIBW_TEST_SKIP: *_arm64
+2022-12-27T02:26:12.8687720Z   CIBW_BUILD: cp38-macosx_arm64
+2022-12-27T02:26:12.8688150Z   CIBW_BUILD_FRONTEND: pip
+2022-12-27T02:26:12.8688420Z   CIBW_BUILD_VERBOSITY: 3
+2022-12-27T02:26:12.8689080Z   CIBW_ENVIRONMENT_MACOS: GRPC_PYTHON_BUILD_WITH_CYTHON=1 GRPC_BUILD_WITH_BORING_SSL_ASM='' GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=TRUE CFLAGS="-I/usr/local/opt/openssl@3/include" LDFLAGS="-L/usr/local/opt/openssl@3/lib" CPPFLAGS="-I/usr/local/opt/openssl@3/include" MAKEFLAGS="-j$(sysctl -n hw.logicalcpu)" PATH=/usr/local/opt/ccache/libexec:$PATH
+2022-12-27T02:26:12.8690180Z   CIBW_BEFORE_BUILD: pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi
+2022-12-27T02:26:12.8690640Z   MAKEFLAGS: -j$(sysctl -n hw.logicalcpu)
+2022-12-27T02:26:12.8690990Z ##[endgroup]
+2022-12-27T02:26:14.8375190Z Requirement already satisfied: cibuildwheel==2.11.3 in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (2.11.3)
+2022-12-27T02:26:14.8935060Z Requirement already satisfied: bashlex!=0.13 in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (0.16)
+2022-12-27T02:26:14.8943620Z Requirement already satisfied: typing-extensions>=4.1.0 in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (4.4.0)
+2022-12-27T02:26:14.8954340Z Requirement already satisfied: packaging>=20.9 in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (22.0)
+2022-12-27T02:26:14.8958340Z Requirement already satisfied: platformdirs in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (2.6.0)
+2022-12-27T02:26:14.8964270Z Requirement already satisfied: filelock in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (3.8.2)
+2022-12-27T02:26:14.8969370Z Requirement already satisfied: bracex in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (2.3.post1)
+2022-12-27T02:26:14.8979700Z Requirement already satisfied: tomli in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (2.0.1)
+2022-12-27T02:26:14.8983070Z Requirement already satisfied: certifi in /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages (from cibuildwheel==2.11.3) (2022.12.7)
+2022-12-27T02:26:15.1994790Z 
+2022-12-27T02:26:15.1997720Z      _ _       _ _   _       _           _
+2022-12-27T02:26:15.1999150Z  ___|_| |_ _ _|_| |_| |_ _ _| |_ ___ ___| |
+2022-12-27T02:26:15.2002980Z |  _| | . | | | | | . | | | |   | -_| -_| |
+2022-12-27T02:26:15.2004090Z |___|_|___|___|_|_|___|_____|_|_|___|___|_|
+2022-12-27T02:26:15.2004370Z 
+2022-12-27T02:26:15.2004540Z cibuildwheel version 2.11.3
+2022-12-27T02:26:15.2004680Z 
+2022-12-27T02:26:15.2004840Z Build options:
+2022-12-27T02:26:15.2005170Z   platform: macos
+2022-12-27T02:26:15.2284950Z   architectures: arm64[0m
+2022-12-27T02:26:15.2285780Z   build_selector: 
+2022-12-27T02:26:15.2286510Z     build_config: cp38-macosx_arm64
+2022-12-27T02:26:15.2286860Z     skip_config: 
+2022-12-27T02:26:15.2287160Z     requires_python: None
+2022-12-27T02:26:15.2287860Z     prerelease_pythons: False[0m
+2022-12-27T02:26:15.2288330Z   [38;5;244mcontainer_engine: docker[0m
+2022-12-27T02:26:15.2288980Z   output_dir: /Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/wheelsout[0m
+2022-12-27T02:26:15.2289630Z   package_dir: /Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5[0m
+2022-12-27T02:26:15.2290220Z   test_selector: 
+2022-12-27T02:26:15.2291410Z     skip_config: *_arm64[0m
+2022-12-27T02:26:15.2292160Z   [38;5;244mbefore_all: [0m
+2022-12-27T02:26:15.2293260Z   before_build: pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi[0m
+2022-12-27T02:26:15.2294080Z   [38;5;244mbefore_test: [0m
+2022-12-27T02:26:15.2295590Z   [38;5;244mbuild_frontend: pip[0m
+2022-12-27T02:26:15.2296840Z   build_verbosity: 3[0m
+2022-12-27T02:26:15.2297380Z   [38;5;244mconfig_settings: [0m
+2022-12-27T02:26:15.2297880Z   [38;5;244mdependency_constraints: pinned[0m
+2022-12-27T02:26:15.2298180Z   environment: 
+2022-12-27T02:26:15.2299280Z     GRPC_PYTHON_BUILD_WITH_CYTHON=1
+2022-12-27T02:26:15.2299710Z     GRPC_BUILD_WITH_BORING_SSL_ASM=''
+2022-12-27T02:26:15.2300020Z     GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=TRUE
+2022-12-27T02:26:15.2301200Z     CFLAGS="-I/usr/local/opt/openssl@3/include"
+2022-12-27T02:26:15.2302090Z     LDFLAGS="-L/usr/local/opt/openssl@3/lib"
+2022-12-27T02:26:15.2302520Z     CPPFLAGS="-I/usr/local/opt/openssl@3/include"
+2022-12-27T02:26:15.2302990Z     MAKEFLAGS="-j$(sysctl -n hw.logicalcpu)"
+2022-12-27T02:26:15.2303470Z     PATH=/usr/local/opt/ccache/libexec:$PATH[0m
+2022-12-27T02:26:15.2303850Z   [38;5;244mmanylinux_images: None[0m
+2022-12-27T02:26:15.2304520Z   [38;5;244mmusllinux_images: None[0m
+2022-12-27T02:26:15.2305100Z   [38;5;244mrepair_command: delocate-wheel --require-archs {delocate_archs} -w {dest_dir} -v {wheel}[0m
+2022-12-27T02:26:15.2305610Z   [38;5;244mtest_command: [0m
+2022-12-27T02:26:15.2305960Z   [38;5;244mtest_extras: [0m
+2022-12-27T02:26:15.2306390Z   [38;5;244mtest_requires: [0m
+2022-12-27T02:26:15.2306740Z 
+2022-12-27T02:26:15.2306940Z Cache folder: /Users/runner/Library/Caches/cibuildwheel
+2022-12-27T02:26:15.2327840Z 
+2022-12-27T02:26:15.2328490Z Here we go!
+2022-12-27T02:26:15.2328810Z 
+2022-12-27T02:26:15.2445230Z 
+2022-12-27T02:26:15.2446620Z [1m[34mBuilding cp38-macosx_arm64 wheel[0m
+2022-12-27T02:26:15.2447110Z CPython 3.8 macOS arm64 - Apple Silicon
+2022-12-27T02:26:15.2447630Z 
+2022-12-27T02:26:15.2454360Z ##[group]Installing Python cp38...
+2022-12-27T02:26:15.2454860Z 
+2022-12-27T02:26:15.2455860Z + pkgutil --pkgs
+2022-12-27T02:26:15.2633440Z ##[endgroup]
+2022-12-27T02:26:15.2635090Z                                                               [32m✓ [0m0.02s
+2022-12-27T02:26:15.2635810Z ##[group]Setting up build environment...
+2022-12-27T02:26:15.2636200Z 
+2022-12-27T02:26:15.2669350Z + /Users/runner/hostedtoolcache/Python/3.8.15/x64/bin/python -sS /Users/runner/Library/Caches/cibuildwheel/virtualenv-20.17.0.pyz --activators= --no-periodic-update --pip=22.3.1 --setuptools=65.6.3 --wheel=0.38.4 --symlink-app-data --python /Library/Frameworks/Python.framework/Versions/3.8/bin/python3 /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv
+2022-12-27T02:26:15.5630130Z created virtual environment CPython3.8.10.final.0-64 in 74ms
+2022-12-27T02:26:15.5631370Z   creator CPython3Posix(dest=/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv, clear=False, no_vcs_ignore=False, global=False)
+2022-12-27T02:26:15.5632080Z   seeder FromAppData(download=False, pip=22.3.1, setuptools=65.6.3, wheel=0.38.4, via=symlink, app_data_dir=/Users/runner/Library/Application Support/virtualenv)
+2022-12-27T02:26:15.5632620Z     added seed packages: pip==22.3.1, setuptools==65.6.3, wheel==0.38.4
+2022-12-27T02:26:15.5842570Z + python -m pip install --upgrade pip -c /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/cibuildwheel/resources/constraints-python38.txt
+2022-12-27T02:26:16.0925160Z Requirement already satisfied: pip in ./lib/python3.8/site-packages (22.3.1)
+2022-12-27T02:26:16.3616920Z + which pip
+2022-12-27T02:26:16.3655650Z /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/bin/pip
+2022-12-27T02:26:16.3662190Z + pip --version
+2022-12-27T02:26:16.7454100Z pip 22.3.1 from /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/pip (python 3.8)
+2022-12-27T02:26:16.7930010Z + which pip
+2022-12-27T02:26:16.7995030Z + which python
+2022-12-27T02:26:16.8034820Z /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/bin/python
+2022-12-27T02:26:16.8039980Z + python --version
+2022-12-27T02:26:16.8133490Z Python 3.8.10
+2022-12-27T02:26:16.8139960Z + which python
+2022-12-27T02:26:16.8252050Z ##[endgroup]
+2022-12-27T02:26:16.8252820Z                                                               [32m✓ [0m1.56s
+2022-12-27T02:26:16.8253840Z ##[group]Installing build tools...
+2022-12-27T02:26:16.8254060Z 
+2022-12-27T02:26:16.8254590Z + pip install --upgrade setuptools wheel delocate -c /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/cibuildwheel/resources/constraints-python38.txt
+2022-12-27T02:26:17.3597550Z Requirement already satisfied: setuptools in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages (65.6.3)
+2022-12-27T02:26:17.7672220Z Requirement already satisfied: wheel in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages (0.38.4)
+2022-12-27T02:26:17.8616290Z Collecting delocate
+2022-12-27T02:26:17.8670110Z   Using cached delocate-0.10.3-py3-none-any.whl (142 kB)
+2022-12-27T02:26:17.9199360Z Collecting packaging>=20.9
+2022-12-27T02:26:17.9251140Z   Using cached packaging-21.3-py3-none-any.whl (40 kB)
+2022-12-27T02:26:17.9566140Z Collecting typing-extensions
+2022-12-27T02:26:17.9613400Z   Using cached typing_extensions-4.4.0-py3-none-any.whl (26 kB)
+2022-12-27T02:26:18.0284840Z Collecting pyparsing!=3.0.5,>=2.0.2
+2022-12-27T02:26:18.0330700Z   Using cached pyparsing-3.0.9-py3-none-any.whl (98 kB)
+2022-12-27T02:26:18.0986050Z Installing collected packages: typing-extensions, pyparsing, packaging, delocate
+2022-12-27T02:26:18.3131540Z Successfully installed delocate-0.10.3 packaging-21.3 pyparsing-3.0.9 typing-extensions-4.4.0
+2022-12-27T02:26:18.4168080Z ##[endgroup]
+2022-12-27T02:26:18.4169230Z                                                               [32m✓ [0m1.59s
+2022-12-27T02:26:18.4170310Z ##[group]Running before_build...
+2022-12-27T02:26:18.4170710Z 
+2022-12-27T02:26:18.4181020Z + pip install Cython; if [[ -f requirements.txt ]]; then pip install -r requirements.txt; fi
+2022-12-27T02:26:19.5898880Z Collecting Cython
+2022-12-27T02:26:19.5989700Z   Using cached Cython-0.29.32-py2.py3-none-any.whl (986 kB)
+2022-12-27T02:26:19.6777320Z Installing collected packages: Cython
+2022-12-27T02:26:20.4347700Z Successfully installed Cython-0.29.32
+2022-12-27T02:26:21.8067260Z Collecting coverage>=4.0
+2022-12-27T02:26:21.8124590Z   Using cached coverage-7.0.1-cp38-cp38-macosx_10_9_x86_64.whl (187 kB)
+2022-12-27T02:26:21.8191590Z Requirement already satisfied: cython>=0.23 in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages (from -r requirements.txt (line 3)) (0.29.32)
+2022-12-27T02:26:21.8458040Z Collecting enum34>=1.0.4
+2022-12-27T02:26:21.8511650Z   Using cached enum34-1.1.10-py3-none-any.whl (11 kB)
+2022-12-27T02:26:21.8779610Z Collecting futures>=2.2.0
+2022-12-27T02:26:21.8782370Z   Using cached futures-3.0.5-py3-none-any.whl
+2022-12-27T02:26:22.4092750Z Collecting protobuf>=3.2.0
+2022-12-27T02:26:22.4153590Z   Using cached protobuf-4.21.12-cp37-abi3-macosx_10_9_universal2.whl (486 kB)
+2022-12-27T02:26:22.4586190Z Collecting six>=1.10
+2022-12-27T02:26:22.4629360Z   Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+2022-12-27T02:26:22.4660970Z Requirement already satisfied: wheel>=0.29 in /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages (from -r requirements.txt (line 8)) (0.38.4)
+2022-12-27T02:26:22.5376590Z Installing collected packages: futures, enum34, six, protobuf, coverage
+2022-12-27T02:26:22.9699490Z Successfully installed coverage-7.0.1 enum34-1.1.10 futures-3.0.5 protobuf-4.21.12 six-1.16.0
+2022-12-27T02:26:23.1277450Z ##[endgroup]
+2022-12-27T02:26:23.1279160Z                                                               [32m✓ [0m4.71s
+2022-12-27T02:26:23.1280050Z ##[group]Building wheel...
+2022-12-27T02:26:23.1280260Z 
+2022-12-27T02:26:23.1290210Z + python -m pip wheel /Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5 --wheel-dir=/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/built_wheel --no-deps -vvv
+2022-12-27T02:26:23.6026790Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-ephem-wheel-cache-0k7vgks9
+2022-12-27T02:26:23.6033890Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-k5f210im
+2022-12-27T02:26:23.6035560Z Initialized build tracking at /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-k5f210im
+2022-12-27T02:26:23.6037820Z Created build tracker: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-k5f210im
+2022-12-27T02:26:23.6041170Z Entered build tracker: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-k5f210im
+2022-12-27T02:26:23.6046130Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-ofd9xreh
+2022-12-27T02:26:23.6058440Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-ephem-wheel-cache-lhvolt2a
+2022-12-27T02:26:23.6202170Z Processing /Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5
+2022-12-27T02:26:23.6210300Z   Added file:///Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5 to build tracker '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-k5f210im'
+2022-12-27T02:26:23.6214960Z   Running setup.py (path:/Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5/setup.py) egg_info for package from file:///Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5
+2022-12-27T02:26:23.6220630Z   Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-0yd46ps3
+2022-12-27T02:26:23.6223660Z   Preparing metadata (setup.py): started
+2022-12-27T02:26:23.6226800Z   Running command python setup.py egg_info
+2022-12-27T02:26:26.3472320Z   Compiling src/python/grpcio/grpc/_cython/cygrpc.pyx because it depends on /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/Cython/Includes/libc/time.pxd.
+2022-12-27T02:26:26.3475960Z   [1/1] Cythonizing src/python/grpcio/grpc/_cython/cygrpc.pyx
+2022-12-27T02:26:26.3801230Z   running egg_info
+2022-12-27T02:26:26.3808290Z   creating /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-0yd46ps3/grpcio.egg-info
+2022-12-27T02:26:26.3833170Z   writing /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-0yd46ps3/grpcio.egg-info/PKG-INFO
+2022-12-27T02:26:26.3839370Z   writing dependency_links to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-0yd46ps3/grpcio.egg-info/dependency_links.txt
+2022-12-27T02:26:26.3845480Z   writing requirements to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-0yd46ps3/grpcio.egg-info/requires.txt
+2022-12-27T02:26:26.3851990Z   writing top-level names to /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-0yd46ps3/grpcio.egg-info/top_level.txt
+2022-12-27T02:26:26.3857550Z   writing manifest file '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-0yd46ps3/grpcio.egg-info/SOURCES.txt'
+2022-12-27T02:26:26.4025380Z   reading manifest file '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-0yd46ps3/grpcio.egg-info/SOURCES.txt'
+2022-12-27T02:26:26.4027550Z   reading manifest template 'PYTHON-MANIFEST.in'
+2022-12-27T02:26:26.4082360Z   /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5/src/python/grpcio/grpc/_cython/cygrpc.pxd
+2022-12-27T02:26:26.4084880Z     tree = Parsing.p_module(s, pxd, full_module_name)
+2022-12-27T02:26:26.4089790Z   warning: src/python/grpcio/grpc/_cython/_cygrpc/grpc.pxi:150:13: 'GRPC_ARG_PRIMARY_USER_AGENT_STRING' redeclared
+2022-12-27T02:26:26.4091950Z   warning: no files found matching '*.h' under directory 'src/python/grpcio/grpc'
+2022-12-27T02:26:26.4218010Z   warning: no files found matching '*.python' under directory 'src/python/grpcio/grpc'
+2022-12-27T02:26:26.4245550Z   warning: no previously-included files matching '*.so' found under directory 'src/python/grpcio/grpc/_cython'
+2022-12-27T02:26:26.4253810Z   warning: no previously-included files matching '*.pyd' found under directory 'src/python/grpcio/grpc/_cython'
+2022-12-27T02:26:26.5461820Z   warning: no files found matching 'src/python/grpcio/precompiled.py'
+2022-12-27T02:26:26.6297670Z   writing manifest file '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-pip-egg-info-0yd46ps3/grpcio.egg-info/SOURCES.txt'
+2022-12-27T02:26:26.7828470Z   Preparing metadata (setup.py): finished with status 'done'
+2022-12-27T02:26:26.7871010Z   Source in /Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5 has version 1.3.5, which satisfies requirement grpcio==1.3.5 from file:///Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5
+2022-12-27T02:26:26.7873700Z   Removed grpcio==1.3.5 from file:///Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5 from build tracker '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-k5f210im'
+2022-12-27T02:26:26.8092150Z Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-unpack-vp2orozd
+2022-12-27T02:26:26.8094210Z Building wheels for collected packages: grpcio
+2022-12-27T02:26:26.8105100Z   Created temporary directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-wcvnk6s1
+2022-12-27T02:26:26.8107750Z   Building wheel for grpcio (setup.py): started
+2022-12-27T02:26:26.8111230Z   Destination directory: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-wcvnk6s1
+2022-12-27T02:26:26.8113020Z   Running command python setup.py bdist_wheel
+2022-12-27T02:26:27.6150400Z   running bdist_wheel
+2022-12-27T02:26:27.6209630Z   running build
+2022-12-27T02:26:27.6212440Z   running build_py
+2022-12-27T02:26:27.6219310Z   running build_project_metadata
+2022-12-27T02:26:27.6223550Z   creating python_build
+2022-12-27T02:26:27.6230130Z   creating python_build/lib.macosx-11.0-arm64-cpython-38
+2022-12-27T02:26:27.6234810Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc
+2022-12-27T02:26:27.6238230Z   copying src/python/grpcio/grpc/_channel.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc
+2022-12-27T02:26:27.6241210Z   copying src/python/grpcio/grpc/_common.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc
+2022-12-27T02:26:27.6243940Z   copying src/python/grpcio/grpc/__init__.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc
+2022-12-27T02:26:27.6246320Z   copying src/python/grpcio/grpc/_utilities.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc
+2022-12-27T02:26:27.6249220Z   copying src/python/grpcio/grpc/_plugin_wrapping.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc
+2022-12-27T02:26:27.6252470Z   copying src/python/grpcio/grpc/_grpcio_metadata.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc
+2022-12-27T02:26:27.6255830Z   copying src/python/grpcio/grpc/_server.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc
+2022-12-27T02:26:27.6263070Z   copying src/python/grpcio/grpc/_auth.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc
+2022-12-27T02:26:27.6268000Z   copying src/python/grpcio/grpc/_credential_composition.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc
+2022-12-27T02:26:27.6274750Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc/beta
+2022-12-27T02:26:27.6277670Z   copying src/python/grpcio/grpc/beta/_server_adaptations.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/beta
+2022-12-27T02:26:27.6286700Z   copying src/python/grpcio/grpc/beta/interfaces.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/beta
+2022-12-27T02:26:27.6290500Z   copying src/python/grpcio/grpc/beta/__init__.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/beta
+2022-12-27T02:26:27.6292470Z   copying src/python/grpcio/grpc/beta/utilities.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/beta
+2022-12-27T02:26:27.6295520Z   copying src/python/grpcio/grpc/beta/implementations.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/beta
+2022-12-27T02:26:27.6298660Z   copying src/python/grpcio/grpc/beta/_client_adaptations.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/beta
+2022-12-27T02:26:27.6306950Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework
+2022-12-27T02:26:27.6309920Z   copying src/python/grpcio/grpc/framework/__init__.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework
+2022-12-27T02:26:27.6317130Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc/_cython
+2022-12-27T02:26:27.6320440Z   copying src/python/grpcio/grpc/_cython/__init__.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/_cython
+2022-12-27T02:26:27.6330620Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/foundation
+2022-12-27T02:26:27.6333660Z   copying src/python/grpcio/grpc/framework/foundation/callable_util.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/foundation
+2022-12-27T02:26:27.6337060Z   copying src/python/grpcio/grpc/framework/foundation/abandonment.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/foundation
+2022-12-27T02:26:27.6345190Z   copying src/python/grpcio/grpc/framework/foundation/__init__.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/foundation
+2022-12-27T02:26:27.6348720Z   copying src/python/grpcio/grpc/framework/foundation/stream.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/foundation
+2022-12-27T02:26:27.6350740Z   copying src/python/grpcio/grpc/framework/foundation/stream_util.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/foundation
+2022-12-27T02:26:27.6357160Z   copying src/python/grpcio/grpc/framework/foundation/future.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/foundation
+2022-12-27T02:26:27.6360820Z   copying src/python/grpcio/grpc/framework/foundation/logging_pool.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/foundation
+2022-12-27T02:26:27.6368760Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/common
+2022-12-27T02:26:27.6371660Z   copying src/python/grpcio/grpc/framework/common/style.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/common
+2022-12-27T02:26:27.6374760Z   copying src/python/grpcio/grpc/framework/common/cardinality.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/common
+2022-12-27T02:26:27.6379980Z   copying src/python/grpcio/grpc/framework/common/__init__.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/common
+2022-12-27T02:26:27.6386340Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/interfaces
+2022-12-27T02:26:27.6389460Z   copying src/python/grpcio/grpc/framework/interfaces/__init__.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/interfaces
+2022-12-27T02:26:27.6397410Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/interfaces/face
+2022-12-27T02:26:27.6400050Z   copying src/python/grpcio/grpc/framework/interfaces/face/__init__.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/interfaces/face
+2022-12-27T02:26:27.6405180Z   copying src/python/grpcio/grpc/framework/interfaces/face/utilities.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/interfaces/face
+2022-12-27T02:26:27.6408080Z   copying src/python/grpcio/grpc/framework/interfaces/face/face.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/interfaces/face
+2022-12-27T02:26:27.6419130Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/interfaces/base
+2022-12-27T02:26:27.6421650Z   copying src/python/grpcio/grpc/framework/interfaces/base/__init__.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/interfaces/base
+2022-12-27T02:26:27.6426010Z   copying src/python/grpcio/grpc/framework/interfaces/base/utilities.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/interfaces/base
+2022-12-27T02:26:27.6432110Z   copying src/python/grpcio/grpc/framework/interfaces/base/base.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/framework/interfaces/base
+2022-12-27T02:26:27.6438710Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc/_cython/_cygrpc
+2022-12-27T02:26:27.6441780Z   copying src/python/grpcio/grpc/_cython/_cygrpc/__init__.py -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/_cython/_cygrpc
+2022-12-27T02:26:27.6450730Z   creating python_build/lib.macosx-11.0-arm64-cpython-38/grpc/_cython/_credentials
+2022-12-27T02:26:27.6453750Z   copying src/python/grpcio/grpc/_cython/_credentials/roots.pem -> python_build/lib.macosx-11.0-arm64-cpython-38/grpc/_cython/_credentials
+2022-12-27T02:26:27.6499770Z   running build_ext
+2022-12-27T02:26:27.7004900Z   Found cython-generated files...
+2022-12-27T02:26:27.7026580Z   building 'grpc._cython.cygrpc' extension
+2022-12-27T02:26:27.7088330Z   creating python_build/temp.macosx-11.0-arm64-cpython-38
+2022-12-27T02:26:27.7091250Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src
+2022-12-27T02:26:27.7093460Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/boringssl
+2022-12-27T02:26:27.7096820Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core
+2022-12-27T02:26:27.7098840Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext
+2022-12-27T02:26:27.7101760Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/census
+2022-12-27T02:26:27.7104410Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/census/gen
+2022-12-27T02:26:27.7107250Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters
+2022-12-27T02:26:27.7109880Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel
+2022-12-27T02:26:27.7113130Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/lb_policy
+2022-12-27T02:26:27.7116210Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/lb_policy/grpclb
+2022-12-27T02:26:27.7118980Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/lb_policy/grpclb/proto
+2022-12-27T02:26:27.7121900Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/lb_policy/grpclb/proto/grpc
+2022-12-27T02:26:27.7124500Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/lb_policy/grpclb/proto/grpc/lb
+2022-12-27T02:26:27.7127200Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/lb_policy/grpclb/proto/grpc/lb/v1
+2022-12-27T02:26:27.7129990Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/lb_policy/pick_first
+2022-12-27T02:26:27.7132350Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/lb_policy/round_robin
+2022-12-27T02:26:27.7136460Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/resolver
+2022-12-27T02:26:27.7137820Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/resolver/dns
+2022-12-27T02:26:27.7141340Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/resolver/dns/c_ares
+2022-12-27T02:26:27.7143270Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/resolver/dns/native
+2022-12-27T02:26:27.7146450Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/client_channel/resolver/sockaddr
+2022-12-27T02:26:27.7148990Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/load_reporting
+2022-12-27T02:26:27.7151950Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/filters/max_age
+2022-12-27T02:26:27.7154390Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/transport
+2022-12-27T02:26:27.7157430Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/transport/chttp2
+2022-12-27T02:26:27.7159900Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/transport/chttp2/alpn
+2022-12-27T02:26:27.7162820Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/transport/chttp2/client
+2022-12-27T02:26:27.7165620Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/transport/chttp2/client/insecure
+2022-12-27T02:26:27.7168540Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/transport/chttp2/client/secure
+2022-12-27T02:26:27.7170990Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/transport/chttp2/server
+2022-12-27T02:26:27.7173970Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/transport/chttp2/server/insecure
+2022-12-27T02:26:27.7176810Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/transport/chttp2/server/secure
+2022-12-27T02:26:27.7179420Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/ext/transport/chttp2/transport
+2022-12-27T02:26:27.7182110Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib
+2022-12-27T02:26:27.7184810Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/channel
+2022-12-27T02:26:27.7187500Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/compression
+2022-12-27T02:26:27.7190350Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/debug
+2022-12-27T02:26:27.7192980Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/http
+2022-12-27T02:26:27.7195730Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/iomgr
+2022-12-27T02:26:27.7207530Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/json
+2022-12-27T02:26:27.7210620Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/profiling
+2022-12-27T02:26:27.7214090Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security
+2022-12-27T02:26:27.7216260Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/context
+2022-12-27T02:26:27.7219580Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/credentials
+2022-12-27T02:26:27.7222130Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/credentials/composite
+2022-12-27T02:26:27.7225070Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/credentials/fake
+2022-12-27T02:26:27.7227870Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/credentials/google_default
+2022-12-27T02:26:27.7230660Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/credentials/iam
+2022-12-27T02:26:27.7233230Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/credentials/jwt
+2022-12-27T02:26:27.7236470Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/credentials/oauth2
+2022-12-27T02:26:27.7238970Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/credentials/plugin
+2022-12-27T02:26:27.7241890Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/credentials/ssl
+2022-12-27T02:26:27.7244490Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/transport
+2022-12-27T02:26:27.7247360Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/security/util
+2022-12-27T02:26:27.7250710Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/slice
+2022-12-27T02:26:27.7253120Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/support
+2022-12-27T02:26:27.7262080Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/surface
+2022-12-27T02:26:27.7268560Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/lib/transport
+2022-12-27T02:26:27.7274600Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/plugin_registry
+2022-12-27T02:26:27.7277380Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/core/tsi
+2022-12-27T02:26:27.7280220Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/python
+2022-12-27T02:26:27.7283020Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/python/grpcio
+2022-12-27T02:26:27.7285700Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/python/grpcio/grpc
+2022-12-27T02:26:27.7288620Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/src/python/grpcio/grpc/_cython
+2022-12-27T02:26:27.7291340Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party
+2022-12-27T02:26:27.7294120Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl
+2022-12-27T02:26:27.7296860Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto
+2022-12-27T02:26:27.7299640Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/aes
+2022-12-27T02:26:27.7302470Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/asn1
+2022-12-27T02:26:27.7305310Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/base64
+2022-12-27T02:26:27.7308260Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/bio
+2022-12-27T02:26:27.7311510Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/bn
+2022-12-27T02:26:27.7314650Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/bn/asm
+2022-12-27T02:26:27.7327440Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/buf
+2022-12-27T02:26:27.7331540Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/bytestring
+2022-12-27T02:26:27.7334330Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/chacha
+2022-12-27T02:26:27.7337390Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/cipher
+2022-12-27T02:26:27.7339690Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/cmac
+2022-12-27T02:26:27.7342600Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/conf
+2022-12-27T02:26:27.7345460Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/curve25519
+2022-12-27T02:26:27.7348160Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/des
+2022-12-27T02:26:27.7350990Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/dh
+2022-12-27T02:26:27.7353820Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/digest
+2022-12-27T02:26:27.7356960Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/dsa
+2022-12-27T02:26:27.7359800Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/ec
+2022-12-27T02:26:27.7362770Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/ecdh
+2022-12-27T02:26:27.7365400Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/ecdsa
+2022-12-27T02:26:27.7368290Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/engine
+2022-12-27T02:26:27.7371250Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/err
+2022-12-27T02:26:27.7374120Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/evp
+2022-12-27T02:26:27.7376950Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/hkdf
+2022-12-27T02:26:27.7379730Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/hmac
+2022-12-27T02:26:27.7382600Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/lhash
+2022-12-27T02:26:27.7385630Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/md4
+2022-12-27T02:26:27.7388600Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/md5
+2022-12-27T02:26:27.7391490Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/modes
+2022-12-27T02:26:27.7394320Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/newhope
+2022-12-27T02:26:27.7397090Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/obj
+2022-12-27T02:26:27.7400430Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/pem
+2022-12-27T02:26:27.7405060Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/pkcs8
+2022-12-27T02:26:27.7407980Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/poly1305
+2022-12-27T02:26:27.7411050Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/rand
+2022-12-27T02:26:27.7413930Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/rc4
+2022-12-27T02:26:27.7416730Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/rsa
+2022-12-27T02:26:27.7419550Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/sha
+2022-12-27T02:26:27.7422470Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/stack
+2022-12-27T02:26:27.7427100Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/x509
+2022-12-27T02:26:27.7438600Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/crypto/x509v3
+2022-12-27T02:26:27.7447010Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/boringssl/ssl
+2022-12-27T02:26:27.7455720Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/cares
+2022-12-27T02:26:27.7459490Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/cares/cares
+2022-12-27T02:26:27.7469740Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/nanopb
+2022-12-27T02:26:27.7472540Z   creating python_build/temp.macosx-11.0-arm64-cpython-38/third_party/zlib
+2022-12-27T02:26:27.7480700Z   gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -DOPENSSL_NO_ASM=1 -D_WIN32_WINNT=1536 -DGPR_BACKWARDS_COMPATIBILITY_MODE=1 -DHAVE_CONFIG_H=1 "-DPyMODINIT_FUNC=__attribute__((visibility (\"default\"))) PyObject*" -Isrc/python/grpcio -Iinclude -I. -Ithird_party/boringssl/include -Ithird_party/zlib -Ithird_party/cares -Ithird_party/cares/cares -Ithird_party/cares/config_darwin -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.8/include/python3.8 -c src/boringssl/err_data.c -o python_build/temp.macosx-11.0-arm64-cpython-38/src/boringssl/err_data.o -fvisibility=hidden -fno-wrapv -pthread -std=gnu99
+2022-12-27T02:26:27.8148560Z   In file included from src/boringssl/err_data.c:17:
+2022-12-27T02:26:27.8151650Z   third_party/boringssl/include/openssl/base.h:120:9: warning: 'OPENSSL_VERSION_NUMBER' macro redefined [-Wmacro-redefined]
+2022-12-27T02:26:27.8155560Z   #define OPENSSL_VERSION_NUMBER 0x10002000
+2022-12-27T02:26:27.8158390Z           ^
+2022-12-27T02:26:27.8161090Z   /usr/local/opt/openssl@3/include/openssl/opensslv.h:99:10: note: previous definition is here
+2022-12-27T02:26:27.8163750Z   # define OPENSSL_VERSION_NUMBER          \
+2022-12-27T02:26:27.8166420Z            ^
+2022-12-27T02:26:27.8169030Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8171690Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:21:
+2022-12-27T02:26:27.8174840Z   /usr/local/opt/openssl@3/include/openssl/e_os2.h:183:11: warning: 'OPENSSL_EXPORT' macro redefined [-Wmacro-redefined]
+2022-12-27T02:26:27.8176920Z   #  define OPENSSL_EXPORT extern
+2022-12-27T02:26:27.8179880Z             ^
+2022-12-27T02:26:27.8182330Z   third_party/boringssl/include/openssl/base.h:155:9: note: previous definition is here
+2022-12-27T02:26:27.8184730Z   #define OPENSSL_EXPORT
+2022-12-27T02:26:27.8187280Z           ^
+2022-12-27T02:26:27.8266050Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8267480Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8270690Z   In file included from /usr/local/opt/openssl@3/include/openssl/types.h:21:
+2022-12-27T02:26:27.8273340Z   /usr/local/opt/openssl@3/include/openssl/safestack.h:264:15: warning: redefinition of typedef 'OPENSSL_BLOCK' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8276320Z   typedef void *OPENSSL_BLOCK;
+2022-12-27T02:26:27.8278750Z                 ^
+2022-12-27T02:26:27.8281440Z   third_party/boringssl/include/openssl/base.h:298:15: note: previous definition is here
+2022-12-27T02:26:27.8283970Z   typedef void *OPENSSL_BLOCK;
+2022-12-27T02:26:27.8286580Z                 ^
+2022-12-27T02:26:27.8289350Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8292060Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8295100Z   /usr/local/opt/openssl@3/include/openssl/types.h:45:31: warning: redefinition of typedef 'ASN1_INTEGER' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8297410Z   typedef struct asn1_string_st ASN1_INTEGER;
+2022-12-27T02:26:27.8299880Z                                 ^
+2022-12-27T02:26:27.8302760Z   third_party/boringssl/include/openssl/base.h:189:31: note: previous definition is here
+2022-12-27T02:26:27.8305260Z   typedef struct asn1_string_st ASN1_INTEGER;
+2022-12-27T02:26:27.8307880Z                                 ^
+2022-12-27T02:26:27.8310570Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8313660Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8316260Z   /usr/local/opt/openssl@3/include/openssl/types.h:46:31: warning: redefinition of typedef 'ASN1_ENUMERATED' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8318590Z   typedef struct asn1_string_st ASN1_ENUMERATED;
+2022-12-27T02:26:27.8321030Z                                 ^
+2022-12-27T02:26:27.8323840Z   third_party/boringssl/include/openssl/base.h:185:31: note: previous definition is here
+2022-12-27T02:26:27.8326330Z   typedef struct asn1_string_st ASN1_ENUMERATED;
+2022-12-27T02:26:27.8329100Z                                 ^
+2022-12-27T02:26:27.8332500Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8335440Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8339240Z   /usr/local/opt/openssl@3/include/openssl/types.h:47:31: warning: redefinition of typedef 'ASN1_BIT_STRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8342230Z   typedef struct asn1_string_st ASN1_BIT_STRING;
+2022-12-27T02:26:27.8345380Z                                 ^
+2022-12-27T02:26:27.8348570Z   third_party/boringssl/include/openssl/base.h:183:31: note: previous definition is here
+2022-12-27T02:26:27.8351800Z   typedef struct asn1_string_st ASN1_BIT_STRING;
+2022-12-27T02:26:27.8354850Z                                 ^
+2022-12-27T02:26:27.8358280Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8361360Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8365180Z   /usr/local/opt/openssl@3/include/openssl/types.h:48:31: warning: redefinition of typedef 'ASN1_OCTET_STRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8368320Z   typedef struct asn1_string_st ASN1_OCTET_STRING;
+2022-12-27T02:26:27.8371500Z                                 ^
+2022-12-27T02:26:27.8374820Z   third_party/boringssl/include/openssl/base.h:190:31: note: previous definition is here
+2022-12-27T02:26:27.8378280Z   typedef struct asn1_string_st ASN1_OCTET_STRING;
+2022-12-27T02:26:27.8381220Z                                 ^
+2022-12-27T02:26:27.8384660Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8387910Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8391820Z   /usr/local/opt/openssl@3/include/openssl/types.h:49:31: warning: redefinition of typedef 'ASN1_PRINTABLESTRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8394690Z   typedef struct asn1_string_st ASN1_PRINTABLESTRING;
+2022-12-27T02:26:27.8397880Z                                 ^
+2022-12-27T02:26:27.8401220Z   third_party/boringssl/include/openssl/base.h:191:31: note: previous definition is here
+2022-12-27T02:26:27.8404640Z   typedef struct asn1_string_st ASN1_PRINTABLESTRING;
+2022-12-27T02:26:27.8407730Z                                 ^
+2022-12-27T02:26:27.8411180Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8414460Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8418240Z   /usr/local/opt/openssl@3/include/openssl/types.h:50:31: warning: redefinition of typedef 'ASN1_T61STRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8421160Z   typedef struct asn1_string_st ASN1_T61STRING;
+2022-12-27T02:26:27.8424340Z                                 ^
+2022-12-27T02:26:27.8427680Z   third_party/boringssl/include/openssl/base.h:193:31: note: previous definition is here
+2022-12-27T02:26:27.8431170Z   typedef struct asn1_string_st ASN1_T61STRING;
+2022-12-27T02:26:27.8434260Z                                 ^
+2022-12-27T02:26:27.8437640Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8440860Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8444650Z   /usr/local/opt/openssl@3/include/openssl/types.h:51:31: warning: redefinition of typedef 'ASN1_IA5STRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8448040Z   typedef struct asn1_string_st ASN1_IA5STRING;
+2022-12-27T02:26:27.8450880Z                                 ^
+2022-12-27T02:26:27.8454120Z   third_party/boringssl/include/openssl/base.h:188:31: note: previous definition is here
+2022-12-27T02:26:27.8456920Z   typedef struct asn1_string_st ASN1_IA5STRING;
+2022-12-27T02:26:27.8459860Z                                 ^
+2022-12-27T02:26:27.8462820Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8465820Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8469180Z   /usr/local/opt/openssl@3/include/openssl/types.h:52:31: warning: redefinition of typedef 'ASN1_GENERALSTRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8471870Z   typedef struct asn1_string_st ASN1_GENERALSTRING;
+2022-12-27T02:26:27.8474730Z                                 ^
+2022-12-27T02:26:27.8477840Z   third_party/boringssl/include/openssl/base.h:187:31: note: previous definition is here
+2022-12-27T02:26:27.8480610Z   typedef struct asn1_string_st ASN1_GENERALSTRING;
+2022-12-27T02:26:27.8483310Z                                 ^
+2022-12-27T02:26:27.8486240Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8489240Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8492560Z   /usr/local/opt/openssl@3/include/openssl/types.h:53:31: warning: redefinition of typedef 'ASN1_UNIVERSALSTRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8495190Z   typedef struct asn1_string_st ASN1_UNIVERSALSTRING;
+2022-12-27T02:26:27.8497770Z                                 ^
+2022-12-27T02:26:27.8500580Z   third_party/boringssl/include/openssl/base.h:195:31: note: previous definition is here
+2022-12-27T02:26:27.8503120Z   typedef struct asn1_string_st ASN1_UNIVERSALSTRING;
+2022-12-27T02:26:27.8505600Z                                 ^
+2022-12-27T02:26:27.8508400Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8511080Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8514310Z   /usr/local/opt/openssl@3/include/openssl/types.h:54:31: warning: redefinition of typedef 'ASN1_BMPSTRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8516530Z   typedef struct asn1_string_st ASN1_BMPSTRING;
+2022-12-27T02:26:27.8519120Z                                 ^
+2022-12-27T02:26:27.8521860Z   third_party/boringssl/include/openssl/base.h:184:31: note: previous definition is here
+2022-12-27T02:26:27.8524460Z   typedef struct asn1_string_st ASN1_BMPSTRING;
+2022-12-27T02:26:27.8527010Z                                 ^
+2022-12-27T02:26:27.8529830Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8532480Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8535830Z   /usr/local/opt/openssl@3/include/openssl/types.h:55:31: warning: redefinition of typedef 'ASN1_UTCTIME' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8538150Z   typedef struct asn1_string_st ASN1_UTCTIME;
+2022-12-27T02:26:27.8540720Z                                 ^
+2022-12-27T02:26:27.8543510Z   third_party/boringssl/include/openssl/base.h:196:31: note: previous definition is here
+2022-12-27T02:26:27.8546050Z   typedef struct asn1_string_st ASN1_UTCTIME;
+2022-12-27T02:26:27.8548760Z                                 ^
+2022-12-27T02:26:27.8551490Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8554240Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8557300Z   /usr/local/opt/openssl@3/include/openssl/types.h:56:31: warning: redefinition of typedef 'ASN1_TIME' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8559860Z   typedef struct asn1_string_st ASN1_TIME;
+2022-12-27T02:26:27.8562450Z                                 ^
+2022-12-27T02:26:27.8565190Z   third_party/boringssl/include/openssl/base.h:194:31: note: previous definition is here
+2022-12-27T02:26:27.8568310Z   typedef struct asn1_string_st ASN1_TIME;
+2022-12-27T02:26:27.8570510Z                                 ^
+2022-12-27T02:26:27.8573250Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8575880Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8579120Z   /usr/local/opt/openssl@3/include/openssl/types.h:57:31: warning: redefinition of typedef 'ASN1_GENERALIZEDTIME' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8581170Z   typedef struct asn1_string_st ASN1_GENERALIZEDTIME;
+2022-12-27T02:26:27.8583760Z                                 ^
+2022-12-27T02:26:27.8586530Z   third_party/boringssl/include/openssl/base.h:186:31: note: previous definition is here
+2022-12-27T02:26:27.8589290Z   typedef struct asn1_string_st ASN1_GENERALIZEDTIME;
+2022-12-27T02:26:27.8591810Z                                 ^
+2022-12-27T02:26:27.8594680Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8597330Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8600530Z   /usr/local/opt/openssl@3/include/openssl/types.h:58:31: warning: redefinition of typedef 'ASN1_VISIBLESTRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8602900Z   typedef struct asn1_string_st ASN1_VISIBLESTRING;
+2022-12-27T02:26:27.8605130Z                                 ^
+2022-12-27T02:26:27.8608190Z   third_party/boringssl/include/openssl/base.h:198:31: note: previous definition is here
+2022-12-27T02:26:27.8610670Z   typedef struct asn1_string_st ASN1_VISIBLESTRING;
+2022-12-27T02:26:27.8613200Z                                 ^
+2022-12-27T02:26:27.8615890Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8618650Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8621600Z   /usr/local/opt/openssl@3/include/openssl/types.h:59:31: warning: redefinition of typedef 'ASN1_UTF8STRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8623910Z   typedef struct asn1_string_st ASN1_UTF8STRING;
+2022-12-27T02:26:27.8626440Z                                 ^
+2022-12-27T02:26:27.8629350Z   third_party/boringssl/include/openssl/base.h:197:31: note: previous definition is here
+2022-12-27T02:26:27.8631900Z   typedef struct asn1_string_st ASN1_UTF8STRING;
+2022-12-27T02:26:27.8634380Z                                 ^
+2022-12-27T02:26:27.8637100Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8639820Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8642920Z   /usr/local/opt/openssl@3/include/openssl/types.h:60:31: warning: redefinition of typedef 'ASN1_STRING' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8645470Z   typedef struct asn1_string_st ASN1_STRING;
+2022-12-27T02:26:27.8648120Z                                 ^
+2022-12-27T02:26:27.8650940Z   third_party/boringssl/include/openssl/base.h:192:31: note: previous definition is here
+2022-12-27T02:26:27.8653700Z   typedef struct asn1_string_st ASN1_STRING;
+2022-12-27T02:26:27.8656120Z                                 ^
+2022-12-27T02:26:27.8659170Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8661570Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8664780Z   /usr/local/opt/openssl@3/include/openssl/types.h:61:13: warning: redefinition of typedef 'ASN1_BOOLEAN' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8666760Z   typedef int ASN1_BOOLEAN;
+2022-12-27T02:26:27.8669760Z               ^
+2022-12-27T02:26:27.8672750Z   third_party/boringssl/include/openssl/base.h:178:13: note: previous definition is here
+2022-12-27T02:26:27.8675070Z   typedef int ASN1_BOOLEAN;
+2022-12-27T02:26:27.8677780Z               ^
+2022-12-27T02:26:27.8680660Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8682950Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8686940Z   /usr/local/opt/openssl@3/include/openssl/types.h:62:13: warning: redefinition of typedef 'ASN1_NULL' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8688540Z   typedef int ASN1_NULL;
+2022-12-27T02:26:27.8691250Z               ^
+2022-12-27T02:26:27.8694160Z   third_party/boringssl/include/openssl/base.h:179:13: note: previous definition is here
+2022-12-27T02:26:27.8696750Z   typedef int ASN1_NULL;
+2022-12-27T02:26:27.8699050Z               ^
+2022-12-27T02:26:27.8701820Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8704420Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8707570Z   /usr/local/opt/openssl@3/include/openssl/types.h:65:29: warning: redefinition of typedef 'ASN1_TYPE' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8709870Z   typedef struct asn1_type_st ASN1_TYPE;
+2022-12-27T02:26:27.8712600Z                               ^
+2022-12-27T02:26:27.8715360Z   third_party/boringssl/include/openssl/base.h:199:29: note: previous definition is here
+2022-12-27T02:26:27.8718030Z   typedef struct asn1_type_st ASN1_TYPE;
+2022-12-27T02:26:27.8720530Z                               ^
+2022-12-27T02:26:27.8723230Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8725910Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8729150Z   /usr/local/opt/openssl@3/include/openssl/types.h:66:31: warning: redefinition of typedef 'ASN1_OBJECT' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8731600Z   typedef struct asn1_object_st ASN1_OBJECT;
+2022-12-27T02:26:27.8733970Z                                 ^
+2022-12-27T02:26:27.8737030Z   third_party/boringssl/include/openssl/base.h:181:31: note: previous definition is here
+2022-12-27T02:26:27.8739580Z   typedef struct asn1_object_st ASN1_OBJECT;
+2022-12-27T02:26:27.8741850Z                                 ^
+2022-12-27T02:26:27.8744690Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8747400Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8750640Z   /usr/local/opt/openssl@3/include/openssl/types.h:69:29: warning: redefinition of typedef 'ASN1_ITEM' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8752890Z   typedef struct ASN1_ITEM_st ASN1_ITEM;
+2022-12-27T02:26:27.8755350Z                               ^
+2022-12-27T02:26:27.8758180Z   third_party/boringssl/include/openssl/base.h:180:29: note: previous definition is here
+2022-12-27T02:26:27.8761170Z   typedef struct ASN1_ITEM_st ASN1_ITEM;
+2022-12-27T02:26:27.8763750Z                               ^
+2022-12-27T02:26:27.8766320Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8769130Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8772490Z   /usr/local/opt/openssl@3/include/openssl/types.h:70:29: warning: redefinition of typedef 'ASN1_PCTX' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8775950Z   typedef struct asn1_pctx_st ASN1_PCTX;
+2022-12-27T02:26:27.8778660Z                               ^
+2022-12-27T02:26:27.8780450Z   third_party/boringssl/include/openssl/base.h:182:29: note: previous definition is here
+2022-12-27T02:26:27.8782970Z   typedef struct asn1_pctx_st ASN1_PCTX;
+2022-12-27T02:26:27.8786030Z                               ^
+2022-12-27T02:26:27.8788440Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8791280Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8794800Z   /usr/local/opt/openssl@3/include/openssl/types.h:86:23: warning: redefinition of typedef 'BIO' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8796430Z   typedef struct bio_st BIO;
+2022-12-27T02:26:27.8799030Z                         ^
+2022-12-27T02:26:27.8801860Z   third_party/boringssl/include/openssl/base.h:235:23: note: previous definition is here
+2022-12-27T02:26:27.8804290Z   typedef struct bio_st BIO;
+2022-12-27T02:26:27.8807160Z                         ^
+2022-12-27T02:26:27.8809600Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8812130Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8815440Z   /usr/local/opt/openssl@3/include/openssl/types.h:87:26: warning: redefinition of typedef 'BIGNUM' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8817390Z   typedef struct bignum_st BIGNUM;
+2022-12-27T02:26:27.8820080Z                            ^
+2022-12-27T02:26:27.8823010Z   third_party/boringssl/include/openssl/base.h:233:26: note: previous definition is here
+2022-12-27T02:26:27.8825340Z   typedef struct bignum_st BIGNUM;
+2022-12-27T02:26:27.8828170Z                            ^
+2022-12-27T02:26:27.8830880Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8834310Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8836740Z   /usr/local/opt/openssl@3/include/openssl/types.h:88:27: warning: redefinition of typedef 'BN_CTX' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8839410Z   typedef struct bignum_ctx BN_CTX;
+2022-12-27T02:26:27.8841800Z                             ^
+2022-12-27T02:26:27.8844390Z   third_party/boringssl/include/openssl/base.h:232:27: note: previous definition is here
+2022-12-27T02:26:27.8846970Z   typedef struct bignum_ctx BN_CTX;
+2022-12-27T02:26:27.8849640Z                             ^
+2022-12-27T02:26:27.8852290Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8855600Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8858090Z   /usr/local/opt/openssl@3/include/openssl/types.h:90:31: warning: redefinition of typedef 'BN_MONT_CTX' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8860810Z   typedef struct bn_mont_ctx_st BN_MONT_CTX;
+2022-12-27T02:26:27.8862910Z                                 ^
+2022-12-27T02:26:27.8866000Z   third_party/boringssl/include/openssl/base.h:237:31: note: previous definition is here
+2022-12-27T02:26:27.8868600Z   typedef struct bn_mont_ctx_st BN_MONT_CTX;
+2022-12-27T02:26:27.8871500Z                                 ^
+2022-12-27T02:26:27.8874410Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8877160Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8880430Z   /usr/local/opt/openssl@3/include/openssl/types.h:92:28: warning: redefinition of typedef 'BN_GENCB' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8882410Z   typedef struct bn_gencb_st BN_GENCB;
+2022-12-27T02:26:27.8885000Z                              ^
+2022-12-27T02:26:27.8887970Z   third_party/boringssl/include/openssl/base.h:236:28: note: previous definition is here
+2022-12-27T02:26:27.8890400Z   typedef struct bn_gencb_st BN_GENCB;
+2022-12-27T02:26:27.8893130Z                              ^
+2022-12-27T02:26:27.8895850Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8898450Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8901520Z   /usr/local/opt/openssl@3/include/openssl/types.h:94:27: warning: redefinition of typedef 'BUF_MEM' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8903810Z   typedef struct buf_mem_st BUF_MEM;
+2022-12-27T02:26:27.8906550Z                             ^
+2022-12-27T02:26:27.8909330Z   third_party/boringssl/include/openssl/base.h:238:27: note: previous definition is here
+2022-12-27T02:26:27.8911820Z   typedef struct buf_mem_st BUF_MEM;
+2022-12-27T02:26:27.8914450Z                             ^
+2022-12-27T02:26:27.8917140Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8919690Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8922760Z   /usr/local/opt/openssl@3/include/openssl/types.h:101:30: warning: redefinition of typedef 'EVP_CIPHER' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8925500Z   typedef struct evp_cipher_st EVP_CIPHER;
+2022-12-27T02:26:27.8927720Z                                ^
+2022-12-27T02:26:27.8930710Z   third_party/boringssl/include/openssl/base.h:256:30: note: previous definition is here
+2022-12-27T02:26:27.8933420Z   typedef struct evp_cipher_st EVP_CIPHER;
+2022-12-27T02:26:27.8935430Z                                ^
+2022-12-27T02:26:27.8938530Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8941200Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8944160Z   /usr/local/opt/openssl@3/include/openssl/types.h:102:34: warning: redefinition of typedef 'EVP_CIPHER_CTX' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.8946360Z   typedef struct evp_cipher_ctx_st EVP_CIPHER_CTX;
+2022-12-27T02:26:27.8949120Z                                    ^
+2022-12-27T02:26:27.8951860Z   third_party/boringssl/include/openssl/base.h:255:34: note: previous definition is here
+2022-12-27T02:26:27.8954370Z   typedef struct evp_cipher_ctx_st EVP_CIPHER_CTX;
+2022-12-27T02:26:27.8956690Z                                    ^
+2022-12-27T02:26:27.8959660Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8962260Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.8965280Z   /usr/local/opt/openssl@3/include/openssl/types.h:103:26: error: typedef redefinition with different types ('struct evp_md_st' vs 'struct env_md_st')
+2022-12-27T02:26:27.8967460Z   typedef struct evp_md_st EVP_MD;
+2022-12-27T02:26:27.8970260Z                            ^
+2022-12-27T02:26:27.8972890Z   third_party/boringssl/include/openssl/base.h:253:26: note: previous definition is here
+2022-12-27T02:26:27.8976020Z   typedef struct env_md_st EVP_MD;
+2022-12-27T02:26:27.8978060Z                            ^
+2022-12-27T02:26:27.8980950Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.8983450Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9008010Z   /usr/local/opt/openssl@3/include/openssl/types.h:104:30: error: typedef redefinition with different types ('struct evp_md_ctx_st' vs 'struct env_md_ctx_st')
+2022-12-27T02:26:27.9008660Z   typedef struct evp_md_ctx_st EVP_MD_CTX;
+2022-12-27T02:26:27.9008920Z                                ^
+2022-12-27T02:26:27.9009220Z   third_party/boringssl/include/openssl/base.h:252:30: note: previous definition is here
+2022-12-27T02:26:27.9009530Z   typedef struct env_md_ctx_st EVP_MD_CTX;
+2022-12-27T02:26:27.9009750Z                                ^
+2022-12-27T02:26:27.9009990Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9010290Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9011040Z   /usr/local/opt/openssl@3/include/openssl/types.h:107:28: warning: redefinition of typedef 'EVP_PKEY' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9011410Z   typedef struct evp_pkey_st EVP_PKEY;
+2022-12-27T02:26:27.9012840Z                              ^
+2022-12-27T02:26:27.9015520Z   third_party/boringssl/include/openssl/base.h:261:28: note: previous definition is here
+2022-12-27T02:26:27.9018370Z   typedef struct evp_pkey_st EVP_PKEY;
+2022-12-27T02:26:27.9020520Z                              ^
+2022-12-27T02:26:27.9023160Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9025950Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9029140Z   /usr/local/opt/openssl@3/include/openssl/types.h:109:40: warning: redefinition of typedef 'EVP_PKEY_ASN1_METHOD' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9031480Z   typedef struct evp_pkey_asn1_method_st EVP_PKEY_ASN1_METHOD;
+2022-12-27T02:26:27.9034050Z                                          ^
+2022-12-27T02:26:27.9036660Z   third_party/boringssl/include/openssl/base.h:258:40: note: previous definition is here
+2022-12-27T02:26:27.9039250Z   typedef struct evp_pkey_asn1_method_st EVP_PKEY_ASN1_METHOD;
+2022-12-27T02:26:27.9042270Z                                          ^
+2022-12-27T02:26:27.9044480Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9047220Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9050930Z   /usr/local/opt/openssl@3/include/openssl/types.h:111:35: warning: redefinition of typedef 'EVP_PKEY_METHOD' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9052880Z   typedef struct evp_pkey_method_st EVP_PKEY_METHOD;
+2022-12-27T02:26:27.9055710Z                                     ^
+2022-12-27T02:26:27.9058690Z   third_party/boringssl/include/openssl/base.h:260:35: note: previous definition is here
+2022-12-27T02:26:27.9061640Z   typedef struct evp_pkey_method_st EVP_PKEY_METHOD;
+2022-12-27T02:26:27.9064110Z                                     ^
+2022-12-27T02:26:27.9067020Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9069850Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9072970Z   /usr/local/opt/openssl@3/include/openssl/types.h:112:32: warning: redefinition of typedef 'EVP_PKEY_CTX' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9075290Z   typedef struct evp_pkey_ctx_st EVP_PKEY_CTX;
+2022-12-27T02:26:27.9077990Z                                  ^
+2022-12-27T02:26:27.9080830Z   third_party/boringssl/include/openssl/base.h:259:32: note: previous definition is here
+2022-12-27T02:26:27.9083480Z   typedef struct evp_pkey_ctx_st EVP_PKEY_CTX;
+2022-12-27T02:26:27.9086170Z                                  ^
+2022-12-27T02:26:27.9089050Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9091760Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9095050Z   /usr/local/opt/openssl@3/include/openssl/types.h:130:34: error: typedef redefinition with different types ('struct evp_Encode_Ctx_st' vs 'struct evp_encode_ctx_st')
+2022-12-27T02:26:27.9097090Z   typedef struct evp_Encode_Ctx_st EVP_ENCODE_CTX;
+2022-12-27T02:26:27.9099900Z                                    ^
+2022-12-27T02:26:27.9102960Z   third_party/boringssl/include/openssl/base.h:257:34: note: previous definition is here
+2022-12-27T02:26:27.9105600Z   typedef struct evp_encode_ctx_st EVP_ENCODE_CTX;
+2022-12-27T02:26:27.9108230Z                                    ^
+2022-12-27T02:26:27.9111240Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9114040Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9117140Z   /usr/local/opt/openssl@3/include/openssl/types.h:132:28: warning: redefinition of typedef 'HMAC_CTX' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9119640Z   typedef struct hmac_ctx_st HMAC_CTX;
+2022-12-27T02:26:27.9122270Z                              ^
+2022-12-27T02:26:27.9125160Z   third_party/boringssl/include/openssl/base.h:262:28: note: previous definition is here
+2022-12-27T02:26:27.9127790Z   typedef struct hmac_ctx_st HMAC_CTX;
+2022-12-27T02:26:27.9130550Z                              ^
+2022-12-27T02:26:27.9133290Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9136050Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9139120Z   /usr/local/opt/openssl@3/include/openssl/types.h:134:22: warning: redefinition of typedef 'DH' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9141500Z   typedef struct dh_st DH;
+2022-12-27T02:26:27.9144140Z                        ^
+2022-12-27T02:26:27.9146920Z   third_party/boringssl/include/openssl/base.h:244:22: note: previous definition is here
+2022-12-27T02:26:27.9149520Z   typedef struct dh_st DH;
+2022-12-27T02:26:27.9152050Z                        ^
+2022-12-27T02:26:27.9154710Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9157330Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9160770Z   /usr/local/opt/openssl@3/include/openssl/types.h:138:23: warning: redefinition of typedef 'DSA' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9162590Z   typedef struct dsa_st DSA;
+2022-12-27T02:26:27.9165230Z                         ^
+2022-12-27T02:26:27.9168060Z   third_party/boringssl/include/openssl/base.h:245:23: note: previous definition is here
+2022-12-27T02:26:27.9170580Z   typedef struct dsa_st DSA;
+2022-12-27T02:26:27.9173110Z                         ^
+2022-12-27T02:26:27.9175840Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9178470Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9181520Z   /usr/local/opt/openssl@3/include/openssl/types.h:143:23: warning: redefinition of typedef 'RSA' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9183850Z   typedef struct rsa_st RSA;
+2022-12-27T02:26:27.9186390Z                         ^
+2022-12-27T02:26:27.9189290Z   third_party/boringssl/include/openssl/base.h:272:23: note: previous definition is here
+2022-12-27T02:26:27.9191850Z   typedef struct rsa_st RSA;
+2022-12-27T02:26:27.9194540Z                         ^
+2022-12-27T02:26:27.9197240Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9199970Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9202940Z   /usr/local/opt/openssl@3/include/openssl/types.h:144:28: warning: redefinition of typedef 'RSA_METHOD' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9205290Z   typedef struct rsa_meth_st RSA_METHOD;
+2022-12-27T02:26:27.9207900Z                              ^
+2022-12-27T02:26:27.9210720Z   third_party/boringssl/include/openssl/base.h:271:28: note: previous definition is here
+2022-12-27T02:26:27.9213310Z   typedef struct rsa_meth_st RSA_METHOD;
+2022-12-27T02:26:27.9215860Z                              ^
+2022-12-27T02:26:27.9218600Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9221280Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9224280Z   /usr/local/opt/openssl@3/include/openssl/types.h:149:26: warning: redefinition of typedef 'EC_KEY' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9226610Z   typedef struct ec_key_st EC_KEY;
+2022-12-27T02:26:27.9229250Z                            ^
+2022-12-27T02:26:27.9232060Z   third_party/boringssl/include/openssl/base.h:247:26: note: previous definition is here
+2022-12-27T02:26:27.9234710Z   typedef struct ec_key_st EC_KEY;
+2022-12-27T02:26:27.9237270Z                            ^
+2022-12-27T02:26:27.9239970Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9242650Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9245890Z   /usr/local/opt/openssl@3/include/openssl/types.h:153:29: warning: redefinition of typedef 'RAND_METHOD' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9248320Z   typedef struct rand_meth_st RAND_METHOD;
+2022-12-27T02:26:27.9250870Z                               ^
+2022-12-27T02:26:27.9253670Z   third_party/boringssl/include/openssl/base.h:269:29: note: previous definition is here
+2022-12-27T02:26:27.9256270Z   typedef struct rand_meth_st RAND_METHOD;
+2022-12-27T02:26:27.9258970Z                               ^
+2022-12-27T02:26:27.9261710Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9264480Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9267500Z   /usr/local/opt/openssl@3/include/openssl/types.h:157:24: warning: redefinition of typedef 'X509' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9269950Z   typedef struct x509_st X509;
+2022-12-27T02:26:27.9272490Z                          ^
+2022-12-27T02:26:27.9275290Z   third_party/boringssl/include/openssl/base.h:293:24: note: previous definition is here
+2022-12-27T02:26:27.9277960Z   typedef struct x509_st X509;
+2022-12-27T02:26:27.9280570Z                          ^
+2022-12-27T02:26:27.9283730Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9286000Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9289440Z   /usr/local/opt/openssl@3/include/openssl/types.h:158:30: warning: redefinition of typedef 'X509_ALGOR' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9291700Z   typedef struct X509_algor_st X509_ALGOR;
+2022-12-27T02:26:27.9294090Z                                ^
+2022-12-27T02:26:27.9297270Z   third_party/boringssl/include/openssl/base.h:219:30: note: previous definition is here
+2022-12-27T02:26:27.9299960Z   typedef struct X509_algor_st X509_ALGOR;
+2022-12-27T02:26:27.9302350Z                                ^
+2022-12-27T02:26:27.9304790Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9307350Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9310730Z   /usr/local/opt/openssl@3/include/openssl/types.h:159:28: warning: redefinition of typedef 'X509_CRL' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9312700Z   typedef struct X509_crl_st X509_CRL;
+2022-12-27T02:26:27.9315240Z                              ^
+2022-12-27T02:26:27.9318020Z   third_party/boringssl/include/openssl/base.h:221:28: note: previous definition is here
+2022-12-27T02:26:27.9320570Z   typedef struct X509_crl_st X509_CRL;
+2022-12-27T02:26:27.9323060Z                              ^
+2022-12-27T02:26:27.9325750Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9328490Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9331650Z   /usr/local/opt/openssl@3/include/openssl/types.h:160:35: warning: redefinition of typedef 'X509_CRL_METHOD' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9333990Z   typedef struct x509_crl_method_st X509_CRL_METHOD;
+2022-12-27T02:26:27.9336540Z                                     ^
+2022-12-27T02:26:27.9339300Z   third_party/boringssl/include/openssl/base.h:290:35: note: previous definition is here
+2022-12-27T02:26:27.9341890Z   typedef struct x509_crl_method_st X509_CRL_METHOD;
+2022-12-27T02:26:27.9344420Z                                     ^
+2022-12-27T02:26:27.9347100Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9349880Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9352870Z   /usr/local/opt/openssl@3/include/openssl/types.h:161:32: warning: redefinition of typedef 'X509_REVOKED' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9355230Z   typedef struct x509_revoked_st X509_REVOKED;
+2022-12-27T02:26:27.9357760Z                                  ^
+2022-12-27T02:26:27.9360690Z   third_party/boringssl/include/openssl/base.h:292:32: note: previous definition is here
+2022-12-27T02:26:27.9363290Z   typedef struct x509_revoked_st X509_REVOKED;
+2022-12-27T02:26:27.9365850Z                                  ^
+2022-12-27T02:26:27.9368610Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9371270Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9374260Z   /usr/local/opt/openssl@3/include/openssl/types.h:162:29: warning: redefinition of typedef 'X509_NAME' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9376590Z   typedef struct X509_name_st X509_NAME;
+2022-12-27T02:26:27.9379140Z                               ^
+2022-12-27T02:26:27.9381900Z   third_party/boringssl/include/openssl/base.h:225:29: note: previous definition is here
+2022-12-27T02:26:27.9384450Z   typedef struct X509_name_st X509_NAME;
+2022-12-27T02:26:27.9387020Z                               ^
+2022-12-27T02:26:27.9389810Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9392530Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9395470Z   /usr/local/opt/openssl@3/include/openssl/types.h:163:31: warning: redefinition of typedef 'X509_PUBKEY' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9398110Z   typedef struct X509_pubkey_st X509_PUBKEY;
+2022-12-27T02:26:27.9400360Z                                 ^
+2022-12-27T02:26:27.9403130Z   third_party/boringssl/include/openssl/base.h:227:31: note: previous definition is here
+2022-12-27T02:26:27.9405750Z   typedef struct X509_pubkey_st X509_PUBKEY;
+2022-12-27T02:26:27.9408500Z                                 ^
+2022-12-27T02:26:27.9411130Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9413840Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9416900Z   /usr/local/opt/openssl@3/include/openssl/types.h:164:30: warning: redefinition of typedef 'X509_STORE' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9419240Z   typedef struct x509_store_st X509_STORE;
+2022-12-27T02:26:27.9421810Z                                ^
+2022-12-27T02:26:27.9424610Z   third_party/boringssl/include/openssl/base.h:295:30: note: previous definition is here
+2022-12-27T02:26:27.9427210Z   typedef struct x509_store_st X509_STORE;
+2022-12-27T02:26:27.9429880Z                                ^
+2022-12-27T02:26:27.9432570Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9435240Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9438320Z   /usr/local/opt/openssl@3/include/openssl/types.h:165:34: warning: redefinition of typedef 'X509_STORE_CTX' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9440670Z   typedef struct x509_store_ctx_st X509_STORE_CTX;
+2022-12-27T02:26:27.9443230Z                                    ^
+2022-12-27T02:26:27.9446020Z   third_party/boringssl/include/openssl/base.h:294:34: note: previous definition is here
+2022-12-27T02:26:27.9448770Z   typedef struct x509_store_ctx_st X509_STORE_CTX;
+2022-12-27T02:26:27.9451320Z                                    ^
+2022-12-27T02:26:27.9454130Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9456800Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9460050Z   /usr/local/opt/openssl@3/include/openssl/types.h:168:31: warning: redefinition of typedef 'X509_LOOKUP' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9462390Z   typedef struct x509_lookup_st X509_LOOKUP;
+2022-12-27T02:26:27.9464960Z                                 ^
+2022-12-27T02:26:27.9467750Z   third_party/boringssl/include/openssl/base.h:291:31: note: previous definition is here
+2022-12-27T02:26:27.9470560Z   typedef struct x509_lookup_st X509_LOOKUP;
+2022-12-27T02:26:27.9473110Z                                 ^
+2022-12-27T02:26:27.9475820Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9478540Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9481500Z   /usr/local/opt/openssl@3/include/openssl/types.h:170:37: warning: redefinition of typedef 'X509_VERIFY_PARAM' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9484030Z   typedef struct X509_VERIFY_PARAM_st X509_VERIFY_PARAM;
+2022-12-27T02:26:27.9486520Z                                       ^
+2022-12-27T02:26:27.9489440Z   third_party/boringssl/include/openssl/base.h:218:37: note: previous definition is here
+2022-12-27T02:26:27.9492070Z   typedef struct X509_VERIFY_PARAM_st X509_VERIFY_PARAM;
+2022-12-27T02:26:27.9494630Z                                       ^
+2022-12-27T02:26:27.9497330Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9500040Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9503120Z   /usr/local/opt/openssl@3/include/openssl/types.h:174:39: warning: redefinition of typedef 'PKCS8_PRIV_KEY_INFO' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9505520Z   typedef struct pkcs8_priv_key_info_st PKCS8_PRIV_KEY_INFO;
+2022-12-27T02:26:27.9508650Z                                         ^
+2022-12-27T02:26:27.9511250Z   third_party/boringssl/include/openssl/base.h:267:39: note: previous definition is here
+2022-12-27T02:26:27.9513530Z   typedef struct pkcs8_priv_key_info_st PKCS8_PRIV_KEY_INFO;
+2022-12-27T02:26:27.9516010Z                                         ^
+2022-12-27T02:26:27.9518760Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9521420Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9524870Z   /usr/local/opt/openssl@3/include/openssl/types.h:176:27: warning: redefinition of typedef 'X509V3_CTX' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9526980Z   typedef struct v3_ext_ctx X509V3_CTX;
+2022-12-27T02:26:27.9529250Z                             ^
+2022-12-27T02:26:27.9532230Z   third_party/boringssl/include/openssl/base.h:285:27: note: previous definition is here
+2022-12-27T02:26:27.9534850Z   typedef struct v3_ext_ctx X509V3_CTX;
+2022-12-27T02:26:27.9537230Z                             ^
+2022-12-27T02:26:27.9540010Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9542560Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9545660Z   /usr/local/opt/openssl@3/include/openssl/types.h:177:24: warning: redefinition of typedef 'CONF' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9547990Z   typedef struct conf_st CONF;
+2022-12-27T02:26:27.9550730Z                          ^
+2022-12-27T02:26:27.9553470Z   third_party/boringssl/include/openssl/base.h:242:24: note: previous definition is here
+2022-12-27T02:26:27.9556140Z   typedef struct conf_st CONF;
+2022-12-27T02:26:27.9558630Z                          ^
+2022-12-27T02:26:27.9561640Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9564290Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9567390Z   /usr/local/opt/openssl@3/include/openssl/types.h:183:26: warning: redefinition of typedef 'ENGINE' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9569820Z   typedef struct engine_st ENGINE;
+2022-12-27T02:26:27.9572930Z                            ^
+2022-12-27T02:26:27.9575430Z   third_party/boringssl/include/openssl/base.h:251:26: note: previous definition is here
+2022-12-27T02:26:27.9578350Z   typedef struct engine_st ENGINE;
+2022-12-27T02:26:27.9580360Z                            ^
+2022-12-27T02:26:27.9583160Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9585790Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9588910Z   /usr/local/opt/openssl@3/include/openssl/types.h:184:23: warning: redefinition of typedef 'SSL' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9591190Z   typedef struct ssl_st SSL;
+2022-12-27T02:26:27.9593780Z                         ^
+2022-12-27T02:26:27.9596820Z   third_party/boringssl/include/openssl/base.h:283:23: note: previous definition is here
+2022-12-27T02:26:27.9599400Z   typedef struct ssl_st SSL;
+2022-12-27T02:26:27.9601960Z                         ^
+2022-12-27T02:26:27.9604770Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9607490Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9610620Z   /usr/local/opt/openssl@3/include/openssl/types.h:185:27: warning: redefinition of typedef 'SSL_CTX' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9612970Z   typedef struct ssl_ctx_st SSL_CTX;
+2022-12-27T02:26:27.9615520Z                             ^
+2022-12-27T02:26:27.9618330Z   third_party/boringssl/include/openssl/base.h:279:27: note: previous definition is here
+2022-12-27T02:26:27.9620920Z   typedef struct ssl_ctx_st SSL_CTX;
+2022-12-27T02:26:27.9623530Z                             ^
+2022-12-27T02:26:27.9626220Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9629060Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9632400Z   /usr/local/opt/openssl@3/include/openssl/types.h:190:36: warning: redefinition of typedef 'X509_POLICY_NODE' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9634890Z   typedef struct X509_POLICY_NODE_st X509_POLICY_NODE;
+2022-12-27T02:26:27.9637200Z                                      ^
+2022-12-27T02:26:27.9640030Z   third_party/boringssl/include/openssl/base.h:216:36: note: previous definition is here
+2022-12-27T02:26:27.9642620Z   typedef struct X509_POLICY_NODE_st X509_POLICY_NODE;
+2022-12-27T02:26:27.9645130Z                                      ^
+2022-12-27T02:26:27.9647820Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9650570Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9653620Z   /usr/local/opt/openssl@3/include/openssl/types.h:191:37: warning: redefinition of typedef 'X509_POLICY_LEVEL' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9655950Z   typedef struct X509_POLICY_LEVEL_st X509_POLICY_LEVEL;
+2022-12-27T02:26:27.9658500Z                                       ^
+2022-12-27T02:26:27.9661410Z   third_party/boringssl/include/openssl/base.h:215:37: note: previous definition is here
+2022-12-27T02:26:27.9664030Z   typedef struct X509_POLICY_LEVEL_st X509_POLICY_LEVEL;
+2022-12-27T02:26:27.9666560Z                                       ^
+2022-12-27T02:26:27.9669320Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9672030Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9675100Z   /usr/local/opt/openssl@3/include/openssl/types.h:192:36: warning: redefinition of typedef 'X509_POLICY_TREE' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9677270Z   typedef struct X509_POLICY_TREE_st X509_POLICY_TREE;
+2022-12-27T02:26:27.9679790Z                                      ^
+2022-12-27T02:26:27.9682660Z   third_party/boringssl/include/openssl/base.h:217:36: note: previous definition is here
+2022-12-27T02:26:27.9685220Z   typedef struct X509_POLICY_TREE_st X509_POLICY_TREE;
+2022-12-27T02:26:27.9687820Z                                      ^
+2022-12-27T02:26:27.9690520Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9693160Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9696220Z   /usr/local/opt/openssl@3/include/openssl/types.h:193:37: warning: redefinition of typedef 'X509_POLICY_CACHE' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9698540Z   typedef struct X509_POLICY_CACHE_st X509_POLICY_CACHE;
+2022-12-27T02:26:27.9701070Z                                       ^
+2022-12-27T02:26:27.9703830Z   third_party/boringssl/include/openssl/base.h:214:37: note: previous definition is here
+2022-12-27T02:26:27.9706430Z   typedef struct X509_POLICY_CACHE_st X509_POLICY_CACHE;
+2022-12-27T02:26:27.9709050Z                                       ^
+2022-12-27T02:26:27.9711710Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9714360Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9717370Z   /usr/local/opt/openssl@3/include/openssl/types.h:195:35: warning: redefinition of typedef 'AUTHORITY_KEYID' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9719690Z   typedef struct AUTHORITY_KEYID_st AUTHORITY_KEYID;
+2022-12-27T02:26:27.9722180Z                                     ^
+2022-12-27T02:26:27.9724940Z   third_party/boringssl/include/openssl/base.h:201:35: note: previous definition is here
+2022-12-27T02:26:27.9727520Z   typedef struct AUTHORITY_KEYID_st AUTHORITY_KEYID;
+2022-12-27T02:26:27.9730110Z                                     ^
+2022-12-27T02:26:27.9732780Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9735420Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9738410Z   /usr/local/opt/openssl@3/include/openssl/types.h:196:30: warning: redefinition of typedef 'DIST_POINT' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9740740Z   typedef struct DIST_POINT_st DIST_POINT;
+2022-12-27T02:26:27.9743610Z                                ^
+2022-12-27T02:26:27.9746140Z   third_party/boringssl/include/openssl/base.h:203:30: note: previous definition is here
+2022-12-27T02:26:27.9748780Z   typedef struct DIST_POINT_st DIST_POINT;
+2022-12-27T02:26:27.9751260Z                                ^
+2022-12-27T02:26:27.9753940Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9756580Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9759760Z   /usr/local/opt/openssl@3/include/openssl/types.h:197:38: warning: redefinition of typedef 'ISSUING_DIST_POINT' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9762120Z   typedef struct ISSUING_DIST_POINT_st ISSUING_DIST_POINT;
+2022-12-27T02:26:27.9764610Z                                        ^
+2022-12-27T02:26:27.9767710Z   third_party/boringssl/include/openssl/base.h:205:38: note: previous definition is here
+2022-12-27T02:26:27.9770180Z   typedef struct ISSUING_DIST_POINT_st ISSUING_DIST_POINT;
+2022-12-27T02:26:27.9772600Z                                        ^
+2022-12-27T02:26:27.9775310Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9777890Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:28:
+2022-12-27T02:26:27.9780940Z   /usr/local/opt/openssl@3/include/openssl/types.h:198:36: warning: redefinition of typedef 'NAME_CONSTRAINTS' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9783120Z   typedef struct NAME_CONSTRAINTS_st NAME_CONSTRAINTS;
+2022-12-27T02:26:27.9785720Z                                      ^
+2022-12-27T02:26:27.9788600Z   third_party/boringssl/include/openssl/base.h:206:36: note: previous definition is here
+2022-12-27T02:26:27.9791430Z   typedef struct NAME_CONSTRAINTS_st NAME_CONSTRAINTS;
+2022-12-27T02:26:27.9793820Z                                      ^
+2022-12-27T02:26:27.9796640Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9799140Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:29:
+2022-12-27T02:26:27.9801870Z   In file included from /usr/local/opt/openssl@3/include/openssl/bio.h:30:
+2022-12-27T02:26:27.9804850Z   /usr/local/opt/openssl@3/include/openssl/crypto.h:308:3: error: typedef redefinition with different types ('struct crypto_threadid_st' vs 'int')
+2022-12-27T02:26:27.9807140Z   } CRYPTO_THREADID;
+2022-12-27T02:26:27.9809770Z     ^
+2022-12-27T02:26:27.9812710Z   third_party/boringssl/include/openssl/base.h:176:13: note: previous definition is here
+2022-12-27T02:26:27.9815130Z   typedef int CRYPTO_THREADID;
+2022-12-27T02:26:27.9817720Z               ^
+2022-12-27T02:26:27.9820330Z   In file included from src/boringssl/err_data.c:18:
+2022-12-27T02:26:27.9823050Z   In file included from /usr/local/opt/openssl@3/include/openssl/err.h:29:
+2022-12-27T02:26:27.9826000Z   /usr/local/opt/openssl@3/include/openssl/bio.h:296:30: warning: redefinition of typedef 'BIO_METHOD' is a C11 feature [-Wtypedef-redefinition]
+2022-12-27T02:26:27.9828430Z   typedef struct bio_method_st BIO_METHOD;
+2022-12-27T02:26:27.9830940Z                                ^
+2022-12-27T02:26:27.9833760Z   third_party/boringssl/include/openssl/base.h:234:30: note: previous definition is here
+2022-12-27T02:26:27.9836270Z   typedef struct bio_method_st BIO_METHOD;
+2022-12-27T02:26:27.9838850Z                                ^
+2022-12-27T02:26:27.9841960Z   src/boringssl/err_data.c:33:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_12' declared as an array with a negative size
+2022-12-27T02:26:27.9844430Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_ASN1 == 12, library_values_changed_12);
+2022-12-27T02:26:27.9846930Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9850060Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:27.9852560Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:27.9855100Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9858290Z   src/boringssl/err_data.c:34:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_13' declared as an array with a negative size
+2022-12-27T02:26:27.9860770Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_CONF == 13, library_values_changed_13);
+2022-12-27T02:26:27.9863210Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9866240Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:27.9868850Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:27.9871320Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9874240Z   src/boringssl/err_data.c:35:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_14' declared as an array with a negative size
+2022-12-27T02:26:27.9876760Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_CRYPTO == 14, library_values_changed_14);
+2022-12-27T02:26:27.9879200Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9882310Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:27.9884820Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:27.9887240Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9890270Z   src/boringssl/err_data.c:36:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_15' declared as an array with a negative size
+2022-12-27T02:26:27.9892730Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_EC == 15, library_values_changed_15);
+2022-12-27T02:26:27.9895260Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9898280Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:27.9900910Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:27.9903360Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9906390Z   src/boringssl/err_data.c:37:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_16' declared as an array with a negative size
+2022-12-27T02:26:27.9909010Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_SSL == 16, library_values_changed_16);
+2022-12-27T02:26:27.9911580Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9914810Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:27.9917430Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:27.9919930Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9922920Z   src/boringssl/err_data.c:38:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_17' declared as an array with a negative size
+2022-12-27T02:26:27.9925420Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_BIO == 17, library_values_changed_17);
+2022-12-27T02:26:27.9928050Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9931110Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:27.9933710Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:27.9936200Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9939250Z   src/boringssl/err_data.c:39:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_18' declared as an array with a negative size
+2022-12-27T02:26:27.9941730Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_PKCS7 == 18, library_values_changed_18);
+2022-12-27T02:26:27.9944290Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9947290Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:27.9950010Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:27.9952750Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9955510Z   src/boringssl/err_data.c:40:24: error: use of undeclared identifier 'ERR_LIB_PKCS8'
+2022-12-27T02:26:27.9958070Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_PKCS8 == 19, library_values_changed_19);
+2022-12-27T02:26:27.9960780Z                          ^
+2022-12-27T02:26:27.9963860Z   src/boringssl/err_data.c:41:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_20' declared as an array with a negative size
+2022-12-27T02:26:27.9966370Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_X509V3 == 20, library_values_changed_20);
+2022-12-27T02:26:27.9969060Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9972070Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:27.9974710Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:27.9977190Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9980260Z   src/boringssl/err_data.c:42:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_21' declared as an array with a negative size
+2022-12-27T02:26:27.9982750Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_RAND == 21, library_values_changed_21);
+2022-12-27T02:26:27.9985360Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9988460Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:27.9991150Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:27.9993660Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:27.9996750Z   src/boringssl/err_data.c:43:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_22' declared as an array with a negative size
+2022-12-27T02:26:27.9999270Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_ENGINE == 22, library_values_changed_22);
+2022-12-27T02:26:28.0001820Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:28.0005140Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:28.0008000Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:28.0010330Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:28.0013320Z   src/boringssl/err_data.c:44:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_23' declared as an array with a negative size
+2022-12-27T02:26:28.0015800Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_OCSP == 23, library_values_changed_23);
+2022-12-27T02:26:28.0018290Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:28.0021490Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:28.0024080Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:28.0027320Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:28.0030920Z   src/boringssl/err_data.c:45:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_24' declared as an array with a negative size
+2022-12-27T02:26:28.0035080Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_UI == 24, library_values_changed_24);
+2022-12-27T02:26:28.0037350Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:28.0041560Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:28.0042700Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:28.0045460Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:28.0048270Z   src/boringssl/err_data.c:46:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_25' declared as an array with a negative size
+2022-12-27T02:26:28.0050730Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_COMP == 25, library_values_changed_25);
+2022-12-27T02:26:28.0053500Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:28.0056260Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:28.0058800Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:28.0061370Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:28.0064340Z   src/boringssl/err_data.c:47:1: error: 'OPENSSL_COMPILE_ASSERT_library_values_changed_26' declared as an array with a negative size
+2022-12-27T02:26:28.0066790Z   OPENSSL_COMPILE_ASSERT(ERR_LIB_ECDSA == 26, library_values_changed_26);
+2022-12-27T02:26:28.0069400Z   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-27T02:26:28.0072440Z   third_party/boringssl/include/openssl/type_check.h:83:45: note: expanded from macro 'OPENSSL_COMPILE_ASSERT'
+2022-12-27T02:26:28.0075140Z     typedef char OPENSSL_COMPILE_ASSERT_##msg[((cond) ? 1 : -1)]
+2022-12-27T02:26:28.0077250Z                                               ^~~~~~~~~~~~~~~~~
+2022-12-27T02:26:28.0080400Z   fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2022-12-27T02:26:28.0082710Z   70 warnings and 20 errors generated.
+2022-12-27T02:26:28.0085190Z   creating var
+2022-12-27T02:26:28.0087790Z   creating var/folders
+2022-12-27T02:26:28.0090540Z   creating var/folders/51
+2022-12-27T02:26:28.0093060Z   creating var/folders/51/hd414ycd67n82196sw51xqtc0000gn
+2022-12-27T02:26:28.0095420Z   creating var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T
+2022-12-27T02:26:28.0098500Z   creating var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/tmpjsgupsk5
+2022-12-27T02:26:28.0103760Z   gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -g -I/usr/local/opt/openssl@3/include -I/usr/local/opt/openssl@3/include -arch arm64 -I/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/include -I/Library/Frameworks/Python.framework/Versions/3.8/include/python3.8 -c /var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/tmpjsgupsk5/a.c -o var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/tmpjsgupsk5/a.o
+2022-12-27T02:26:28.0104930Z   Traceback (most recent call last):
+2022-12-27T02:26:28.0118520Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/unixccompiler.py", line 186, in _compile
+2022-12-27T02:26:28.0119210Z       self.spawn(compiler_so + cc_args + [src, '-o', obj] + extra_postargs)
+2022-12-27T02:26:28.0119860Z     File "/Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5/src/python/grpcio/_spawn_patch.py", line 69, in _commandfile_spawn
+2022-12-27T02:26:28.0120240Z       _classic_spawn(self, command)
+2022-12-27T02:26:28.0120890Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/ccompiler.py", line 1007, in spawn
+2022-12-27T02:26:28.0121330Z       spawn(cmd, dry_run=self.dry_run, **kwargs)
+2022-12-27T02:26:28.0124450Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/spawn.py", line 70, in spawn
+2022-12-27T02:26:28.0126120Z       raise DistutilsExecError(
+2022-12-27T02:26:28.0129630Z   distutils.errors.DistutilsExecError: command '/usr/bin/gcc' failed with exit code 1
+2022-12-27T02:26:28.0131650Z 
+2022-12-27T02:26:28.0134680Z   During handling of the above exception, another exception occurred:
+2022-12-27T02:26:28.0136960Z 
+2022-12-27T02:26:28.0139620Z   Traceback (most recent call last):
+2022-12-27T02:26:28.0142980Z     File "/Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5/src/python/grpcio/commands.py", line 281, in build_extensions
+2022-12-27T02:26:28.0145180Z       build_ext.build_ext.build_extensions(self)
+2022-12-27T02:26:28.0148930Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py", line 195, in build_extensions
+2022-12-27T02:26:28.0150450Z       _build_ext.build_ext.build_extensions(self)
+2022-12-27T02:26:28.0154090Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 468, in build_extensions
+2022-12-27T02:26:28.0155880Z       self._build_extensions_serial()
+2022-12-27T02:26:28.0159390Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 494, in _build_extensions_serial
+2022-12-27T02:26:28.0161650Z       self.build_extension(ext)
+2022-12-27T02:26:28.0165010Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 246, in build_extension
+2022-12-27T02:26:28.0166960Z       _build_ext.build_extension(self, ext)
+2022-12-27T02:26:28.0170640Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 549, in build_extension
+2022-12-27T02:26:28.0172570Z       objects = self.compiler.compile(
+2022-12-27T02:26:28.0176070Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/ccompiler.py", line 599, in compile
+2022-12-27T02:26:28.0178060Z       self._compile(obj, src, ext, cc_args, extra_postargs, pp_opts)
+2022-12-27T02:26:28.0181630Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/unixccompiler.py", line 188, in _compile
+2022-12-27T02:26:28.0183550Z       raise CompileError(msg)
+2022-12-27T02:26:28.0186650Z   distutils.errors.CompileError: command '/usr/bin/gcc' failed with exit code 1
+2022-12-27T02:26:28.0188990Z 
+2022-12-27T02:26:28.0191890Z   During handling of the above exception, another exception occurred:
+2022-12-27T02:26:28.0194270Z 
+2022-12-27T02:26:28.0197110Z   Traceback (most recent call last):
+2022-12-27T02:26:28.0199830Z     File "<string>", line 2, in <module>
+2022-12-27T02:26:28.0202730Z     File "<pip-setuptools-caller>", line 34, in <module>
+2022-12-27T02:26:28.0205790Z     File "/Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5/setup.py", line 278, in <module>
+2022-12-27T02:26:28.0207950Z       setuptools.setup(
+2022-12-27T02:26:28.0211370Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/__init__.py", line 87, in setup
+2022-12-27T02:26:28.0213370Z       return distutils.core.setup(**attrs)
+2022-12-27T02:26:28.0216870Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 185, in setup
+2022-12-27T02:26:28.0218840Z       return run_commands(dist)
+2022-12-27T02:26:28.0222320Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 201, in run_commands
+2022-12-27T02:26:28.0224520Z       dist.run_commands()
+2022-12-27T02:26:28.0227790Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+2022-12-27T02:26:28.0230030Z       self.run_command(cmd)
+2022-12-27T02:26:28.0233840Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/dist.py", line 1208, in run_command
+2022-12-27T02:26:28.0235450Z       super().run_command(command)
+2022-12-27T02:26:28.0238930Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+2022-12-27T02:26:28.0241200Z       cmd_obj.run()
+2022-12-27T02:26:28.0244420Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/wheel/bdist_wheel.py", line 325, in run
+2022-12-27T02:26:28.0246600Z       self.run_command("build")
+2022-12-27T02:26:28.0250280Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+2022-12-27T02:26:28.0252680Z       self.distribution.run_command(command)
+2022-12-27T02:26:28.0256040Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/dist.py", line 1208, in run_command
+2022-12-27T02:26:28.0257780Z       super().run_command(command)
+2022-12-27T02:26:28.0261370Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+2022-12-27T02:26:28.0263460Z       cmd_obj.run()
+2022-12-27T02:26:28.0266790Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/command/build.py", line 132, in run
+2022-12-27T02:26:28.0269190Z       self.run_command(cmd_name)
+2022-12-27T02:26:28.0272290Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+2022-12-27T02:26:28.0274240Z       self.distribution.run_command(command)
+2022-12-27T02:26:28.0277660Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/dist.py", line 1208, in run_command
+2022-12-27T02:26:28.0279940Z       super().run_command(command)
+2022-12-27T02:26:28.0283040Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+2022-12-27T02:26:28.0285180Z       cmd_obj.run()
+2022-12-27T02:26:28.0288460Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 84, in run
+2022-12-27T02:26:28.0290600Z       _build_ext.run(self)
+2022-12-27T02:26:28.0293890Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py", line 186, in run
+2022-12-27T02:26:28.0296230Z       _build_ext.build_ext.run(self)
+2022-12-27T02:26:28.0299590Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 346, in run
+2022-12-27T02:26:28.0301370Z       self.build_extensions()
+2022-12-27T02:26:28.0304670Z     File "/Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5/src/python/grpcio/commands.py", line 285, in build_extensions
+2022-12-27T02:26:28.0306900Z       raise CommandError(
+2022-12-27T02:26:28.0309640Z   commands.CommandError: Failed `build_ext` step:
+2022-12-27T02:26:28.0312200Z   Traceback (most recent call last):
+2022-12-27T02:26:28.0315680Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/unixccompiler.py", line 186, in _compile
+2022-12-27T02:26:28.0318210Z       self.spawn(compiler_so + cc_args + [src, '-o', obj] + extra_postargs)
+2022-12-27T02:26:28.0321010Z     File "/Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5/src/python/grpcio/_spawn_patch.py", line 69, in _commandfile_spawn
+2022-12-27T02:26:28.0323140Z       _classic_spawn(self, command)
+2022-12-27T02:26:28.0326410Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/ccompiler.py", line 1007, in spawn
+2022-12-27T02:26:28.0328620Z       spawn(cmd, dry_run=self.dry_run, **kwargs)
+2022-12-27T02:26:28.0331940Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/spawn.py", line 70, in spawn
+2022-12-27T02:26:28.0334180Z       raise DistutilsExecError(
+2022-12-27T02:26:28.0337210Z   distutils.errors.DistutilsExecError: command '/usr/bin/gcc' failed with exit code 1
+2022-12-27T02:26:28.0339380Z 
+2022-12-27T02:26:28.0342020Z   During handling of the above exception, another exception occurred:
+2022-12-27T02:26:28.0344510Z 
+2022-12-27T02:26:28.0347100Z   Traceback (most recent call last):
+2022-12-27T02:26:28.0350770Z     File "/Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5/src/python/grpcio/commands.py", line 281, in build_extensions
+2022-12-27T02:26:28.0352570Z       build_ext.build_ext.build_extensions(self)
+2022-12-27T02:26:28.0356010Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py", line 195, in build_extensions
+2022-12-27T02:26:28.0358010Z       _build_ext.build_ext.build_extensions(self)
+2022-12-27T02:26:28.0361790Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 468, in build_extensions
+2022-12-27T02:26:28.0363680Z       self._build_extensions_serial()
+2022-12-27T02:26:28.0367170Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 494, in _build_extensions_serial
+2022-12-27T02:26:28.0369240Z       self.build_extension(ext)
+2022-12-27T02:26:28.0372770Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 246, in build_extension
+2022-12-27T02:26:28.0374670Z       _build_ext.build_extension(self, ext)
+2022-12-27T02:26:28.0378090Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 549, in build_extension
+2022-12-27T02:26:28.0380130Z       objects = self.compiler.compile(
+2022-12-27T02:26:28.0383600Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/ccompiler.py", line 599, in compile
+2022-12-27T02:26:28.0385520Z       self._compile(obj, src, ext, cc_args, extra_postargs, pp_opts)
+2022-12-27T02:26:28.0388910Z     File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/setuptools/_distutils/unixccompiler.py", line 188, in _compile
+2022-12-27T02:26:28.0390790Z       raise CompileError(msg)
+2022-12-27T02:26:28.0393850Z   distutils.errors.CompileError: command '/usr/bin/gcc' failed with exit code 1
+2022-12-27T02:26:28.0396080Z 
+2022-12-27T02:26:28.1133530Z   error: subprocess-exited-with-error
+2022-12-27T02:26:28.1135220Z   
+2022-12-27T02:26:28.1136180Z   × python setup.py bdist_wheel did not run successfully.
+2022-12-27T02:26:28.1136730Z   │ exit code: 1
+2022-12-27T02:26:28.1137200Z   ╰─> See above for output.
+2022-12-27T02:26:28.1137550Z   
+2022-12-27T02:26:28.1138050Z   note: This error originates from a subprocess, and is likely not a problem with pip.
+2022-12-27T02:26:28.1149250Z   full command: /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/bin/python -u -c '
+2022-12-27T02:26:28.1149650Z   exec(compile('"'"''"'"''"'"'
+2022-12-27T02:26:28.1150010Z   # This is <pip-setuptools-caller> -- a caller that pip uses to run setup.py
+2022-12-27T02:26:28.1150270Z   #
+2022-12-27T02:26:28.1152000Z   # - It imports setuptools before invoking setup.py, to enable projects that directly
+2022-12-27T02:26:28.1152780Z   #   import from `distutils.core` to work with newer packaging standards.
+2022-12-27T02:26:28.1153890Z   # - It provides a clear error message when setuptools is not installed.
+2022-12-27T02:26:28.1154790Z   # - It sets `sys.argv[0]` to the underlying `setup.py`, when invoking `setup.py` so
+2022-12-27T02:26:28.1155980Z   #   setuptools doesn'"'"'t think the script is `-c`. This avoids the following warning:
+2022-12-27T02:26:28.1157090Z   #     manifest_maker: standard file '"'"'-c'"'"' not found".
+2022-12-27T02:26:28.1158140Z   # - It generates a shim setup.py, for handling setup.cfg-only projects.
+2022-12-27T02:26:28.1158840Z   import os, sys, tokenize
+2022-12-27T02:26:28.1159330Z   
+2022-12-27T02:26:28.1159770Z   try:
+2022-12-27T02:26:28.1160220Z       import setuptools
+2022-12-27T02:26:28.1161110Z   except ImportError as error:
+2022-12-27T02:26:28.1161800Z       print(
+2022-12-27T02:26:28.1163610Z           "ERROR: Can not execute `setup.py` since setuptools is not available in "
+2022-12-27T02:26:28.1165450Z           "the build environment.",
+2022-12-27T02:26:28.1166240Z           file=sys.stderr,
+2022-12-27T02:26:28.1167130Z       )
+2022-12-27T02:26:28.1168440Z       sys.exit(1)
+2022-12-27T02:26:28.1169320Z   
+2022-12-27T02:26:28.1169820Z   __file__ = %r
+2022-12-27T02:26:28.1170500Z   sys.argv[0] = __file__
+2022-12-27T02:26:28.1171130Z   
+2022-12-27T02:26:28.1171900Z   if os.path.exists(__file__):
+2022-12-27T02:26:28.1198330Z       filename = __file__
+2022-12-27T02:26:28.1198750Z       with tokenize.open(__file__) as f:
+2022-12-27T02:26:28.1199180Z           setup_py_code = f.read()
+2022-12-27T02:26:28.1199540Z   else:
+2022-12-27T02:26:28.1200180Z       filename = "<auto-generated setuptools caller>"
+2022-12-27T02:26:28.1200720Z       setup_py_code = "from setuptools import setup; setup()"
+2022-12-27T02:26:28.1201130Z   
+2022-12-27T02:26:28.1201530Z   exec(compile(setup_py_code, filename, "exec"))
+2022-12-27T02:26:28.1202840Z   '"'"''"'"''"'"' % ('"'"'/Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5/setup.py'"'"',), "<pip-setuptools-caller>", "exec"))' bdist_wheel -d /private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-wheel-wcvnk6s1
+2022-12-27T02:26:28.1204100Z   cwd: /Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5/
+2022-12-27T02:26:28.1204950Z   Building wheel for grpcio (setup.py): finished with status 'error'
+2022-12-27T02:26:28.1205510Z   ERROR: Failed building wheel for grpcio
+2022-12-27T02:26:28.1205960Z   Running command python setup.py clean
+2022-12-27T02:26:28.1206410Z   Running setup.py clean for grpcio
+2022-12-27T02:26:28.9069600Z   running clean
+2022-12-27T02:26:28.9095300Z   removing 'python_build/temp.macosx-11.0-arm64-cpython-38' (and everything under it)
+2022-12-27T02:26:28.9278760Z   removing 'python_build/lib.macosx-11.0-arm64-cpython-38' (and everything under it)
+2022-12-27T02:26:28.9359200Z   'python_build/bdist.macosx-11.0-arm64' does not exist -- can't clean it
+2022-12-27T02:26:28.9360040Z   'python_build/scripts-3.8' does not exist -- can't clean it
+2022-12-27T02:26:28.9363010Z   removing 'python_build'
+2022-12-27T02:26:29.0034900Z Failed to build grpcio
+2022-12-27T02:26:29.0040340Z ERROR: Failed to build one or more wheels
+2022-12-27T02:26:29.0057160Z Exception information:
+2022-12-27T02:26:29.0057850Z Traceback (most recent call last):
+2022-12-27T02:26:29.0059680Z   File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 160, in exc_logging_wrapper
+2022-12-27T02:26:29.0060510Z     status = run_func(*args)
+2022-12-27T02:26:29.0061650Z   File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 247, in wrapper
+2022-12-27T02:26:29.0062400Z     return func(self, options, args)
+2022-12-27T02:26:29.0063510Z   File "/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/build/venv/lib/python3.8/site-packages/pip/_internal/commands/wheel.py", line 201, in run
+2022-12-27T02:26:29.0064410Z     raise CommandError("Failed to build one or more wheels")
+2022-12-27T02:26:29.0065020Z pip._internal.exceptions.CommandError: Failed to build one or more wheels
+2022-12-27T02:26:29.0065980Z Removed build tracker: '/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/pip-build-tracker-k5f210im'
+2022-12-27T02:26:29.0855320Z ##[endgroup]
+2022-12-27T02:26:29.0856080Z                                                               [31m✕ [0m5.96s
+2022-12-27T02:26:29.1759190Z ##[error]Command ['python', '-m', 'pip', 'wheel', '/Users/runner/actions-runner/_work/python.build/python.build/build_grpcio13538/grpcio-1.3.5', '--wheel-dir=/private/var/folders/51/hd414ycd67n82196sw51xqtc0000gn/T/cibw-run-bog3379z/cp38-macosx_arm64/built_wheel', '--no-deps', '-vvv'] failed with code 1. None
+2022-12-27T02:26:29.1767920Z 
+2022-12-27T02:26:29.1992480Z ##[error]Process completed with exit code 1.
+2022-12-27T02:26:29.2044810Z ##[group]Run rm -rf build_grpcio13538 wheelsout
+2022-12-27T02:26:29.2045100Z [36;1mrm -rf build_grpcio13538 wheelsout[0m
+2022-12-27T02:26:29.2070610Z shell: /bin/bash -e {0}
+2022-12-27T02:26:29.2070790Z env:
+2022-12-27T02:26:29.2071020Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:29.2071320Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.8.15/x64/lib/pkgconfig
+2022-12-27T02:26:29.2071620Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:29.2071900Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:29.2072180Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.8.15/x64
+2022-12-27T02:26:29.2072410Z ##[endgroup]
+2022-12-27T02:26:29.6290270Z Cleaning up orphan processes
