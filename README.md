@@ -1,18 +1,17 @@
 # python.build - Mirror and Builder for Python Wheels
 
-[python.build](https://python.build) is a builder and mirror for Python packages that don't have [wheels](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#wheels) for platforms such as Apple Silicon (aarch64/ARM64, for example, if you have an M1/M2 processor) or Linux ARM64 (AWS Graviton for example), and to also back-build wheels for older Python and package versions.
+[python.build](https://python.build) is a builder and mirror for Python packages that don't have [wheels](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#wheels) for platforms such as Apple Silicon (aarch64/ARM64, if you have an M1/M2 processor) or Linux ARM64 (AWS Graviton, etc), and to also back-build wheels for older Python and package versions.
 
 With the release of Python 3.11, a lot more packages now support these platforms, but there are still a lot of packages that don't; or have older versions that popular projects have pinned. For example, Dagster relies on grpcio, and [it's not a great install experience on Apple Silicon](https://github.com/grpc/grpc/issues/25082).
 
-So this project hopes to provide reproducible builds using Github Actions, and then provide a mirror for them on [python.build](https://python.build).
+So this project hopes to provide reproducible builds using Github Actions, and then provide a mirror for them on [python.build](https://python.build) as well as on the [releases](https://github.com/kilnbuild/python.build/releases).
 
 ## Installation / Using python.build
 ### Poetry
-Using Poetry is a super simple experience, and causes the least amount of pain.
+Using Poetry is a straight forward experience.
 
-You have a couple of options, ranging from adding `python.build` as a source to your `pyproject.toml` file,
+You have a couple of options, either adding `python.build` as a source to your `pyproject.toml` file,
 or just using the wheel directly as a vendored dependency.
-
 
 #### Option 1: Adding python.build as a source repository
 
@@ -115,25 +114,23 @@ Please see [PACKAGES](./PACKAGES.md) for a list of packages that are currently b
 If you would like to see a package added, please open an issue here (and please also contribute building for that architecture to the package! <3).
 
 ## Hosting
-A webserver runs on a couple of cloud servers that are a part of the [Bandwidth Alliance](https://www.cloudflare.com/bandwidth-alliance/), which allows us to save on bandwidth costs. We then use Cloudflare as the CDN.
+Using [Wasabi](https://wasabi.com) to host the wheels as a static site, which is a memebr of the [Bandwidth Alliance](https://www.cloudflare.com/bandwidth-alliance/), which allows us to save on bandwidth costs. We then use Cloudflare as the CDN.
 
 It's planned to provide multiple mirror options, so those who can't use Cloudflare can use a different mirror (for example those in China).
 
-The wheels and mirrored PyPI repositories are backed up on [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) and [Wasabi](https://wasabi.com/) for redundancy. This currently doesn't use much space, due to only mirroring a certain subset of packages.
-
-You can also download the wheel directly from either the [python.build](https://python.build) website, or Github Actions. Note that Github Actions only stores logs and artifacts for a limited amount of time, but we provide a full audit log of all builds, and you can always use the script to build the wheel yourself.
+You can also download the wheel directly from either the [python.build](https://python.build) website, or the [releases page](https://github.com/kilnbuild/python.build/releases). Note that Github Actions only stores logs and artifacts for a limited amount of time, but we provide a full audit log of all builds, and you can always use the workflow files to build the wheels yourself.
 
 ## Auditing
 The goal is to ensure all built wheels have a full auditable build history and should be as reproducible as possible. You should be able to run the Github Action on your own repository and get the same result (unless OpenSSL changes, Python changes... Nix in future maybe? :-)).
 
-You can see the audit logs at [audit.python.build](https://audit.python.build), which has a log of built packages from Github Actions, as Github Actions doesn't store this indefinitely (it is currently a [maximum of 90 days](https://docs.github.com/en/organizations/managing-organization-settings/configuring-the-retention-period-for-github-actions-artifacts-and-logs-in-your-organization)). You can also see a log of the packages built on the [Github Actions page](https://github.com/kilnbuild/python.build).
+You can see the audit logs on the [audit branch](https://github.com/kilnbuild/python.build/tree/audit), which has a log of built packages from Github Actions, as Github Actions doesn't store this indefinitely (it is currently a [maximum of 90 days](https://docs.github.com/en/organizations/managing-organization-settings/configuring-the-retention-period-for-github-actions-artifacts-and-logs-in-your-organization)). You can also see a log of the packages built on the [Github Actions page](https://github.com/kilnbuild/python.build).
 
 You can also fork the repository and just change the runner to Github Actions, which should work fine. Just be aware that Github has limits on the amount of minutes you can use per month, so please check before running.
 
 ## Who is behind this?
-This was started by [Josh Taylor](https://github.com/joshuataylor), having been annoyed at the wheel situation with a new M1 Macbook Air. It's a fantastic laptop (as someone who has been using Linux as their primary desktop since 2006). So I wanted to try and help out with the situation and have a fun sideproject to work on that helps the community.
+This was started by [Josh Taylor](https://github.com/joshuataylor), having been annoyed at the wheel situation with a new M1 Macbook Air. It's a fantastic laptop (as someone who has been using, and will continue to use, Linux as their primary desktop since 2006). So I wanted to try and help out with the situation and have a fun sideproject to work on that helps the community.
 
-Kiln is just a silly name I came up with, because a kiln is used for "baking substances", which is kind of like baking packages, I guess? :-) 🐍🔥
+Kiln is just a silly name I came up with for another project, and it kind of fits, as it's kind of like baking packages, I guess? :-) 🐍🧱
 
 ## Inspiration
 Thanks to [pietrodn](https://github.com/pietrodn), who created a [Github Action](https://github.com/pietrodn/grpcio-mac-arm-build)
